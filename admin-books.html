@@ -20,6 +20,56 @@
         </nav>
     </header>
 
+    <main class="container">
+        <h1>Администрација књига</h1>
+
+        <div class="card">
+            <h3>Додај нову књигу</h3>
+            <form>
+                <div class="form-group">
+                    <label for="book-title">Наслов књиге:</label>
+                    <input type="text" id="book-title" placeholder="Унесите наслов">
+                </div>
+                <div class="form-group">
+                    <label for="book-author">Аутор:</label>
+                    <input type="text" id="book-author" placeholder="Унесите име аутора">
+                </div>
+                <button type="button" class="btn btn-primary">Сачувај</button>
+            </form>
+        </div>
+
+        <div class="card">
+            <h3>Листа књига</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Наслов</th>
+                        <th>Аутор</th>
+                        <th>Акције</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Наслов књиге 1</td>
+                        <td>Аутор 1</td>
+                        <td>
+                            <button class="btn btn-secondary" style="padding: 0.3rem 0.6rem;">Измени</button>
+                            <button class="btn" style="padding: 0.3rem 0.6rem; background-color: #ef5350; color: white;">Обриши</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Наслов књиге 2</td>
+                        <td>Аутор 2</td>
+                        <td>
+                            <button class="btn btn-secondary" style="padding: 0.3rem 0.6rem;">Измени</button>
+                            <button class="btn" style="padding: 0.3rem 0.6rem; background-color: #ef5350; color: white;">Обриши</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
     <footer>
         <p>Заједница Читалаца — Пројекат из веб дизајна 2026</p>
     </footer>
