@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заједница Читалаца - Вук Караџић</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .star-rating {
+            color: var(--accent-color);
+            font-size: 2rem;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">Заједница Читалаца</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Књиге</a></li>
+                <li><a href="authors.html">Аутори</a></li>
+                <li><a href="profile.html">Профил</a></li>
+                <li><a href="admin-books.html">Админ књиге</a></li>
+                <li><a href="admin-authors.html">Админ аутори</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <h1>Детаљи аутора</h1>
+        <div class="card" style="text-align: left; align-items: flex-start;">
+            <div style="display: flex; gap: 2rem; flex-wrap: wrap; align-items: start; width: 100%;">
+                <div style="flex: 1; max-width: 250px;">
+                    <img src="images/vuk-karadzic.jpg" alt="Вук Караџић" style="width: 100%; border-radius: var(--border-radius); box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                </div>
+                <div style="flex: 2; min-width: 300px;">
+                    <h2>Вук Караџић</h2>
+                    <br>
+                    <p><strong>Биографија:</strong></p>
+                    <p>Српски филолог, реформатор српског језика, сакупљач народних умотворина и писац првог речника српског језика. Вук је најзначајнија личност српске књижевности прве половине 19. века. Поставио је темеље савременог српског књижевног језика и писма заснованог на фонетском принципу.</p>
+                    <div style="margin-top: 2rem;">
+                        <p><strong>Просечна оцена:</strong></p>
+                        <div class="star-rating">★★★★★</div>
+                        <p style="font-size: 0.9rem; color: #777;">Оцена заснована на рецензијама корисника</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); align-items: start; margin-top: 2rem;">
+            <div class="card" style="text-align: left; align-items: flex-start;">
+                <h3>Оцените аутора</h3>
+                <form style="width: 100%;">
+                    <div class="form-group">
+                        <label for="author-rating">Ваша оцена:</label>
+                        <select id="author-rating" name="author-rating">
+                            <option value="5">5 - ★★★★★</option>
+                            <option value="4">4 - ★★★★☆</option>
+                            <option value="3">3 - ★★★☆☆</option>
+                            <option value="2">2 - ★★☆☆☆</option>
+                            <option value="1">1 - ★☆☆☆☆</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="author-review">Ваш коментар (опционо):</label>
+                        <textarea id="author-review" rows="3" placeholder="Ваши утисци о аутору..."></textarea>
+                    </div>
+                    <button type="button" class="btn btn-primary">Оцени</button>
+                </form>
+            </div>
+            <div class="card" style="text-align: left; align-items: flex-start;">
+                <h3>Претходне оцене корисника</h3>
+                <div style="border-bottom: 1px solid var(--gray-light); padding-bottom: 1rem; margin-bottom: 1rem; width: 100%;">
+                    <p><strong>Марко М.</strong> <span style="color: var(--accent-color);">★★★★★</span></p>
+                    <p>Отац наше писмености. Његово дело је темељ наше културе.</p>
+                </div>
+                <div style="border-bottom: 1px solid var(--gray-light); padding-bottom: 1rem; margin-bottom: 1rem; width: 100%;">
+                    <p><strong>Јован Ј.</strong> <span style="color: var(--accent-color);">★★★★★</span></p>
+                    <p>Генијалан реформатор. Правило „пиши као што говориш“ је највећи дар језику.</p>
+                </div>
+            </div>
+        </div>
+        <h3>Књиге овог аутора</h3>
+        <div class="grid">
+            <div class="card" style="text-align: center;">
+                <h3><a href="book-details-rijecnik.html" style="color: var(--text-color); text-decoration: none;">Српски ријечник</a></h3>
+                <a href="book-details-rijecnik.html" class="btn btn-secondary" style="margin-top: 1rem;">Детаљи књиге</a>
+            </div>
+            <div class="card" style="text-align: center;">
+                <h3><a href="book-details-rijecnik.html" style="color: var(--text-color); text-decoration: none;">Српске народне приповијетке</a></h3>
+                <a href="book-details-rijecnik.html" class="btn btn-secondary" style="margin-top: 1rem;">Детаљи књиге</a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Заједница Читалаца — Пројекат из веб дизајна 2026</p>
+    </footer>
+</body>
+</html>

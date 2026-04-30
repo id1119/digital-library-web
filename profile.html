@@ -19,35 +19,41 @@
             </ul>
         </nav>
     </header>
-
     <main class="container">
         <h1>Кориснички профил</h1>
-
-        <div class="card">
+        <div class="card" style="text-align: left; align-items: flex-start;">
             <h2>Моји подаци</h2>
-            <p><strong>Име:</strong> Петар Петровић</p>
-            <p><strong>Е-пошта:</strong> petar@gmail.com</p>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; width: 100%;">
+                <p style="margin: 0;"><strong>Име:</strong> Петар</p>
+                <p style="margin: 0;"><strong>Презиме:</strong> Петровић</p>
+                <p style="margin: 0;"><strong>Е-пошта:</strong> petar.petrovic@primer.rs</p>
+                <p style="margin: 0;"><strong>Адреса:</strong> Булевар краља Александра 73, Београд</p>
+                <p style="margin: 0;"><strong>Датум рођења:</strong> 15. мај 1995.</p>
+                <p style="margin: 0;"><strong>Корисничко име:</strong> petar95</p>
+            </div>
+            <button class="btn btn-secondary" style="margin-top: 1.5rem;">Измени податке</button>
         </div>
-
         <div class="grid">
             <section>
                 <h3>Моје рецензије</h3>
-                <div class="card">
-                    <p><strong>Књига:</strong> На Дрини ћуприја</p>
-                    <p><strong>Рецензија:</strong> Ово је била одлична књига!</p>
+                <div class="card" style="text-align: left; align-items: flex-start;">
+                    <p><strong>Књига:</strong> <a href="book-details-cuprija.html" style="color: var(--accent-color); text-decoration: none; font-weight: 600;">На Дрини ћуприја</a></p>
+                    <p><strong>Рецензија:</strong> Ово је била одлична књига! Андрићев стил је заиста уникатан.</p>
                 </div>
             </section>
-
             <section>
                 <h3>Моје оцене</h3>
-                <div class="card">
-                    <p><strong>Аутор:</strong> Иво Андрић</p>
-                    <p><strong>Оцена:</strong> ★★★★★</p>
+                <div class="card" style="text-align: left; align-items: flex-start;">
+                    <p><strong>Аутор:</strong> <a href="author-details-andric.html" style="color: var(--accent-color); text-decoration: none; font-weight: 600;">Иво Андрић</a></p>
+                    <p><strong>Оцена:</strong> <span style="color: var(--accent-color);">★★★★★</span></p>
+                </div>
+                <div class="card" style="text-align: left; align-items: flex-start;">
+                    <p><strong>Аутор:</strong> <a href="author-details-vuk.html" style="color: var(--accent-color); text-decoration: none; font-weight: 600;">Вук Караџић</a></p>
+                    <p><strong>Оцена:</strong> <span style="color: var(--accent-color);">★★★★★</span></p>
                 </div>
             </section>
         </div>
     </main>
-
     <footer>
         <p>Заједница Читалаца — Пројекат из веб дизајна 2026</p>
     </footer>
