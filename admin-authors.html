@@ -19,54 +19,68 @@
             </ul>
         </nav>
     </header>
-
     <main class="container">
         <h1>Администрација аутора</h1>
-
-        <div class="card">
-            <h3>Додај новог аутора</h3>
-            <form>
-                <div class="form-group">
-                    <label for="author-name">Име и презиме:</label>
-                    <input type="text" id="author-name" placeholder="Унесите име аутора">
-                </div>
-                <div class="form-group">
-                    <label for="author-bio">Биографија:</label>
-                    <textarea id="author-bio" rows="3" placeholder="Кратка биографија..."></textarea>
-                </div>
-                <button type="button" class="btn btn-primary">Сачувај</button>
-            </form>
+        <div class="grid" style="grid-template-columns: 1fr 1fr; align-items: start;">
+            <div class="card" style="text-align: left; align-items: flex-start;">
+                <h3>Додај новог аутора</h3>
+                <form style="width: 100%;">
+                    <div class="form-group">
+                        <label for="author-name">Име и презиме:</label>
+                        <input type="text" id="author-name" placeholder="Унесите име аутора">
+                    </div>
+                    <div class="form-group">
+                        <label for="author-bio">Биографија:</label>
+                        <textarea id="author-bio" rows="3" placeholder="Кратка биографија..."></textarea>
+                    </div>
+                    <button type="button" class="btn btn-primary">Сачувај</button>
+                </form>
+            </div>
+            <div class="card" style="text-align: left; align-items: flex-start;">
+                <h3>Измени аутора</h3>
+                <form style="width: 100%;">
+                    <div class="form-group">
+                        <label for="edit-author-name">Име и презиме:</label>
+                        <input type="text" id="edit-author-name" value="Иво Андрић">
+                    </div>
+                    <div class="form-group">
+                        <label for="edit-author-bio">Биографија:</label>
+                        <textarea id="edit-author-bio" rows="3">Српски и југословенски писац, добитник Нобелове награде.</textarea>
+                    </div>
+                    <button type="button" class="btn btn-primary">Ажурирај</button>
+                </form>
+            </div>
         </div>
-
-        <div class="card">
+        <div class="card" style="text-align: left; align-items: flex-start;">
             <h3>Листа аутора</h3>
-            <table>
+            <table style="width: 100%; border-collapse: collapse;">
                 <thead>
                     <tr>
-                        <th>Име</th>
-                        <th>Акције</th>
+                        <th style="text-align: left; padding: 0.8rem; border-bottom: 2px solid var(--gray-light);">Име</th>
+                        <th style="text-align: left; padding: 0.8rem; border-bottom: 2px solid var(--gray-light);">Акције</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Име Аутора 1</td>
-                        <td>
-                            <button class="btn btn-secondary" style="padding: 0.3rem 0.6rem;">Измени</button>
-                            <button class="btn" style="padding: 0.3rem 0.6rem; background-color: #ef5350; color: white;">Обриши</button>
+                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-light);">Иво Андрић</td>
+                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-light);">
+                            <a href="author-details-andric.html" class="btn btn-secondary" style="padding: 0.3rem 0.6rem; font-size: 0.8rem;">Детаљи</a>
+                            <button class="btn btn-secondary" style="padding: 0.3rem 0.6rem; font-size: 0.8rem;">Измени</button>
+                            <button class="btn" style="padding: 0.3rem 0.6rem; font-size: 0.8rem; background-color: #ef5350; color: white;">Обриши</button>
                         </td>
                     </tr>
                     <tr>
-                        <td>Име Аутора 2</td>
-                        <td>
-                            <button class="btn btn-secondary" style="padding: 0.3rem 0.6rem;">Измени</button>
-                            <button class="btn" style="padding: 0.3rem 0.6rem; background-color: #ef5350; color: white;">Обриши</button>
+                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-light);">Габор Мате</td>
+                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-light);">
+                            <a href="author-details-mate.html" class="btn btn-secondary" style="padding: 0.3rem 0.6rem; font-size: 0.8rem;">Детаљи</a>
+                            <button class="btn btn-secondary" style="padding: 0.3rem 0.6rem; font-size: 0.8rem;">Измени</button>
+                            <button class="btn" style="padding: 0.3rem 0.6rem; font-size: 0.8rem; background-color: #ef5350; color: white;">Обриши</button>
                         </td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </main>
-
     <footer>
         <p>Заједница Читалаца — Пројекат из веб дизајна 2026</p>
     </footer>
