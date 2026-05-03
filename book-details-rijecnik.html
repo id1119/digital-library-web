@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заједница Читалаца - Српски ријечник</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">Заједница Читалаца</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Књиге</a></li>
+                <li><a href="authors.html">Аутори</a></li>
+                <li><a href="profile.html">Профил</a></li>
+                <li><a href="admin-books.html">Админ књиге</a></li>
+                <li><a href="admin-authors.html">Админ аутори</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <h1>Детаљи књиге</h1>
+        <div class="card" style="display: flex; flex-direction: row; align-items: flex-start; text-align: left; gap: 2rem; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 250px; max-width: 300px; height: 400px; background-color: var(--gray-light); border-radius: var(--border-radius); display: flex; align-items: center; justify-content: center; border: 2px dashed var(--accent-color);">
+                <img src="images/srpski-rjecnik.jpg" alt="Српски ријечник" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--border-radius);">
+            </div>
+            <div style="flex: 2; min-width: 300px;">
+                <h2>Српски ријечник</h2>
+                <p><strong>Аутор:</strong> <a href="author-details-vuk.html" style="color: var(--accent-color); text-decoration: none; font-weight: 600;">Вук Караџић</a></p>
+                <p><strong>Жанр:</strong> Лингвистика, Етнологија</p>
+                <p><strong>Формат:</strong> Тврди повез (Репринт)</p>
+                <p><strong>Број страна:</strong> 800+</p>
+                <p><strong>Цена:</strong> 2.500 РСД</p>
+                <p><strong>ISBN:</strong> 978-86-17-15201-4</p>
+                <br>
+                <p><strong>Опис:</strong> Чувено дело Вука Караџића из 1818. године (допуњено 1852). Ово није само речник језика, већ и ризница народних обичаја, веровања и умотворина. Вук је кроз објашњења речи описао читав народни живот и културу свог времена.</p>
+            </div>
+        </div>
+        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); align-items: start; margin-top: 2rem;">
+            <div class="card" style="text-align: left; align-items: flex-start;">
+                <h3>Оставите рецензију</h3>
+                <form style="width: 100%;">
+                    <div class="form-group">
+                        <label for="username">Ваше име:</label>
+                        <input type="text" id="username" name="username" placeholder="Унесите своје име">
+                    </div>
+                    <div class="form-group">
+                        <label for="comment">Коментар:</label>
+                        <textarea id="comment" name="comment" rows="4" placeholder="Ваша рецензија..."></textarea>
+                    </div>
+                    <button type="button" class="btn btn-primary">Пошаљи</button>
+                </form>
+            </div>
+            <div class="card" style="text-align: left; align-items: flex-start;">
+                <h3>Претходне рецензије</h3>
+                <div style="border-bottom: 1px solid var(--gray-light); padding-bottom: 1rem; margin-bottom: 1rem; width: 100%;">
+                    <p><strong>Милан М.</strong></p>
+                    <p>Свака кућа треба да има овај речник. То је основ наше писмености.</p>
+                </div>
+                <div style="border-bottom: 1px solid var(--gray-light); padding-bottom: 1rem; margin-bottom: 1rem; width: 100%;">
+                    <p><strong>Катарина К.</strong></p>
+                    <p>Занимљиво је читати Вукове дефиниције. Пуно је хумора и народне мудрости.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Заједница Читалаца — Пројекат из веб дизајна 2026</p>
+    </footer>
+</body>
+</html>
