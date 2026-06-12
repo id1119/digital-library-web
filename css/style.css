@@ -93,6 +93,14 @@ h1, h2, h3 {
 .card .btn {
     margin-top: auto;
 }
+.text-link {
+    color: var(--accent-color);
+    font-weight: 600;
+    text-decoration: none;
+}
+.text-link:hover {
+    text-decoration: underline;
+}
 .btn {
     display: inline-block;
     padding: 0.6rem 1.2rem;
@@ -247,6 +255,92 @@ input, textarea, select {
 .auth-form .btn {
     width: 100%;
 }
+.profile-card {
+    align-items: flex-start;
+    min-height: auto;
+    text-align: left;
+}
+.profile-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+    margin-bottom: 1.25rem;
+}
+.profile-subtitle {
+    color: #6d5a53;
+}
+.profile-badge {
+    padding: 0.4rem 0.75rem;
+    border-radius: 999px;
+    background-color: var(--gray-light);
+    color: var(--text-color);
+    font-size: 0.9rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+.profile-details {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+.profile-details div {
+    padding: 0.85rem;
+    border: 1px solid var(--gray-light);
+    border-radius: 8px;
+    background-color: #fffdf9;
+}
+.detail-label {
+    margin-bottom: 0.25rem;
+    color: #6d5a53;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+.profile-details p {
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+.profile-summary {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+.summary-item {
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    background-color: var(--white);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    text-align: center;
+}
+.summary-item strong {
+    display: block;
+    color: var(--accent-color);
+    font-size: 1.6rem;
+}
+.summary-item span {
+    color: #6d5a53;
+}
+.profile-activity-grid {
+    align-items: start;
+}
+.activity-card {
+    align-items: flex-start;
+    min-height: auto;
+    text-align: left;
+}
+.activity-meta {
+    margin-bottom: 1rem;
+    color: #6d5a53;
+    font-size: 0.9rem;
+}
+.rating-stars {
+    color: var(--accent-color);
+    letter-spacing: 0;
+}
 @media (max-width: 768px) {
     header {
         padding: 1rem 2%;
@@ -268,6 +362,13 @@ input, textarea, select {
         justify-content: center;
     }
     .form-row {
+        grid-template-columns: 1fr;
+    }
+    .profile-header {
+        flex-direction: column;
+    }
+    .profile-details,
+    .profile-summary {
         grid-template-columns: 1fr;
     }
     main {

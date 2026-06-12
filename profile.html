@@ -23,54 +23,95 @@
     </header>
     <main class="container">
         <h1>Кориснички профил</h1>
-        <div class="card" style="text-align: left; align-items: flex-start;">
-            <h2>Моји подаци</h2>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; width: 100%;">
-                <p style="margin: 0;"><strong>Име:</strong> Петар</p>
-                <p style="margin: 0;"><strong>Презиме:</strong> Петровић</p>
-                <p style="margin: 0;"><strong>Е-пошта:</strong> petar.petrovic@primer.rs</p>
-                <p style="margin: 0;"><strong>Адреса:</strong> Булевар краља Александра 73, Београд</p>
-                <p style="margin: 0;"><strong>Датум рођења:</strong> 15. мај 1995.</p>
-                <p style="margin: 0;"><strong>Корисничко име:</strong> petar95</p>
-                <p style="margin: 0;"><strong>Занимање: </strong> столар</p>
-                <p style="margin: 0;"><strong>ID корисника:</strong> 300</p>
+
+        <section class="card profile-card">
+            <div class="profile-header">
+                <div>
+                    <h2>Моји подаци</h2>
+                    <p class="profile-subtitle">Основни подаци пријављеног корисника.</p>
+                </div>
+                <span class="profile-badge">ID корисника: 300</span>
             </div>
-            <button class="btn btn-secondary" style="margin-top: 1.5rem;">Измени податке</button>
-        </div>
-        <div class="grid">
+
+            <div class="profile-details">
+                <div>
+                    <p class="detail-label">Име</p>
+                    <p>Петар</p>
+                </div>
+                <div>
+                    <p class="detail-label">Презиме</p>
+                    <p>Петровић</p>
+                </div>
+                <div>
+                    <p class="detail-label">Е-пошта</p>
+                    <p>petar.petrovic@primer.rs</p>
+                </div>
+                <div>
+                    <p class="detail-label">Корисничко име</p>
+                    <p>petar95</p>
+                </div>
+                <div>
+                    <p class="detail-label">Адреса</p>
+                    <p>Булевар краља Александра 73, Београд</p>
+                </div>
+                <div>
+                    <p class="detail-label">Датум рођења</p>
+                    <p>15. мај 1995.</p>
+                </div>
+                <div>
+                    <p class="detail-label">Занимање</p>
+                    <p>Столар</p>
+                </div>
+                <div>
+                    <p class="detail-label">Статус</p>
+                    <p>Активан члан</p>
+                </div>
+            </div>
+
+            <button type="button" class="btn btn-secondary">Измени податке</button>
+        </section>
+
+        <section class="profile-summary">
+            <article class="summary-item">
+                <strong>2</strong>
+                <span>оцењена аутора</span>
+            </article>
+            <article class="summary-item">
+                <strong>1</strong>
+                <span>написана рецензија</span>
+            </article>
+            <article class="summary-item">
+                <strong>5.0</strong>
+                <span>просечна оцена</span>
+            </article>
+        </section>
+
+        <div class="grid profile-activity-grid">
             <section>
                 <h3>Моје рецензије</h3>
-                <div class="card" style="text-align: left; align-items: flex-start;">
-                    <p><strong>Књига:</strong> <a href="book-details-cuprija.html"
-                            style="color: var(--accent-color); text-decoration: none; font-weight: 600;">На Дрини
+
+                <article class="card activity-card">
+                    <p><strong>Књига:</strong> <a href="book-details-cuprija.html" class="text-link">На Дрини
                             ћуприја</a></p>
-                    <p><small>Датум: 20.03.2025. | ID књиге: 10</small></p>
-                    <br>
+                    <p class="activity-meta">Датум: 20.03.2025. | ID књиге: 10</p>
                     <p><strong>Рецензија:</strong> Ово је била одлична књига! Андрићев стил је заиста уникатан.</p>
-                </div>
+                </article>
             </section>
+
             <section>
                 <h3>Моје оцене</h3>
-                <div class="card" style="text-align: left; align-items: flex-start;">
-                    <p><strong>Аутор:</strong> <a href="author-details-andric.html"
-                            style="color: var(--accent-color); text-decoration: none; font-weight: 600;">Иво Андрић</a>
-              
-                    </p>
-                    <p><small>Датум: 20.03.2025. | ID аутора: 10</small></p>
-                    <br>
-                    <p><strong>Оцена:</strong> <span style="color: var(--accent-color);">★★★★★</span></p>
-                </div>
-                <div class="card" style="text-align: left; align-items: flex-start;">
-                    <p><strong>Аутор:</strong> <a href="author-details-vuk.html"
-                            style="color: var(--accent-color); text-decoration: none; font-weight: 600;">Вук Караџић</a>
-                    </p>
-                    <p><small>Датум: 21.04.2026. | ID аутора: 21</small></p>
-                    <br>
-                    <p><strong>Аутор:</strong> <a href="author-details-vuk.html"
-                            style="color: var(--accent-color); text-decoration: none; font-weight: 600;">Вук Караџић</a>
-                    </p>
-                    <p><strong>Оцена:</strong> <span style="color: var(--accent-color);">★★★★★</span></p>
-                </div>
+
+                <article class="card activity-card">
+                    <p><strong>Аутор:</strong> <a href="author-details-andric.html" class="text-link">Иво Андрић</a></p>
+                    <p class="activity-meta">Датум: 20.03.2025. | ID аутора: 21</p>
+                    <p><strong>Оцена:</strong> <span class="rating-stars">★★★★★</span></p>
+                </article>
+
+                <article class="card activity-card">
+                    <p><strong>Аутор:</strong> <a href="author-details-vuk.html" class="text-link">Вук Караџић</a></p>
+                    <p class="activity-meta">Датум: 21.04.2026. | ID аутора: 23</p>
+                    <p><strong>Оцена:</strong> <span class="rating-stars">★★★★★</span></p>
+                </article>
             </section>
         </div>
     </main>
