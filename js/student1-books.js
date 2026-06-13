@@ -49,6 +49,7 @@ const STUDENT1_BOOKS = [
     }
 ];
 
+let currentBooks = [...STUDENT1_BOOKS];
 let student1Reviews = [
     {
         id: "r0",
@@ -96,19 +97,72 @@ let student1Reviews = [
         text: "Свака кућа треба да има овај речник. То је основ наше писмености."
     }
 ];
+let selectedEditBookId = STUDENT1_BOOKS[0].id;
+let selectedDeleteBookId = null;
 
 document.addEventListener("DOMContentLoaded", () => {
+    initStudent1Books();
+});
+
+async function initStudent1Books() {
+    addDeleteDialog();
+    currentBooks = await getBooksFromSource();
     renderBookCatalog();
     renderBookAdminTable();
     setupBookForms();
     setupBookDetails();
     renderProfileReviews();
-    addDeleteDialog();
-});
+    updateProfileSummary();
+}
 
 function loadBooks() {
-    // DZ2 zahteva dinamičko učitavanje. Ovde je izdvojeno kao adapter koji se kasnije menja Firebase pozivom.
-    return STUDENT1_BOOKS;
+    return currentBooks;
+}
+
+async function getBooksFromSource() {
+    const firebaseUrl = window.STUDENT1_FIREBASE_URL;
+
+    if (!firebaseUrl) {
+        return [...STUDENT1_BOOKS];
+    }
+
+    try {
+        const response = await fetch(firebaseUrl);
+
+        if (!response.ok) {
+            throw new Error("Firebase response failed");
+        }
+
+        const data = await response.json();
+        const firebaseBooks = normalizeFirebaseBooks(data);
+
+        return firebaseBooks.length > 0 ? firebaseBooks : [...STUDENT1_BOOKS];
+    } catch (error) {
+        return [...STUDENT1_BOOKS];
+    }
+}
+
+function normalizeFirebaseBooks(data) {
+    if (!data) {
+        return [];
+    }
+
+    return Object.entries(data).map(([id, book], index) => ({
+        id,
+        numericId: Number(book.numericId || book.id || index + 1),
+        title: book.title || book.naziv || "",
+        authorName: book.authorName || book.autor || "Непознат аутор",
+        authorUrl: book.authorUrl || "#",
+        image: book.image || book.slika || "images/na-drini-cuprija.jpg",
+        detailsUrl: book.detailsUrl || "#",
+        description: book.description || book.opis || "",
+        genre: book.genre || book.zanr || "",
+        format: book.format || "",
+        price: Number(book.price || book.cena || 0),
+        pages: Number(book.pages || book.brojStrana || 0),
+        authorId: Number(book.authorId || book.idAutora || 0),
+        isbn: book.isbn || ""
+    }));
 }
 
 function renderBookCatalog() {
@@ -118,7 +172,9 @@ function renderBookCatalog() {
         return;
     }
 
-    grid.innerHTML = loadBooks().map((book) => `
+    const books = loadBooks();
+
+    grid.innerHTML = books.length > 0 ? books.map((book) => `
         <article class="card book-card">
             <h3><a href="${book.detailsUrl}" class="plain-link">${book.title}</a></h3>
             <p><b>Аутор:</b> <a href="${book.authorUrl}" class="text-link">${book.authorName}</a></p>
@@ -126,7 +182,7 @@ function renderBookCatalog() {
             <p>${book.description}</p>
             <a href="${book.detailsUrl}" class="btn btn-primary">Детаљи</a>
         </article>
-    `).join("");
+    `).join("") : `<p class="empty-state">Нема књига за приказ.</p>`;
 }
 
 function renderBookAdminTable() {
@@ -136,7 +192,14 @@ function renderBookAdminTable() {
         return;
     }
 
-    tbody.innerHTML = loadBooks().map((book) => `
+    const books = loadBooks();
+
+    if (books.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="4">Нема књига за приказ.</td></tr>`;
+        return;
+    }
+
+    tbody.innerHTML = books.map((book) => `
         <tr>
             <td>${book.title}</td>
             <td>${book.genre}</td>
@@ -157,7 +220,7 @@ function renderBookAdminTable() {
         button.addEventListener("click", () => openDeleteDialog(button.dataset.deleteBook));
     });
 
-    fillEditBookForm(loadBooks()[0].id);
+    fillEditBookForm(books[0].id);
 }
 
 function setupBookForms() {
@@ -175,7 +238,15 @@ function setupBookForms() {
                 return;
             }
 
-            showBookFormMessage(form.dataset.bookForm, "Подаци су исправни. Упис у базу је планиран за финалну предају.", "success");
+            if (form.dataset.bookForm === "add") {
+                addBookLocally(data);
+                form.reset();
+                showBookFormMessage("add", "Књига је додата у локални приказ.", "success");
+                return;
+            }
+
+            updateBookLocally(data);
+            showBookFormMessage("edit", "Измене су приказане локално. Упис у базу је планиран за финалну предају.", "success");
         });
     });
 }
@@ -190,6 +261,10 @@ function validateBook(data) {
 
     if (!data.description || data.description.trim().length < 10) {
         errors.description = "Опис мора имати најмање 10 карактера.";
+    }
+
+    if (!/^(https?:\/\/|images\/).+\.(jpg|jpeg|png|webp)$/i.test(data.image || "")) {
+        errors.image = "Унеси URL слике или путању из images/ фолдера.";
     }
 
     if (!data.genre || data.genre.trim().length < 2) {
@@ -219,6 +294,56 @@ function validateBook(data) {
     return errors;
 }
 
+function addBookLocally(data) {
+    const id = `book-${Date.now()}`;
+
+    currentBooks.push({
+        id,
+        numericId: currentBooks.length + 100,
+        title: data.title.trim(),
+        authorName: `Аутор ID: ${data.authorId}`,
+        authorUrl: "#",
+        image: data.image.trim(),
+        detailsUrl: "admin-books.html",
+        description: data.description.trim(),
+        genre: data.genre.trim(),
+        format: data.format.trim(),
+        price: Number(data.price),
+        pages: Number(data.pages),
+        authorId: Number(data.authorId),
+        isbn: data.isbn.trim()
+    });
+
+    renderBookCatalog();
+    renderBookAdminTable();
+    updateProfileSummary();
+}
+
+function updateBookLocally(data) {
+    currentBooks = currentBooks.map((book) => {
+        if (book.id !== selectedEditBookId) {
+            return book;
+        }
+
+        return {
+            ...book,
+            title: data.title.trim(),
+            image: data.image.trim(),
+            description: data.description.trim(),
+            genre: data.genre.trim(),
+            format: data.format.trim(),
+            price: Number(data.price),
+            pages: Number(data.pages),
+            authorId: Number(data.authorId),
+            isbn: data.isbn.trim()
+        };
+    });
+
+    renderBookCatalog();
+    renderBookAdminTable();
+    updateProfileSummary();
+}
+
 function fillEditBookForm(bookId) {
     const form = document.querySelector('[data-book-form="edit"]');
     const book = loadBooks().find((item) => item.id === bookId);
@@ -227,8 +352,10 @@ function fillEditBookForm(bookId) {
         return;
     }
 
+    selectedEditBookId = book.id;
     form.elements.title.value = book.title;
     form.elements.description.value = book.description;
+    form.elements.image.value = book.image;
     form.elements.genre.value = book.genre;
     form.elements.format.value = book.format;
     form.elements.price.value = book.price;
@@ -258,16 +385,33 @@ function addDeleteDialog() {
     `);
 
     document.querySelector("[data-cancel-delete-book]").addEventListener("click", closeDeleteDialog);
-    document.querySelector("[data-confirm-delete-book]").addEventListener("click", closeDeleteDialog);
+    document.querySelector("[data-confirm-delete-book]").addEventListener("click", deleteSelectedBook);
 }
 
 function openDeleteDialog(bookId) {
     const dialog = document.querySelector("#book-delete-dialog");
     const book = loadBooks().find((item) => item.id === bookId);
 
+    selectedDeleteBookId = bookId;
     dialog.querySelector("[data-delete-book-text]").textContent = `Да ли желите да обришете књигу "${book.title}"?`;
     dialog.classList.add("is-open");
     dialog.setAttribute("aria-hidden", "false");
+}
+
+function deleteSelectedBook() {
+    if (!selectedDeleteBookId) {
+        closeDeleteDialog();
+        return;
+    }
+
+    currentBooks = currentBooks.filter((book) => book.id !== selectedDeleteBookId);
+    student1Reviews = student1Reviews.filter((review) => review.bookId !== selectedDeleteBookId);
+    selectedDeleteBookId = null;
+    renderBookCatalog();
+    renderBookAdminTable();
+    renderProfileReviews();
+    updateProfileSummary();
+    closeDeleteDialog();
 }
 
 function closeDeleteDialog() {
@@ -345,7 +489,7 @@ function renderReviewsForBook(bookId) {
 
     const reviews = student1Reviews.filter((review) => review.bookId === bookId);
 
-    list.innerHTML = reviews.map(renderReviewItem).join("");
+    list.innerHTML = reviews.length > 0 ? reviews.map(renderReviewItem).join("") : `<p class="empty-state">Нема рецензија за ову књигу.</p>`;
 }
 
 function renderProfileReviews() {
@@ -356,6 +500,11 @@ function renderProfileReviews() {
     }
 
     const currentUserReviews = student1Reviews.filter((review) => review.userId === 300);
+
+    if (currentUserReviews.length === 0) {
+        list.innerHTML = `<article class="card activity-card"><p>Корисник још нема рецензије.</p></article>`;
+        return;
+    }
 
     list.innerHTML = currentUserReviews.map((review) => {
         const book = loadBooks().find((item) => item.id === review.bookId);
@@ -368,6 +517,19 @@ function renderProfileReviews() {
             </article>
         `;
     }).join("");
+}
+
+function updateProfileSummary() {
+    const reviewCount = document.querySelector("[data-profile-review-count]");
+    const bookCount = document.querySelector("[data-profile-book-count]");
+
+    if (reviewCount) {
+        reviewCount.textContent = student1Reviews.filter((review) => review.userId === 300).length;
+    }
+
+    if (bookCount) {
+        bookCount.textContent = loadBooks().length;
+    }
 }
 
 function renderReviewItem(review) {

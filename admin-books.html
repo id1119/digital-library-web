@@ -36,6 +36,11 @@
                         <textarea id="book-description" name="description" rows="3" placeholder="Кратак опис књиге"></textarea>
                         <small class="field-error" data-error-for="description"></small>
                     </div>
+                    <div class="form-group">
+                        <label for="book-image">Слика:</label>
+                        <input type="text" id="book-image" name="image" placeholder="images/naziv-slike.jpg">
+                        <small class="field-error" data-error-for="image"></small>
+                    </div>
                     <div class="form-row">
                         <div class="form-group">
                             <label for="book-genre">Жанр:</label>
@@ -89,6 +94,11 @@
                         <label for="edit-description">Опис:</label>
                         <textarea id="edit-description" name="description" rows="3"></textarea>
                         <small class="field-error" data-error-for="description"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="edit-image">Слика:</label>
+                        <input type="text" id="edit-image" name="image">
+                        <small class="field-error" data-error-for="image"></small>
                     </div>
                     <div class="form-row">
                         <div class="form-group">
@@ -149,6 +159,7 @@
         <p>Заједница Читалаца — Пројекат из веб дизајна 2026</p>
     </footer>
     <script src="js/shared.js"></script>
+    <script src="js/firebase-config.js"></script>
     <script src="js/student1-books.js"></script>
 </body>
 </html>

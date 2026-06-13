@@ -1,0 +1,1 @@
+window.STUDENT1_FIREBASE_URL = "";
