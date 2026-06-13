@@ -271,6 +271,10 @@ input, textarea, select {
 .profile-subtitle {
     color: #6d5a53;
 }
+.authors-intro,
+.author-meta {
+    color: #6d5a53;
+}
 .profile-badge {
     padding: 0.4rem 0.75rem;
     border-radius: 999px;
@@ -340,6 +344,35 @@ input, textarea, select {
 .rating-stars {
     color: var(--accent-color);
     letter-spacing: 0;
+}
+.authors-intro {
+    max-width: 720px;
+    margin-bottom: 1.5rem;
+}
+.authors-grid {
+    align-items: stretch;
+}
+.author-card {
+    min-height: auto;
+}
+.author-img {
+    width: 110px;
+    height: 110px;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    background-color: var(--gray-light);
+    overflow: hidden;
+}
+.author-img img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+.author-meta {
+    margin-top: -0.5rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
 }
 @media (max-width: 768px) {
     header {

@@ -5,25 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Заједница Читалаца - Аутори</title>
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        .author-img {
-            width: 100px;
-            height: 100px;
-            background-color: var(--gray-light);
-            border-radius: 50%;
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-        }
-        .author-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -40,34 +21,41 @@
     </header>
     <main class="container">
         <h1>Аутори</h1>
-        <div class="grid">
-            <div class="card" style="text-align: center; display: flex; flex-direction: column; align-items: center;">
+
+        <section class="authors-intro">
+            <p>Преглед аутора из каталога са основним информацијама и пречицом до детаљне странице.</p>
+        </section>
+
+        <div class="grid authors-grid">
+            <article class="card author-card">
                 <div class="author-img">
                     <img src="images/ivo-andric.jpg" alt="Иво Андрић">
                 </div>
                 <h3>Иво Андрић</h3>
+                <p class="author-meta">Класика | Историјски роман</p>
                 <p>Српски и југословенски писац, добитник Нобелове награде. Најпознатији је по роману На Дрини ћуприја.</p>
-                <br>
                 <a href="author-details-andric.html" class="btn btn-primary">Детаљи</a>
-            </div>
-            <div class="card" style="text-align: center; display: flex; flex-direction: column; align-items: center;">
+            </article>
+
+            <article class="card author-card">
                 <div class="author-img">
                     <img src="images/gabor-mate.jpg" alt="Габор Мате">
                 </div>
                 <h3>Габор Мате</h3>
+                <p class="author-meta">Психологија | Популарна наука</p>
                 <p>Канадски лекар и писац, познат по темама трауме, стреса, зависности и емоционалног развоја.</p>
-                <br>
                 <a href="author-details-mate.html" class="btn btn-primary">Детаљи</a>
-            </div>
-            <div class="card" style="text-align: center; display: flex; flex-direction: column; align-items: center;">
+            </article>
+
+            <article class="card author-card">
                 <div class="author-img">
                     <img src="images/vuk-karadzic.jpg" alt="Вук Караџић">
                 </div>
                 <h3>Вук Караџић</h3>
+                <p class="author-meta">Филологија | Народна књижевност</p>
                 <p>Српски реформатор језика и азбуке, познат по правилу „пиши као што говориш, читај као што је написано“.</p>
-                <br>
                 <a href="author-details-vuk.html" class="btn btn-primary">Детаљи</a>
-            </div>
+            </article>
         </div>
     </main>
     <footer>
