@@ -50,6 +50,7 @@ const STUDENT1_BOOKS = [
 ];
 
 let currentBooks = [...STUDENT1_BOOKS];
+let currentAuthors = {};
 let student1Reviews = [
     {
         id: "r0",
@@ -106,7 +107,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 async function initStudent1Books() {
     addDeleteDialog();
-    currentBooks = await getBooksFromSource();
+    const database = await getDatabaseFromSource();
+
+    currentBooks = database.books;
+    currentAuthors = database.authors;
+    student1Reviews = database.reviews;
     renderBookCatalog();
     renderBookAdminTable();
     setupBookForms();
@@ -119,50 +124,148 @@ function loadBooks() {
     return currentBooks;
 }
 
-async function getBooksFromSource() {
-    const firebaseUrl = window.STUDENT1_FIREBASE_URL;
+async function getDatabaseFromSource() {
+    const databaseUrl = window.STUDENT1_FIREBASE_URL || window.STUDENT1_DATABASE_URL;
 
-    if (!firebaseUrl) {
-        return [...STUDENT1_BOOKS];
+    if (!databaseUrl) {
+        return getFallbackDatabase();
     }
 
     try {
-        const response = await fetch(firebaseUrl);
+        const response = await fetch(databaseUrl);
 
         if (!response.ok) {
-            throw new Error("Firebase response failed");
+            throw new Error("Database response failed");
         }
 
         const data = await response.json();
-        const firebaseBooks = normalizeFirebaseBooks(data);
+        const database = normalizeDatabase(data);
 
-        return firebaseBooks.length > 0 ? firebaseBooks : [...STUDENT1_BOOKS];
+        return database.books.length > 0 ? database : getFallbackDatabase();
     } catch (error) {
-        return [...STUDENT1_BOOKS];
+        return getFallbackDatabase();
     }
 }
 
-function normalizeFirebaseBooks(data) {
+function getFallbackDatabase() {
+    return {
+        books: [...STUDENT1_BOOKS],
+        authors: {},
+        reviews: [...student1Reviews]
+    };
+}
+
+function normalizeDatabase(data) {
+    if (!data || !data.knjige) {
+        return getFallbackDatabase();
+    }
+
+    const authors = data.autori || {};
+    const books = normalizeBooks(data.knjige, authors);
+    const reviews = normalizeReviews(data.recenzije || {}, books, data.korisnici || {});
+
+    return { books, authors, reviews };
+}
+
+function normalizeBooks(data, authors) {
     if (!data) {
         return [];
     }
 
     return Object.entries(data).map(([id, book], index) => ({
         id,
-        numericId: Number(book.numericId || book.id || index + 1),
+        numericId: id,
         title: book.title || book.naziv || "",
-        authorName: book.authorName || book.autor || "Непознат аутор",
-        authorUrl: book.authorUrl || "#",
-        image: book.image || book.slika || "images/na-drini-cuprija.jpg",
-        detailsUrl: book.detailsUrl || "#",
+        authorName: getAuthorName(authors, book.idAutora),
+        authorUrl: getAuthorUrl(book.idAutora),
+        image: getFirstImage(book.slike || book.image || book.slika),
+        detailsUrl: getBookDetailsUrl(id, index),
         description: book.description || book.opis || "",
         genre: book.genre || book.zanr || "",
         format: book.format || "",
         price: Number(book.price || book.cena || 0),
         pages: Number(book.pages || book.brojStrana || 0),
-        authorId: Number(book.authorId || book.idAutora || 0),
+        authorId: book.authorId || book.idAutora || "",
         isbn: book.isbn || ""
     }));
+}
+
+function normalizeReviews(data, books, users) {
+    const knownBookIds = new Set(books.map((book) => book.id));
+
+    return Object.entries(data)
+        .filter(([, review]) => knownBookIds.has(review.idKnjige))
+        .map(([id, review]) => ({
+            id,
+            bookId: review.idKnjige,
+            bookNumericId: review.idKnjige,
+            userId: review.idKorisnika,
+            username: getUserName(users, review.idKorisnika),
+            date: formatDate(review.datum),
+            text: review.tekst || ""
+        }));
+}
+
+function getFirstImage(images) {
+    if (Array.isArray(images) && images.length > 0) {
+        return images[0];
+    }
+
+    return typeof images === "string" && images ? images : "images/na-drini-cuprija.jpg";
+}
+
+function getAuthorName(authors, authorId) {
+    const author = authors[authorId];
+
+    if (!author) {
+        return "Непознат аутор";
+    }
+
+    return `${author.ime} ${author.prezime}`.trim();
+}
+
+function getAuthorUrl(authorId) {
+    const knownPages = {
+        aut001: "author-details-andric.html",
+        aut002: "author-details-mate.html",
+        aut003: "author-details-vuk.html"
+    };
+
+    return knownPages[authorId] || "authors.html";
+}
+
+function getBookDetailsUrl(bookId, index) {
+    const knownPages = {
+        knj000: "book-details-cuprija.html",
+        knj001: "book-details-umovi.html",
+        knj002: "book-details-rijecnik.html"
+    };
+
+    if (knownPages[bookId]) {
+        return knownPages[bookId];
+    }
+
+    return index % 3 === 0 ? "book-details-cuprija.html" : index % 3 === 1 ? "book-details-umovi.html" : "book-details-rijecnik.html";
+}
+
+function getUserName(users, userId) {
+    const user = users[userId];
+
+    if (!user) {
+        return userId;
+    }
+
+    return `${user.ime} ${user.prezime}`.trim();
+}
+
+function formatDate(date) {
+    const parsedDate = new Date(date);
+
+    if (!date || Number.isNaN(parsedDate.getTime())) {
+        return date || "";
+    }
+
+    return parsedDate.toLocaleDateString("sr-RS");
 }
 
 function renderBookCatalog() {
@@ -283,8 +386,8 @@ function validateBook(data) {
         errors.pages = "Број страна мора бити позитиван број.";
     }
 
-    if (!Number(data.authorId) || Number(data.authorId) <= 0) {
-        errors.authorId = "ID аутора мора бити позитиван број.";
+    if (!data.authorId || data.authorId.trim().length < 1) {
+        errors.authorId = "ID аутора је обавезан.";
     }
 
     if (!/^(978|979)\d{10}$/.test(isbn)) {
@@ -301,8 +404,8 @@ function addBookLocally(data) {
         id,
         numericId: currentBooks.length + 100,
         title: data.title.trim(),
-        authorName: `Аутор ID: ${data.authorId}`,
-        authorUrl: "#",
+        authorName: getAuthorName(currentAuthors, data.authorId.trim()),
+        authorUrl: getAuthorUrl(data.authorId.trim()),
         image: data.image.trim(),
         detailsUrl: "admin-books.html",
         description: data.description.trim(),
@@ -310,7 +413,7 @@ function addBookLocally(data) {
         format: data.format.trim(),
         price: Number(data.price),
         pages: Number(data.pages),
-        authorId: Number(data.authorId),
+        authorId: data.authorId.trim(),
         isbn: data.isbn.trim()
     });
 
@@ -334,7 +437,7 @@ function updateBookLocally(data) {
             format: data.format.trim(),
             price: Number(data.price),
             pages: Number(data.pages),
-            authorId: Number(data.authorId),
+            authorId: data.authorId.trim(),
             isbn: data.isbn.trim()
         };
     });
@@ -454,7 +557,7 @@ function setupBookDetails() {
             id: `r-${Date.now()}`,
             bookId: book.id,
             bookNumericId: book.numericId,
-            userId: 300,
+            userId: "kor001",
             username: data.username.trim(),
             date: new Date().toLocaleDateString("sr-RS"),
             text: data.comment.trim()
@@ -499,7 +602,7 @@ function renderProfileReviews() {
         return;
     }
 
-    const currentUserReviews = student1Reviews.filter((review) => review.userId === 300);
+    const currentUserReviews = student1Reviews.filter((review) => review.userId === "kor001");
 
     if (currentUserReviews.length === 0) {
         list.innerHTML = `<article class="card activity-card"><p>Корисник још нема рецензије.</p></article>`;
@@ -524,7 +627,7 @@ function updateProfileSummary() {
     const bookCount = document.querySelector("[data-profile-book-count]");
 
     if (reviewCount) {
-        reviewCount.textContent = student1Reviews.filter((review) => review.userId === 300).length;
+        reviewCount.textContent = student1Reviews.filter((review) => review.userId === "kor001").length;
     }
 
     if (bookCount) {

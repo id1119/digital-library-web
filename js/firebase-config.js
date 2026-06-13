@@ -1,1 +1,2 @@
+window.STUDENT1_DATABASE_URL = "data2026.json";
 window.STUDENT1_FIREBASE_URL = "";
