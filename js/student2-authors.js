@@ -1,4 +1,3 @@
-const DATABASE_URL = "data2026.json";
 const DEFAULT_USER_ID = "kor001";
 
 let databasePromise;
@@ -6,15 +5,61 @@ let selectedAuthorId = null;
 let localRatings = [];
 
 document.addEventListener("DOMContentLoaded", () => {
+    setupStudent2Navigation();
     renderAuthorsPage();
     setupAdminAuthorsPage();
     renderAuthorDetailsPage();
     renderProfileRatings();
 });
 
+function setupStudent2Navigation() {
+    const nav = document.querySelector(".student2-page nav.container");
+    const links = nav?.querySelector(".nav-links");
+
+    if (!nav || !links || nav.querySelector("[data-student2-menu]")) {
+        return;
+    }
+
+    const menuButton = document.createElement("button");
+    menuButton.type = "button";
+    menuButton.className = "student2-menu-button";
+    menuButton.dataset.student2Menu = "";
+    menuButton.setAttribute("aria-expanded", "false");
+    menuButton.setAttribute("aria-controls", "student2-navigation");
+    menuButton.textContent = "Мени";
+
+    links.id = "student2-navigation";
+    nav.insertBefore(menuButton, links);
+
+    menuButton.addEventListener("click", () => {
+        const isOpen = nav.classList.toggle("menu-open");
+
+        menuButton.setAttribute("aria-expanded", String(isOpen));
+        menuButton.textContent = isOpen ? "Затвори" : "Мени";
+    });
+
+    links.addEventListener("click", (event) => {
+        if (event.target.matches("a")) {
+            closeStudent2Navigation(nav, menuButton);
+        }
+    });
+
+    window.addEventListener("resize", () => {
+        if (window.innerWidth > 720) {
+            closeStudent2Navigation(nav, menuButton);
+        }
+    });
+}
+
+function closeStudent2Navigation(nav, menuButton) {
+    nav.classList.remove("menu-open");
+    menuButton.setAttribute("aria-expanded", "false");
+    menuButton.textContent = "Мени";
+}
+
 async function loadDatabase() {
     if (!databasePromise) {
-        databasePromise = fetch(DATABASE_URL).then((response) => {
+        databasePromise = fetch(firebaseDatabaseUrl()).then((response) => {
             if (!response.ok) {
                 throw new Error("База података није доступна.");
             }
@@ -297,8 +342,29 @@ function addAuthorDeleteDialog() {
         </div>
     `);
 
-    document.querySelector("[data-confirm-author-delete]").addEventListener("click", closeAuthorDeleteDialog);
+    const dialog = document.querySelector("#author-delete-dialog");
+
+    document.querySelector("[data-confirm-author-delete]").addEventListener("click", () => {
+        closeAuthorDeleteDialog();
+        showStatus(
+            "[data-admin-authors-status]",
+            `Брисање аутора ${selectedAuthorId} је потврђено. Упис у Firebase није обавезан за ДЗ2.`,
+            "success"
+        );
+    });
     document.querySelector("[data-cancel-author-delete]").addEventListener("click", closeAuthorDeleteDialog);
+
+    dialog.addEventListener("click", (event) => {
+        if (event.target === dialog) {
+            closeAuthorDeleteDialog();
+        }
+    });
+
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && dialog.classList.contains("is-open")) {
+            closeAuthorDeleteDialog();
+        }
+    });
 }
 
 function openAuthorDeleteDialog(authorId, author) {
