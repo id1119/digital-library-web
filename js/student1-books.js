@@ -234,18 +234,8 @@ function getAuthorUrl(authorId) {
     return knownPages[authorId] || "authors.html";
 }
 
-function getBookDetailsUrl(bookId, index) {
-    const knownPages = {
-        knj000: "book-details-cuprija.html",
-        knj001: "book-details-umovi.html",
-        knj002: "book-details-rijecnik.html"
-    };
-
-    if (knownPages[bookId]) {
-        return knownPages[bookId];
-    }
-
-    return index % 3 === 0 ? "book-details-cuprija.html" : index % 3 === 1 ? "book-details-umovi.html" : "book-details-rijecnik.html";
+function getBookDetailsUrl(bookId) {
+    return `book-details-cuprija.html?id=${encodeURIComponent(bookId)}`;
 }
 
 function getUserName(users, userId) {
@@ -532,7 +522,16 @@ function setupBookDetails() {
         return;
     }
 
-    renderReviewsForBook(page.dataset.bookDetail);
+    const bookId = getCurrentBookId(page);
+    const book = loadBooks().find((item) => item.id === bookId);
+
+    if (!book) {
+        renderMissingBook();
+        return;
+    }
+
+    renderBookDetails(book);
+    renderReviewsForBook(book.id);
 
     if (!form) {
         return;
@@ -551,8 +550,6 @@ function setupBookDetails() {
             return;
         }
 
-        const book = loadBooks().find((item) => item.id === page.dataset.bookDetail);
-
         student1Reviews.unshift({
             id: `r-${Date.now()}`,
             bookId: book.id,
@@ -567,6 +564,59 @@ function setupBookDetails() {
         renderReviewsForBook(book.id);
         showReviewMessage("Рецензија је додата у локални приказ.", "success");
     });
+}
+
+function getCurrentBookId(page) {
+    const params = new URLSearchParams(window.location.search);
+
+    return params.get("id") || page.dataset.bookDetail;
+}
+
+function renderBookDetails(book) {
+    const title = document.querySelector("title");
+    const cover = document.querySelector(".book-detail-cover img");
+    const info = document.querySelector(".book-detail-info");
+
+    if (title) {
+        title.textContent = `Заједница Читалаца - ${book.title}`;
+    }
+
+    if (cover) {
+        cover.src = book.image;
+        cover.alt = book.title;
+    }
+
+    if (info) {
+        info.innerHTML = `
+            <h2>${book.title}</h2>
+            <p><strong>ID књиге:</strong> ${book.id}</p>
+            <p><strong>Аутор ID:</strong> ${book.authorId}</p>
+            <p><strong>Аутор:</strong> <a href="${book.authorUrl}" class="text-link">${book.authorName}</a></p>
+            <p><strong>Жанр:</strong> ${book.genre}</p>
+            <p><strong>Формат:</strong> ${book.format}</p>
+            <p><strong>Број страна:</strong> ${book.pages}</p>
+            <p><strong>Цена:</strong> ${book.price} РСД</p>
+            <p><strong>ISBN:</strong> ${book.isbn}</p>
+            <br>
+            <p><strong>Опис:</strong> ${book.description}</p>
+        `;
+    }
+}
+
+function renderMissingBook() {
+    const info = document.querySelector(".book-detail-info");
+    const list = document.querySelector("[data-reviews-list]");
+
+    if (info) {
+        info.innerHTML = `
+            <h2>Књига није пронађена</h2>
+            <p>Провери да ли је ID књиге исправан.</p>
+        `;
+    }
+
+    if (list) {
+        list.innerHTML = `<p class="empty-state">Нема рецензија јер књига није пронађена.</p>`;
+    }
 }
 
 function validateReview(data) {
