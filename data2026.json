@@ -1,0 +1,3824 @@
+{
+  "autori": {
+    "aut001": {
+      "ime": "Јохан Волфганг фон",
+      "prezime": "Гете",
+      "biografija": "Јохан Волфганг фон Гете био је немачки писац, политичар, песник, научник и филозоф, један од најзначајнијих представника светске књижевности. Његово најпознатије дело, трагедија „Фауст”, стварано је готово шест деценија и сматра се ремек-делом које је обележило епоху предромантизма и романтизма. Оставио је неизбрисив траг и у теорији боја и биологији.",
+      "slike": [
+        "https://images.gr-assets.com/authors/1532614109p8/285217.jpg",
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Goethe_%28Stieler_1828%29.jpg?width=400"
+      ],
+      "datumRodjenja": "1749-08-28",
+      "status": "Преминуо",
+      "brojOsvojenihNagrada": 5,
+      "brojProdatihPrimeraka": 50000000,
+      "kontaktTelefonMenadzera": "+381 64 111-2222"
+    },
+    "aut002": {
+      "ime": "Никола",
+      "prezime": "Тесла",
+      "biografija": "Никола Тесла је био један од најпознатијих српских и светских проналазача и научника у области физике, електротехнике и радиотехнике. Најзначајнији је по свом доприносу у пројектовању система наизменичне струје, а његови патенти и теоријски рад чине основу модерне електричне мреже. Иако превасходно научник, његова размишљања о енергији и будућности човечанства имају изузетну филозофску и књижевну вредност.",
+      "slike": [
+        "https://commons.wikimedia.org/wiki/Special:FilePath/N.Tesla.JPG?width=400",
+        "https://upload.wikimedia.org/wikipedia/commons/7/79/Tesla_circa_1890.jpeg",
+        "https://upload.wikimedia.org/wikipedia/commons/d/d4/Nikola_Tesla_%281856-1943%29_early_portrait.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/e/e9/Nikola_Tesla%2C_with_his_equipment_EDIT.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/d/d1/Nikola_tesla_color.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/3/33/Nikola_Tesla_by_Sarony_c1885.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/7/7c/Nikola_Tesla_on_Time_Magazine_1931.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/6/6d/Nikola_Tesla_1933.png",
+        "https://upload.wikimedia.org/wikipedia/commons/d/d8/Nikola_Tesla_in_laboratorul_sau.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/d/dc/Nikola_Tesla_by_Sarony_c1898.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/3/35/Nikola_Tesla_by_Sarony_c1898.svg",
+        "https://upload.wikimedia.org/wikipedia/commons/a/ab/Nikola_Tesla_holding_bulb.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/5/50/Tesla-bulb.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/c/c5/Nikola_Tesla_-_Laslovarga_%282%29.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/4/40/Nikola_Tesla_in_his_laboratory_in_New_York_01.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/f/f2/Nikola_Tesla_Statue.jpg"
+      ],
+      "datumRodjenja": "1856-07-10",
+      "status": "Преминуо",
+      "brojOsvojenihNagrada": 7,
+      "brojProdatihPrimeraka": 10000000,
+      "kontaktTelefonMenadzera": "+381 64 222-3333"
+    },
+    "aut003": {
+      "ime": "Карл",
+      "prezime": "Попер",
+      "biografija": "Карл Попер је био аустријско-британски филозоф и професор, који се данас сматра једним од највећих филозофа науке 20. века. Познат је по одбацивању класичног индуктивистичког погледа на научну методу у корист емпиријске фалсификабилности (оповргљивости). Његова друштвено-политичка дела, попут књиге „Отворено друштво и његови непријатељи”, снажно су утицала на развој модерне демократске мисли.",
+      "slike": [
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Karl_Popper.jpg?width=400",
+        "https://upload.wikimedia.org/wikipedia/commons/8/82/Photo_of_Karl_Popper.jpg"
+      ],
+      "datumRodjenja": "1902-07-28",
+      "status": "Преминуо",
+      "brojOsvojenihNagrada": 4,
+      "brojProdatihPrimeraka": 5000000,
+      "kontaktTelefonMenadzera": "+381 64 333-4444"
+    },
+    "aut004": {
+      "ime": "Дејвид",
+      "prezime": "Дојч",
+      "biografija": "Дејвид Дојч је савремени британски физичар на Универзитету у Оксфорду и један од пионира у области квантног рачунарства. У својим капиталним делима, попут књига „Тканина стварности” и „Почетак бесконачности”, он маестрално повезује квантну теорију, теорију еволуције, епистемологију и теорију рачунања у јединствен, оптимистичан поглед на свет и људски напредак.",
+      "slike": [
+        "https://images.gr-assets.com/authors/1346933648p8/103190.jpg",
+        "https://commons.wikimedia.org/wiki/Special:FilePath/David_Deutsch.jpg?width=400"
+      ],
+      "datumRodjenja": "1953-05-18",
+      "status": "Активан",
+      "brojOsvojenihNagrada": 3,
+      "brojProdatihPrimeraka": 3000000,
+      "kontaktTelefonMenadzera": "+381 64 444-5555"
+    },
+    "aut005": {
+      "ime": "Џорџ",
+      "prezime": "Орвел",
+      "biografija": "Џорџ Орвел, чије је право име било Ерик Артур Блер, био је енглески писац, есејиста, новинар и критичар. Његово стваралаштво одликује се оштром друштвеном критиком и бескомпромисним противљењем тоталитаризму у свим његовим облицима. Највећу светску славу стекао је маестралним дистопијским романом „1984” и алегоријском новелом „Животињска фарма”, чији су мотиви постали део савремене поп културе и политичког речника.",
+      "slike": [
+        "https://commons.wikimedia.org/wiki/Special:FilePath/George_Orwell_press_photo.jpg?width=400",
+        "https://upload.wikimedia.org/wikipedia/commons/8/82/George_Orwell%2C_c._1940_%2841928180381%29.jpg",
+        "https://images.gr-assets.com/authors/1588856560p8/3706.jpg"
+      ],
+      "datumRodjenja": "1903-06-25",
+      "status": "Преминуо",
+      "brojOsvojenihNagrada": 2,
+      "brojProdatihPrimeraka": 50000000,
+      "kontaktTelefonMenadzera": "+381 64 555-6666"
+    },
+    "aut006": {
+      "ime": "Роџер",
+      "prezime": "Вилијамс",
+      "biografija": "Роџер Вилијамс је амерички писац научне фантастике, најпознатији по свом култном роману „Метаморфоза главног интелекта” (The Metamorphosis of Prime Intellect). Његово дело истражује дубоке филозофске и етичке импликације вештачке интелигенције која достиже технолошки сингуларитет и преузима контролу над универзумом.",
+      "slike": [
+        "https://images.gr-assets.com/authors/1467724662p8/14958993.jpg"
+      ],
+      "datumRodjenja": "1957-01-01",
+      "status": "Активан",
+      "brojOsvojenihNagrada": 1,
+      "brojProdatihPrimeraka": 500000,
+      "kontaktTelefonMenadzera": "+381 65 111-2222"
+    },
+    "aut007": {
+      "ime": "Тед",
+      "prezime": "Ћанг",
+      "biografija": "Тед Ћанг је један од најцењенијих савремених америчких писаца научне фантастике, познат по кратким причама и новелама које освајају најпрестижније награде у овом жанру. Његова збирка „Приче о твом животу и друге приче” послужила је као основа за познати филм „Долазак” (Arrival). Чанг се у својим делима бави комплексим темама попут детерминизма, слободне воље и природе језика.",
+      "slike": [
+        "https://images.gr-assets.com/authors/1399023404p8/130698.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/2/22/Chiang%2C_Ted_%28Villarrubia%29_%28cropped%29.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/8/8f/Chiang%2C_Ted_%28WFA%29.jpg"
+      ],
+      "datumRodjenja": "1967-01-01",
+      "status": "Активан",
+      "brojOsvojenihNagrada": 4,
+      "brojProdatihPrimeraka": 2000000,
+      "kontaktTelefonMenadzera": "+381 63 222-3333"
+    },
+    "aut008": {
+      "ime": "Ричард",
+      "prezime": "Фајнман",
+      "biografija": "Ричард Фајнман је био амерички теоријски физичар и добитник Нобелове награде за физику 1965. године за свој рад на квантној електродинамици. Осим по бриљантном научном уму, био је познат по изванредној способности да комплексна физичка питања објасни на једноставан, свима разумљив начин. Његова аутобиографска књига „Зар нисте шали, господине Фајнмане!” постала је светски бестселер.",
+      "slike": [
+        "https://upload.wikimedia.org/wikipedia/commons/0/06/Richard_Feynman_1959.png",
+        "https://upload.wikimedia.org/wikipedia/commons/f/fc/Richard_Feynman_1988.png",
+        "https://upload.wikimedia.org/wikipedia/commons/f/f9/Feynman-richard_p.jpg"
+      ],
+      "datumRodjenja": "1918-05-11",
+      "status": "Преминуо",
+      "brojOsvojenihNagrada": 5,
+      "brojProdatihPrimeraka": 10000000,
+      "kontaktTelefonMenadzera": "+381 61 333-4444"
+    },
+    "aut009": {
+      "ime": "Леонард",
+      "prezime": "Млодинов",
+      "biografija": "Леонард Млодинов је амерички теоријски физичар, сценариста и аутор популарних научних књига. Радио је на Институту Макс Планк и предаје на Калифорнијском технолошком институту (Caltech). Познат је по писању бестселера који приближавају науку широј публици, укључујући и књиге које је писао у коауторству са Стивеном Хокингом, као и сопствена хваљена дела попут „Еуклидовог прозора”.",
+      "slike": [
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Leonard_Mlodinow.jpg?width=400",
+        "https://images.gr-assets.com/authors/1305995091p8/1399.jpg"
+      ],
+      "datumRodjenja": "1954-01-01",
+      "status": "Активан",
+      "brojOsvojenihNagrada": 2,
+      "brojProdatihPrimeraka": 3000000,
+      "kontaktTelefonMenadzera": "+381 62 444-5555"
+    },
+    "aut010": {
+      "ime": "Волтер",
+      "prezime": "Ајзаксон",
+      "biografija": "Волтер Ајзаксон је истакнути амерички новинар, професор историје и писац, који је обављао функције извршног директора Института Аспен и уредника часописа Тајм. Светску славу стекао је пишући мајсторски истражене биографије неких од највећих умова у историји, међу којима су Алберт Ајнштајн, Бенџамин Френклин, Стив Џобс, Леонардо да Винчи и Илон Маск.",
+      "slike": [
+        "https://images.gr-assets.com/authors/1192222433p8/7111.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/7/78/Walter_Isaacson_VF_2012_Shankbone_2.JPG",
+        "https://upload.wikimedia.org/wikipedia/commons/0/0a/Walter_Isaacson_%2815183516282%29.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/b/b1/Walter_Isaacson_%2815183521052%29.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/3/3a/Walter_Isaacson_%2814997313438%29.jpg"
+      ],
+      "datumRodjenja": "1952-05-20",
+      "status": "Активан",
+      "brojOsvojenihNagrada": 2,
+      "brojProdatihPrimeraka": 20000000,
+      "kontaktTelefonMenadzera": "+381 66 555-6666"
+    },
+    "aut011": {
+      "ime": "Михаил",
+      "prezime": "Булгаков",
+      "biografija": "Михаил Афанасијевич Булгаков био је руски писац и драматург из прве половине 20. века. Најпознатији је по свом ремек-делу, роману „Мајстор и Маргарита”, који представља оштру сатиру совјетског друштва испреплетену са магичним реализмом и хришћанским мотивима. Овај роман се данас сматра једним од највећих књижевних остварења 20. века.",
+      "slike": [
+        "https://upload.wikimedia.org/wikipedia/commons/c/c1/%D0%9C%D0%B8%D1%85%D0%B0%D0%B8%D0%BB-%D0%91%D1%83%D0%BB%D0%B3%D0%B0%D0%BA%D0%BE%D0%B2.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/1/1b/Mikhail_Bulgakov%2C_1923.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/d/d1/Bulgakov_MA_1926.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/e/e0/Bulgakov1910s.jpg"
+      ],
+      "datumRodjenja": "1891-05-15",
+      "status": "Преминуо",
+      "brojOsvojenihNagrada": 1,
+      "brojProdatihPrimeraka": 30000000,
+      "kontaktTelefonMenadzera": "+381 64 111-0011"
+    },
+    "aut012": {
+      "ime": "Вилијам",
+      "prezime": "Гибсон",
+      "biografija": "Вилијам Гибсон је америчко-канадски писац научне фантастике и есејиста, широко познат као пионир научнофантастичног поджанра киберпанк (cyberpunk). Његов дебитантски роман „Неуромансер” из 1984. године револуционаризовао је жанр, освојивши три најпрестижније награде (Хуго, Небјула и Филип К. Дик) и популаризовао термин „сајберспејс”.",
+      "slike": [
+        "https://images.gr-assets.com/authors/1373826214p8/9226.jpg",
+        "https://images.gr-assets.com/photos/1282769296p8/147223.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/a/a4/William_Gibson_60th_birthday_portrait.jpg"
+      ],
+      "datumRodjenja": "1948-03-17",
+      "status": "Активан",
+      "brojOsvojenihNagrada": 3,
+      "brojProdatihPrimeraka": 15000000,
+      "kontaktTelefonMenadzera": "+381 65 222-0012"
+    },
+    "aut013": {
+      "ime": "Пол",
+      "prezime": "Фајерабенд",
+      "biografija": "Пол Фајерабенд био је аустријски филозоф науке, познат по свом провокативном и анархистичком приступу научној методи. У свом најзначајнијем делу „Против методе”, Фајерабенд тврди да не постоји јединствено правило нити универзална научна метода која би гарантовала напредак знања, супротстављајући се традиционалном догматизму у науци.",
+      "slike": [
+        "https://images.gr-assets.com/photos/1316778353p8/344361.jpg",
+        "https://images.gr-assets.com/authors/1443565224p8/85302.jpg"
+      ],
+      "datumRodjenja": "1924-01-13",
+      "status": "Преминуо",
+      "brojOsvojenihNagrada": 2,
+      "brojProdatihPrimeraka": 2000000,
+      "kontaktTelefonMenadzera": "+381 63 333-0013"
+    },
+    "aut014": {
+      "ime": "Ричард",
+      "prezime": "Докинс",
+      "biografija": "Ричард Докинс је истакнути британски еволуциони биолог, етолог и писац популарне науке. Светску славу стекао је 1976. године књигом „Себични ген”, у којој је популаризовао геноцентрични поглед на еволуцију и сковао термин „мем”. Познат је и по свом отвореном залагању за рационализам и научно објашњење света.",
+      "slike": [
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Richard_Dawkins.jpg?width=400",
+        "https://images.gr-assets.com/authors/1377030297p8/1194.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/a/a0/Richard_Dawkins_Cooper_Union_Shankbone.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/a/a7/Richard_dawkins_lecture.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/8/82/Dinner_with_Richard_Dawkins_and_CFI..._like_a_candle_in_the_dark.jpg"
+      ],
+      "datumRodjenja": "1941-03-26",
+      "status": "У пензији",
+      "brojOsvojenihNagrada": 6,
+      "brojProdatihPrimeraka": 10000000,
+      "kontaktTelefonMenadzera": "+381 62 444-0014"
+    },
+    "aut015": {
+      "ime": "Томас",
+      "prezime": "Кун",
+      "biografija": "Томас Кун био је амерички физичар, историчар и филозоф науке, чије је дело дубоко променило начин на који разумемо научни напредак. Његова капитална књига „Структура научних револуција” увела је концепт „парадигме” и „промене парадигме”, тврдећи да се наука не развија линеарно, већ кроз повремене радикалне револуције.",
+      "slike": [
+        "https://images.gr-assets.com/authors/1341864336p8/4735497.jpg",
+        "https://images.gr-assets.com/photos/1462240132p8/1429919.jpg"
+      ],
+      "datumRodjenja": "1922-07-18",
+      "status": "Преминуо",
+      "brojOsvojenihNagrada": 3,
+      "brojProdatihPrimeraka": 5000000,
+      "kontaktTelefonMenadzera": "+381 61 555-0015"
+    },
+    "aut016": {
+      "ime": "Исак",
+      "prezime": "Асимов",
+      "biografija": "Исак Асимов је био амерички писац и професор биохемије руског порекла. Један је од најзначајнијих и најплоднијих писаца научне фантастике у историји, најпознатији по свом серијалу „Задужбина” и причама о роботима у којима је формулисао чувена Три закона роботике. Његово стваралаштво извршило је огроман утицај на развој модерне технологије и књижевности.",
+      "slike": [
+        "https://images.gr-assets.com/authors/1341965730p8/16667.jpg"
+      ],
+      "datumRodjenja": "1920-01-02",
+      "status": "Преминуо",
+      "brojOsvojenihNagrada": 14,
+      "brojProdatihPrimeraka": 50000000,
+      "kontaktTelefonMenadzera": "+381 64 666-0016"
+    },
+    "aut017": {
+      "ime": "Вилијам",
+      "prezime": "Шекспир",
+      "biografija": "Вилијам Шекспир био је енглески песник, драматург и глумац, који се генерално сматра највећим писцем на енглеском језику и најзначајнијим светским драматургом. Његов опус, који укључује ремек-дела попут „Хамлета”, „Ромеа и Јулије” и „Магбета”, преведен је на све веће живе језике и изводи се чешће него дела било ког другог драмског писца у историји.",
+      "slike": [
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Shakespeare.jpg?width=400",
+        "https://upload.wikimedia.org/wikipedia/commons/f/fb/Cobbe_portrait_of_Shakespeare.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/3/36/Shakespeare_Droeshout_1623.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/8/82/William_Shakespeare_MET_DP860173.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/7/70/William_Shakespeare_MET_DP858182.jpg"
+      ],
+      "datumRodjenja": "1564-04-26",
+      "status": "Преминуо",
+      "brojOsvojenihNagrada": 5,
+      "brojProdatihPrimeraka": 1000000000,
+      "kontaktTelefonMenadzera": "+381 65 777-0017"
+    },
+    "aut018": {
+      "ime": "Михајло",
+      "prezime": "Пупин",
+      "biografija": "Михајло Идворски Пупин био је истакнути српско-амерички физичар, проналазач и професор на Универзитету Колумбија. Његов најзначајнији проналазак, познат као Пупинови калемови, омогућио је пренос телефонског сигнала на велике удаљености. Био је један од оснивача НАСА-е, а за своју аутобиографску књигу „Од пашњака до научењака” (From Immigrant to Inventor) награђен је престижном Пулицеровом наградом 1924. године.",
+      "slike": [
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Mihajlo_Pupin.jpg?width=400",
+        "https://upload.wikimedia.org/wikipedia/commons/f/f9/Mihajlo_Pupin_1903_by_Paja_Jovanovi%C4%87_%282%29.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/0/0a/Portrait_of_Michael_Idvorsky_Pupin_%281858-1935%29%2C_Physicist_%282551884992%29_%28deriv%29.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/9/9b/Mihajlo_Pupin_in_1916_cropped_from_a_larger_image.png"
+      ],
+      "datumRodjenja": "1858-10-09",
+      "status": "Преминуо",
+      "brojOsvojenihNagrada": 6,
+      "brojProdatihPrimeraka": 2000000,
+      "kontaktTelefonMenadzera": "+381 63 888-0018"
+    },
+    "aut019": {
+      "ime": "Милутин",
+      "prezime": "Миланковић",
+      "biografija": "Милутин Миланковић био је српски математичар, астроном, климатолог, геофизичар и грађевински инжењер. Светску славу стекао је својом теоријом ледених доба, познатом као Миланковићеви циклуси, у којој је математички објаснио како дугорочне промене у Земљиној орбити утичу на климу. Такође је дао значајан допринос реформи јулијанског календара.",
+      "slike": [
+        "https://upload.wikimedia.org/wikipedia/commons/8/89/Milutin_Milankovi%C4%87_2.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/7/72/Milutin_Milankovi%C4%87.jpg"
+      ],
+      "datumRodjenja": "1879-05-28",
+      "status": "Преминуо",
+      "brojOsvojenihNagrada": 4,
+      "brojProdatihPrimeraka": 1500000,
+      "kontaktTelefonMenadzera": "+381 62 999-0019"
+    },
+    "aut020": {
+      "ime": "Лудвиг",
+      "prezime": "Витгенштајн",
+      "biografija": "Лудвиг Витгенштајн био је аустријско-британски филозоф који је пресудно утицао на развој аналитичке филозофије, логике и филозофије језика у 20. веку. Његово прво велико дело, „Логичко-филозофски трактат”, покушало је да одреди границе смисленог језика, док је у каснијим делима, попут „Филозофских истраживања”, у потпуности променио свој приступ, уводећи концепт „језичких игара”.",
+      "slike": [
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Ludwig_Wittgenstein.jpg?width=400",
+        "https://images.gr-assets.com/authors/1615573835p8/7672.jpg"
+      ],
+      "datumRodjenja": "1889-04-26",
+      "status": "Преминуо",
+      "brojOsvojenihNagrada": 2,
+      "brojProdatihPrimeraka": 5000000,
+      "kontaktTelefonMenadzera": "+381 61 101-0020"
+    },
+    "aut021": {
+      "ime": "Фјодор",
+      "prezime": "Достојевски",
+      "biografija": "Фјодор Михајлович Достојевски био је један од највећих руских и светских писаца, чије дело дубоко истражује људску психологију у контексту политичких, друштвених и духовних превирања у Русији 19. века. Његови романи попут „Злочина и казне” и „Браће Карамазових” представљају темељ модерног психолошког романа и егзистенцијализма.",
+      "slike": [
+        "https://images.gr-assets.com/photos/1615656739p8/4003486.jpg",
+        "https://images.gr-assets.com/photos/1443974069p8/1326536.jpg",
+        "https://images.gr-assets.com/photos/1615656809p8/4003487.jpg",
+        "https://images.gr-assets.com/photos/1638747167p8/4091866.jpg",
+        "https://images.gr-assets.com/photos/1638747196p8/4091867.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/5/5b/Fyodor_Dostoyevsky_%281880%29.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/3/38/Fyodor_Dostoyevsky_%28Lorenkovich%2C_1878%29_%28cropped%29.jpg"
+      ],
+      "datumRodjenja": "1821-11-11",
+      "status": "Преминуо",
+      "brojOsvojenihNagrada": 4,
+      "brojProdatihPrimeraka": 100000000,
+      "kontaktTelefonMenadzera": "+381 64 202-0021"
+    },
+    "aut022": {
+      "ime": "Чарлс",
+      "prezime": "Мангер",
+      "biografija": "Чарлс Томас Мангер био је амерички инвеститор, пословни магнат и филантроп, најпознатији као дугогодишњи пословни партнер Ворена Бафета и потпредседник компаније Berkshire Hathaway. Поред инвестирања, Мангер је био познат по својој практичној животној филозофији, мултидисциплинарном приступу решавању проблема и концепту „менталних модела” који је детаљно описан у књизи „Сироти Чарлијев алманах”.",
+      "slike": [
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Charlie_Munger.jpg?width=400",
+        "https://upload.wikimedia.org/wikipedia/commons/b/bb/Charlie_Munger_2_%28cropped%29.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/5/56/Charlie_Munger_%28cropped%29.jpg"
+      ],
+      "datumRodjenja": "1924-01-01",
+      "status": "Преминуо",
+      "brojOsvojenihNagrada": 3,
+      "brojProdatihPrimeraka": 3000000,
+      "kontaktTelefonMenadzera": "+381 65 303-0022"
+    },
+    "aut023": {
+      "ime": "Борислав",
+      "prezime": "Пекић",
+      "biografija": "Борислав Пекић био је један од најзначајнијих српских и југословенских књижевника 20. века, романсијер, драмски писац и академик САНУ. Његов импозантни књижевни опус обухвата монументална дела попут „Златног руна”, „Беснила” и „Година које су појели скакавци”. Био је један од оснивача Демократске странке и бескомпромисни борац за демократију.",
+      "slike": [
+        "https://upload.wikimedia.org/wikipedia/commons/f/f7/21_-_borislav-pekic-pisac-akademik-1991.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/e/e5/25_-_B.Pekic.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/4/4a/19_-_Pekic-1991.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/0/0b/18b_-_Borislav_Pekic-Vladimir_Radojicic%289-3-1991%292.jpg",
+        "https://images.gr-assets.com/photos/1409437608p8/1049875.jpg",
+        "https://images.gr-assets.com/photos/1482922296p8/1793405.jpg",
+        "https://images.gr-assets.com/photos/1483564339p8/1797383.jpg"
+      ],
+      "datumRodjenja": "1930-02-04",
+      "status": "Преминуо",
+      "brojOsvojenihNagrada": 8,
+      "brojProdatihPrimeraka": 2000000,
+      "kontaktTelefonMenadzera": "+381 63 404-0023"
+    },
+    "aut024": {
+      "ime": "Петар II",
+      "prezime": "Петровић Његош",
+      "biografija": "Петар II Петровић Његош био је црногорски државни поглавар, владика и један од највећих песника српског језика и јужнословенске књижевности. Његово најславније дело, епска поема „Горски вијенац”, представља ремек-дело које синтетише народну мудрост, филозофска размишљања о слободи и борбу за национално ослобођење.",
+      "slike": [
+        "https://images.gr-assets.com/authors/1258401955p8/3035833.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/9/9c/Petar_I_Petrovi%C4%87_Njego%C5%A1%2C_litografija_Anastasa_Jovanovi%C4%87a_u_boji.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/b/b6/Petar_II_Petrovic-Njegos_%28cropped%29.jpg"
+      ],
+      "datumRodjenja": "1813-11-13",
+      "status": "Преминуо",
+      "brojOsvojenihNagrada": 2,
+      "brojProdatihPrimeraka": 5000000,
+      "kontaktTelefonMenadzera": "+381 62 505-0024"
+    },
+    "aut025": {
+      "ime": "Вук",
+      "prezime": "Стефановић Караџић",
+      "biografija": "Вук Стефановић Караџић био је српски филолог, реформатор српског језика, сакупљач народних умотворина и писац првог речника српског језика. Његова реформа правописа базирана на фонетском начелу „пиши као што говориш, а читај као што је написано” поставила је темеље модерног српског књижевног језика и културног идентитета.",
+      "slike": [
+        "https://upload.wikimedia.org/wikipedia/commons/4/41/VukKaradzic.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/6/6e/Uro%C5%A1_Kne%C5%BEevi%C4%87_-_Vuk_Stefanovi%C4%87_Karad%C5%BEi%C4%87.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/9/9c/J.B.Rotfmayer_-_Vuk_Stefanovi%C4%87_Karad%C5%BEi%C4%87.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/f/fb/Fotografija_Vuk_Karad%C5%BEi%C4%87.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/4/4c/Vuk_Karad%C5%BEi%C4%87%2C_Aksentije_Marodi%C4%87_%281863%29.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/0/0d/Vuk_Karad%C5%BEi%C4%87%2C_Kriehuber%2C_Zora.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/4/48/Vuk-karadzic.gif"
+      ],
+      "datumRodjenja": "1787-11-07",
+      "status": "Преминуо",
+      "brojOsvojenihNagrada": 3,
+      "brojProdatihPrimeraka": 10000000,
+      "kontaktTelefonMenadzera": "+381 61 606-0025"
+    },
+    "aut026": {
+      "ime": "Љу",
+      "prezime": "Цисин",
+      "biografija": "Љу Цисин је један од најпознатијих савремених кинеских писаца научне фантастике. Његово најпознатије дело, трилогија „Проблем три тела” (део серијала „Успомена на Земљину прошлост”), освојило је престижну награду Хуго и стекло огромну светску популарност. У својим романима Цисин вешто комбинује тврду научну фантастику са дубоким филозофским питањима о опстанку човечанства и контакту са ванземаљским цивилизацијама.",
+      "slike": [
+        "https://upload.wikimedia.org/wikipedia/commons/2/2a/Geek_Bar_Tor_authors_event_-_Cixin_Liu_%2818397919319%29.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/0/09/Cixin_Liu_at_Worldcon_75%2C_Helsinki%2C_before_the_Hugo_Awards.jpg"
+      ],
+      "datumRodjenja": "1963-06-23",
+      "status": "Активан",
+      "brojOsvojenihNagrada": 6,
+      "brojProdatihPrimeraka": 30000000,
+      "kontaktTelefonMenadzera": "+381 64 707-0026"
+    },
+    "aut027": {
+      "ime": "Питер",
+      "prezime": "Тил",
+      "biografija": "Питер Тил је амерички предузетник, милијардер и венчур капиталиста, најпознатији као један од суоснивача компаније PayPal и први спољни инвеститор у Facebook. Његова књига „Од нуле до један” (Zero to One) постала је култна литература у Силицијумској долини, нудећи јединствене и често контраверзне погледе на иновације, стварање монопола и будућност технологије.",
+      "slike": [
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Peter_Thiel.jpg?width=400",
+        "https://upload.wikimedia.org/wikipedia/commons/3/3e/Peter_Thiel_by_Gage_Skidmore.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/f/f3/Peter_Thiel_%282014%29.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/3/3f/Peter_Thiel_2014_by_Heisenberg_Media.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/f/f9/Peter_Thiel_%2851876291686%29.jpg"
+      ],
+      "datumRodjenja": "1967-10-11",
+      "status": "Активан",
+      "brojOsvojenihNagrada": 2,
+      "brojProdatihPrimeraka": 5000000,
+      "kontaktTelefonMenadzera": "+381 65 808-0027"
+    },
+    "aut028": {
+      "ime": "Нир",
+      "prezime": "Ејал",
+      "biografija": "Нир Ејал је амерички аутор, предавач и инвеститор, стручњак за бихевиорални дизајн и психологију потрошача. Његова бестселер књига „Закачен: Како изградити производе који стварају навике” (Hooked) постала је обавезно штиво за дизајнере производа широм света, детаљно објашњавајући психолошке моделе помоћу којих технолошке компаније стварају сервисе који изазивају зависност.",
+      "slike": [
+        "https://upload.wikimedia.org/wikipedia/commons/0/0b/TNW_USA_2014_%2816269164341%29.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/b/b6/NirEyal2019.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/0/01/TNW_USA_2014_%2815648540644%29.jpg"
+      ],
+      "datumRodjenja": "1980-02-19",
+      "status": "Активан",
+      "brojOsvojenihNagrada": 1,
+      "brojProdatihPrimeraka": 2000000,
+      "kontaktTelefonMenadzera": "+381 63 909-0028"
+    },
+    "aut029": {
+      "ime": "Ашли",
+      "prezime": "Венс",
+      "biografija": "Ашли Венс је јужноафричко-амерички пословни новинар и писац, познат по свом раду за часопис Bloomberg Businessweek. Светску славу стекао је захваљујући детаљној и ауторизованој биографији „Илон Маск: Тесла, СпејсИкс и потрага за фантастичном будућношћу”, која пружа јединствен и објективан увид у живот, рад и контроверзну визију једног од најинтригантнијих предузетника данашњице.",
+      "slike": [
+        "https://upload.wikimedia.org/wikipedia/commons/b/b6/Ashlee_Vance.gk.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/c/c2/Ashlee_Vance_in_2023.jpg"
+      ],
+      "datumRodjenja": "1977-01-01",
+      "status": "Активан",
+      "brojOsvojenihNagrada": 2,
+      "brojProdatihPrimeraka": 3000000,
+      "kontaktTelefonMenadzera": "+381 62 121-0029"
+    },
+    "aut030": {
+      "ime": "Михаил",
+      "prezime": "Шолохов",
+      "biografija": "Михаил Александрович Шолохов био је истакнути руски и совјетски писац, добитник Нобелове награде за књижевност 1965. године. Његово монументално дело, епски роман „Тихи Дон”, мајсторски приказује живот донских Козака током Првог светског рата, Руске револуције и грађанског рата, пружајући дубоку психолошку и историјску слику једног турбулентног времена. Поред тога, знаменита је и његова потресна приповетка „Човекова судбина”.",
+      "slike": [
+        "https://upload.wikimedia.org/wikipedia/commons/2/27/%D0%9C%D0%B8%D1%85%D0%B0%D0%B8%D0%BB_%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80%D0%BE%D0%B2%D0%B8%D1%87_%D0%A8%D0%BE%D0%BB%D0%BE%D1%85%D0%BE%D0%B2.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/c/c7/Mikhail_Sholokhov_1960.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/f/f9/%D0%9F%D0%BE%D1%80%D1%82%D1%80%D0%B5%D1%82_%D0%9C._%D0%A8%D0%BE%D0%BB%D0%BE%D1%85%D0%BE%D0%B2%D0%B0._%D0%92.%D0%9A%D0%BE%D0%B2%D1%80%D0%B8%D0%B3%D0%B8%D0%BD._1938_-_1939_%D0%B3%D0%B3.jpg"
+      ],
+      "datumRodjenja": "1905-05-24",
+      "status": "Преминуо",
+      "brojOsvojenihNagrada": 5,
+      "brojProdatihPrimeraka": 20000000,
+      "kontaktTelefonMenadzera": "+381 61 232-0030"
+    },
+    "aut031": {
+      "ime": "Макс",
+      "prezime": "Тегмарк",
+      "biografija": "Макс Тегмарк је шведско-амерички физичар, космолог и професор на Институту за технологију у Масачусетсу (МИТ). Један је од оснивача Института за будућност живота (Future of Life Institute), где се бави истраживањем егзистенцијалних ризика које доноси напредна вештачка интелигенција. Његова позната књига „Живот 3.0: Људско биће у добу вештачке интелигенције” детаљно истражује утицај технологије на будућност човечанства и структуралне промене у друштву.",
+      "slike": [
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Max_Tegmark.jpg?width=400",
+        "https://upload.wikimedia.org/wikipedia/commons/3/33/Max_Tegmark_01.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/2/23/Max_Tegmark_2024_%28cropped%29.jpg"
+      ],
+      "datumRodjenja": "1967-05-05",
+      "status": "Активан",
+      "brojOsvojenihNagrada": 3,
+      "brojProdatihPrimeraka": 4000000,
+      "kontaktTelefonMenadzera": "+381 64 345-6789"
+    },
+    "aut032": {
+      "ime": "Метју",
+      "prezime": "Вокер",
+      "biografija": "Метју Вокер је британски научник, професор неуронауке и психологије на Универзитету Калифорније у Берклију, где је основао Центар за науку о сну човека. Његова међународна бестселер књига „Зашто спавамо: Моћ сна и снова” револуционаризовала је јавно схватање важности спавања за физичко и ментално здравље, дуговечност, памћење и превенцију тешких болести.",
+      "slike": [
+        "https://upload.wikimedia.org/wikipedia/commons/c/c7/Matt_Scientist_Headshot.jpg",
+        "https://images.gr-assets.com/authors/1537277808p8/17598726.jpg"
+      ],
+      "datumRodjenja": "1973-01-01",
+      "status": "Активан",
+      "brojOsvojenihNagrada": 2,
+      "brojProdatihPrimeraka": 3000000,
+      "kontaktTelefonMenadzera": "+381 65 456-7890"
+    },
+    "aut033": {
+      "ime": "Ханс",
+      "prezime": "Рослинг",
+      "biografija": "Ханс Рослинг био је шведски лекар, академик, професор међународног здравља и визионарски јавни говорник. Као суоснивач фондације Gapminder, посветио је живот борби против глобалног незнања, користећи иновативне визуелизације података како би промовисао поглед на свет заснован на чињеницама. Његова постхумно објављена књига „Фактологија” (Factfulness) постала је глобални феномен који помаже људима да превазиђу инстинктивне предрасуде.",
+      "slike": [
+        "https://upload.wikimedia.org/wikipedia/commons/5/55/Hans_Rosling_2012_Shankbone.JPG",
+        "https://upload.wikimedia.org/wikipedia/commons/2/28/Hans_Rosling%2C_2016_%28cropped%29.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/a/a2/Dr._Rosling-_fakta_og_fiksjon_om_verdens_tilstand_-_NMD_2014_%2814144305564%29.jpg"
+      ],
+      "datumRodjenja": "1948-07-27",
+      "status": "Преминуо",
+      "brojOsvojenihNagrada": 4,
+      "brojProdatihPrimeraka": 5000000,
+      "kontaktTelefonMenadzera": "+381 63 567-8901"
+    },
+    "aut034": {
+      "ime": "Едвард",
+      "prezime": "Сноуден",
+      "biografija": "Едвард Сноуден је амерички узбуњивач и бивши радник Централне обавештајне агенције (ЦИА) и Националне безбедносне агенције (НСА). Године 2013. открио је јавности постојање тајних америчких и британских програма за глобални масовни надзор, што је покренуло једну од највећих дебата о приватности у историји. Његови мемоари „Трајно забележено” (Permanent Record) детаљно описују његов живот и мотиве за овај историјски чин.",
+      "slike": [
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Edward_Snowden.jpg?width=400",
+        "https://upload.wikimedia.org/wikipedia/commons/3/3f/Edward_Snowden_2013-10-9_%281%29_%28cropped%29.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/9/9c/Edward-Snowden-FOPF-2014.jpg"
+      ],
+      "datumRodjenja": "1983-06-21",
+      "status": "Активан",
+      "brojOsvojenihNagrada": 5,
+      "brojProdatihPrimeraka": 2000000,
+      "kontaktTelefonMenadzera": "+381 62 678-9012"
+    },
+    "aut035": {
+      "ime": "Мајкл",
+      "prezime": "Бронштајн",
+      "biografija": "Мајкл Бронштајн је истакнути научник, професор на Универзитету у Оксфорду и један од водећих светских стручњака у области вештачке интелигенције и машинског учења. Његов истраживачки рад фокусиран је на развој геометријског дубоког учења и примену неуронских мрежа на графове, што има револуционарне примене у дизајнирању лекова, предвиђању протеинских структура и анализи комплексних биолошких података.",
+      "slike": [
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Michael_Bronstein.jpg?width=400",
+        "https://upload.wikimedia.org/wikipedia/commons/b/b8/Michael_Bronstein_in_Nepal_2024.jpg"
+      ],
+      "datumRodjenja": "1980-01-01",
+      "status": "Активан",
+      "brojOsvojenihNagrada": 3,
+      "brojProdatihPrimeraka": 500000,
+      "kontaktTelefonMenadzera": "+381 66 789-0123"
+    },
+    "aut036": {
+      "ime": "В. Тимоти",
+      "prezime": "Голвеј",
+      "biografija": "В. Тимоти Голвеј је амерички аутор и спортски тренер, најпознатији по свом револуционарном приступу спортској психологији и менталном тренингу. Његова култна књига „Унутрашња игра тениса” (The Inner Game of Tennis) променила је начин на који спортисти, али и пословни људи, приступају учењу, превазилажењу унутрашње самокритике и постизању врхунских резултата кроз стање опуштене концентрације.",
+      "slike": [
+        "https://images.gr-assets.com/authors/1238770986p8/593.jpg"
+      ],
+      "datumRodjenja": "1938-01-01",
+      "status": "У пензији",
+      "brojOsvojenihNagrada": 2,
+      "brojProdatihPrimeraka": 2000000,
+      "kontaktTelefonMenadzera": "+381 64 890-1234"
+    },
+    "aut037": {
+      "ime": "Иво",
+      "prezime": "Андрић",
+      "biografija": "Иво Андрић био је један од највећих српских и југословенских књижевника, дипломата и једини добитник Нобелове награде за књижевност са ових простора (1961. године). Његова најпознатија дела, попут романа „На Дрини ћуприја”, „Травничка хроника” и „Проклета авлија”, маестрално спајају историјску фактографију, филозофска промишљања и дубоку психолошку анализу човека на раскршћу светова и култура.",
+      "slike": [
+        "https://upload.wikimedia.org/wikipedia/commons/7/75/S._Kragujevic%2C_Ivo_Andric%2C_1961.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/b/b2/Ivo_Andric_crop.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/7/7f/Ivo_Andri%C4%87_1953.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/a/af/Ivo_Andric%2C_1951.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/5/5f/S.Kragujevic%2C_Ivo_Andric.JPG"
+      ],
+      "datumRodjenja": "1892-10-09",
+      "status": "Преминуо",
+      "brojOsvojenihNagrada": 6,
+      "brojProdatihPrimeraka": 20000000,
+      "kontaktTelefonMenadzera": "+381 65 901-2345"
+    },
+    "aut038": {
+      "ime": "Даглас",
+      "prezime": "Адамс",
+      "biografija": "Даглас Адамс био је енглески писац, драматург и музичар, светски познат по свом култном сатиричном научнофантастичном серијалу „Аутостоперски водич кроз галаксију”. Кроз апсурдни хумор и бриљантну сатиру, Адамс је истраживао смисао живота, универзума и свега осталог, оставивши неизбрисив траг у поп култури и књижевности. Такође је радио као сценариста за чувену серију „Доктор Ху”.",
+      "slike": [
+        "https://images.gr-assets.com/authors/1616277702p8/4.jpg",
+        "https://images.gr-assets.com/photos/1284043123p8/152177.jpg",
+        "https://images.gr-assets.com/photos/1284043160p8/152178.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/d/da/Douglas_Adams_San_Francisco_2.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/8/84/Douglas_Adams_San_Francisco_cropped.jpg"
+      ],
+      "datumRodjenja": "1952-03-11",
+      "status": "Преминуо",
+      "brojOsvojenihNagrada": 4,
+      "brojProdatihPrimeraka": 25000000,
+      "kontaktTelefonMenadzera": "+381 63 012-3456"
+    },
+    "aut039": {
+      "ime": "Платон",
+      "prezime": "",
+      "biografija": "Платон је био један од најутицајнијих старогрчких филозофа, Сократов ученик и Аристотелов учитељ. Оснивач је Академије у Атини, прве институције за високо образовање у западном свету. Његови дијалози, међу којима се посебно истичу „Држава”, „Гозба” и „Одбрана Сократова”, поставили су темеље западне филозофије, етике, политичке теорије и епистемологије.",
+      "slike": [
+        "https://upload.wikimedia.org/wikipedia/commons/4/4e/Plato-small.png",
+        "https://upload.wikimedia.org/wikipedia/commons/4/4a/Platon.png",
+        "https://upload.wikimedia.org/wikipedia/commons/a/a4/Greece_from_the_Coming_of_the_Hellenes_to_AD._14%2C_page_355%2C_Plato.jpg",
+        "https://images.gr-assets.com/authors/1651532170p8/879.jpg",
+        "https://images.gr-assets.com/photos/1390144761p8/921711.jpg"
+      ],
+      "datumRodjenja": "-0428-01-01",
+      "status": "Преминуо",
+      "brojOsvojenihNagrada": 1,
+      "brojProdatihPrimeraka": 100000000,
+      "kontaktTelefonMenadzera": "+381 61 123-4567"
+    },
+    "aut040": {
+      "ime": "Насим Николас",
+      "prezime": "Талеб",
+      "biografija": "Насим Николас Талеб је либанско-амерички есејиста, математичар, статистичар и бивши финансијски трговац. Његов рад се фокусира на проблеме случајности, вероватноће и неизвесности. Најпознатији је по својој књизи „Црни лабуд” (The Black Swan), у којој истражује утицај високо нероватних и непредвидивих догађаја на светску економију и историју, као и по увођењу концепта антикрхкости.",
+      "slike": [
+        "https://images.gr-assets.com/authors/1206025993p8/21559.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/0/0e/Nassim_Nicholas_Taleb_DLD_2009-012_%28cropped%29.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/8/83/Nassim_Nicholas_Taleb_2013_%28cropped%29.jpg"
+      ],
+      "datumRodjenja": "1960-09-01",
+      "status": "Активан",
+      "brojOsvojenihNagrada": 3,
+      "brojProdatihPrimeraka": 10000000,
+      "kontaktTelefonMenadzera": "+381 62 234-5678"
+    },
+    "aut041": {
+      "ime": "Антоан де",
+      "prezime": "Сент-Егзипери",
+      "biografija": "Антоан де Сент-Егзипери био је француски писац, песник, аристократа, новинар и пионир авијације. Светску славу стекао је својим филозофским и поетским романом „Мали принц”, који је постао једна од најпревођенијих и најпродаванијих књига у историји човечанства. Његово стваралаштво дубоко је инспирисано његовим летачким искуствима, посебно радом у поштанској авијацији.",
+      "slike": [
+        "https://images.gr-assets.com/authors/1330853515p8/1020792.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/7/7e/Antoine_de_Saint-Exup%C3%A9ry_%28cropped%29.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/8/81/Saint-Exup%C3%A9ry_5.png"
+      ],
+      "datumRodjenja": "1900-06-29",
+      "status": "Преминуо",
+      "brojOsvojenihNagrada": 3,
+      "brojProdatihPrimeraka": 200000000,
+      "kontaktTelefonMenadzera": "+381 64 345-1041"
+    },
+    "aut042": {
+      "ime": "Олдус",
+      "prezime": "Хаксли",
+      "biografija": "Олдус Хаксли био је енглески писац и филозоф, један од најистакнутијих интелектуалаца 20. века. Најпознатији је по свом култном дистопијском роману „Врли нови свет”, у ком мајсторски истражује опасности технолошког напретка, губитка индивидуалности и конзумеристичког друштва контроле. Током живота био је више пута номинован за Нобелову награду за књижевност.",
+      "slike": [
+        "https://images.gr-assets.com/authors/1547138835p8/3487.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/d/d4/Aldous_Huxley_1929.png",
+        "https://upload.wikimedia.org/wikipedia/commons/9/91/Aldous_Huxley_-_photo_Henri_Manuel.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/a/a9/ALDOUS_LEONARD_HUXLEY_1894_-_1963_NOVELISTA_ENSAYISTA_Y_POETA_INGLES_%2813451350533%29.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/0/0a/Aldous_Huxley_1947.png"
+      ],
+      "datumRodjenja": "1894-07-26",
+      "status": "Преминуо",
+      "brojOsvojenihNagrada": 4,
+      "brojProdatihPrimeraka": 30000000,
+      "kontaktTelefonMenadzera": "+381 65 456-1042"
+    },
+    "aut043": {
+      "ime": "Виктор",
+      "prezime": "Франкл",
+      "biografija": "Виктор Емил Франкл био је аустријски неуролог, психијатар, филозоф и преживели заточеник холокауста. Оснивач је логотерапије, психотерапијског правца који се фокусира на проналажење смисла живота. Његова аутобиографска књига „Човекова потрага за смислом” (код нас често превођена и као „Зашто се нисте убили?”) сматра се једним од најважнијих психијатријских и филозофских дела 20. века.",
+      "slike": [
+        "https://images.gr-assets.com/authors/1542894524p8/2782.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/d/de/Viktor_Frankl.webp",
+        "https://upload.wikimedia.org/wikipedia/commons/f/fe/Viktor_Frankl2.jpg"
+      ],
+      "datumRodjenja": "1905-03-26",
+      "status": "Преминуо",
+      "brojOsvojenihNagrada": 5,
+      "brojProdatihPrimeraka": 15000000,
+      "kontaktTelefonMenadzera": "+381 63 567-1043"
+    },
+    "aut044": {
+      "ime": "Марко Тулије",
+      "prezime": "Цицерон",
+      "biografija": "Марко Тулије Цицерон био је један од највећих римских државника, говорника, правника и филозофа. Његови говори, писма и филозофски списи извршили су немерљив утицај на латински језик, развој реторике и европску ренесансу. Дела попут „О држави” и беседа којима је бранио Римску републику остала су трајни споменик политичке и моралне филозофије античког света.",
+      "slike": [
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Cicero.jpg?width=400",
+        "https://upload.wikimedia.org/wikipedia/commons/9/9a/M-T-Cicero.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/1/18/Marcus_Tullius_Cicero.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/6/68/Cicero-bust-1.png",
+        "https://upload.wikimedia.org/wikipedia/commons/7/78/Marcus_Tullius_Cicero_1777.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/5/50/Cicero-face.png",
+        "https://upload.wikimedia.org/wikipedia/commons/4/44/Marcus_Tullius_Cicero_%28_106_-_43_v._Chr%29_---_Colonia_Ulpia_Traiana%2C_Xanten_Niederrhein_%287716385800%29.jpg"
+      ],
+      "datumRodjenja": "-0106-01-03",
+      "status": "Преминуо",
+      "brojOsvojenihNagrada": 1,
+      "brojProdatihPrimeraka": 50000000,
+      "kontaktTelefonMenadzera": "+381 62 678-1044"
+    },
+    "aut045": {
+      "ime": "Јован",
+      "prezime": "Дучић",
+      "biografija": "Јован Дучић био је један од најзначајнијих српских песника, есејиста, путописац и дипломата Краљевине Југославије. Као један од главних представника српске модерне, подигао је српску лирику на највиши европски ниво. Поред непревазиђене поезије, оставио је за собом чувену збирку филозофских есеја и афоризама „Благо цара Радована”, као и путописе „Градови и химере”.",
+      "slike": [
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Jovan_Ducic.jpg?width=400",
+        "https://upload.wikimedia.org/wikipedia/commons/2/2b/Ducic.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/3/3b/Jovan_Du%C4%8Di%C4%87_-_cropped.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/7/74/Jovan_Ducic_Amerikanski_Srbobran_1976.jpg"
+      ],
+      "datumRodjenja": "1871-02-17",
+      "status": "Преминуо",
+      "brojOsvojenihNagrada": 4,
+      "brojProdatihPrimeraka": 3000000,
+      "kontaktTelefonMenadzera": "+381 61 789-1045"
+    },
+    "aut046": {
+      "ime": "Ник",
+      "prezime": "Бостром",
+      "biografija": "Ник Бостром је шведски филозоф са Универзитета у Оксфорду, познат по свом раду на егзистенцијалним ризицима, антропичком начелу и етици побољшања људи. Оснивач је Института за будућност човечанства. Његова књига „Суперинтелигенција: Путеви, опасности, стратегије” изазвала је глобалну дебату о потенцијалним претњама које развој напредне вештачке интелигенције представља за опстанак људске врсте.",
+      "slike": [
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Nick_Bostrom.jpg?width=400",
+        "https://images.gr-assets.com/authors/1408029377p8/608087.jpg",
+        "https://images.gr-assets.com/photos/1408029422p8/1041410.jpg",
+        "https://images.gr-assets.com/photos/1408029439p8/1041411.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/3/3a/Prof_Nick_Bostrom_324-1.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/6/60/Nick_Bostrom_-_thinking.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/4/4a/Nick_Bostrom_-_Coffee.jpg"
+      ],
+      "datumRodjenja": "1973-03-10",
+      "status": "Активан",
+      "brojOsvojenihNagrada": 2,
+      "brojProdatihPrimeraka": 2000000,
+      "kontaktTelefonMenadzera": "+381 64 890-1046"
+    },
+    "aut047": {
+      "ime": "Бенџамин",
+      "prezime": "Френклин",
+      "biografija": "Бенџамин Френклин био је један од Очева оснивача Сједињених Америчких Држава, полимат, проналазач, дипломата, писац и политички филозоф. Као научник, познат је по својим открићима у вези са електрицитетом (укључујући проналазак громобрана), док је као писац оставио неизбрисив траг својом недовршеном аутобиографијом и „Алманахом сиротог Ричарда”, препуним мудрости које се и данас цитирају.",
+      "slike": [
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Benjamin_Franklin.jpg?width=400",
+        "https://upload.wikimedia.org/wikipedia/commons/8/87/Joseph_Siffrein_Duplessis_-_Benjamin_Franklin_-_Google_Art_Project.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/f/f8/Benjamin_Franklin_after_Joseph_Siffred_Duplessis.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/a/a3/Benjamin_Franklin_1767.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/3/3b/Benjamin_Franklin_%281706%E2%80%931790%29_MET_DP312881.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/3/39/Bust_of_Benjamin_Franklin_MET_25632.jpg",
+        "https://images.gr-assets.com/authors/1215314094p8/289513.jpg"
+      ],
+      "datumRodjenja": "1706-01-17",
+      "status": "Преминуо",
+      "brojOsvojenihNagrada": 1,
+      "brojProdatihPrimeraka": 50000000,
+      "kontaktTelefonMenadzera": "+381 65 901-1047"
+    },
+    "aut048": {
+      "ime": "Стивен",
+      "prezime": "Пинкер",
+      "biografija": "Стивен Пинкер је канадско-амерички когнитивни психолог, лингвиста и јавни интелектуалац, тренутно професор на Универзитету Харвард. Његова истраживања фокусирана су на визуелну когницију и психологију језика. У својим бестселерима, попут „Просветитељство сада” и „Бољи анђели наше природе”, он аргументовано, ослањајући се на податке, брани тезу да се човечанство захваљујући разуму и науци креће ка све бољем и мирнијем стању.",
+      "slike": [
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Steven_Pinker.jpg?width=400",
+        "https://images.gr-assets.com/authors/1235758085p8/3915.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/f/fe/Steven_Pinker_in_2023_A_04_%28cropped%29.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/8/83/Steven_Pinker_2005.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/4/4c/Steven_Pinker_2011.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/a/a6/Steven_Pinker_in_2023.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/9/94/Steven_Pinker_%2812270%29.jpg"
+      ],
+      "datumRodjenja": "1954-09-18",
+      "status": "Активан",
+      "brojOsvojenihNagrada": 5,
+      "brojProdatihPrimeraka": 8000000,
+      "kontaktTelefonMenadzera": "+381 63 012-1048"
+    },
+    "aut049": {
+      "ime": "Реј",
+      "prezime": "Далио",
+      "biografija": "Реј Далио је амерички инвеститор, милијардер и филантроп, оснивач хеџ фонда Bridgewater Associates, који је под његовим вођством постао један од највећих на свету. Познат је по заговарању радикалне транспарентности у пословању. Своје искуство, животне лекције и системе за доношење одлука сабрао је у књизи „Принципи” (Principles), која је постала глобални бестселер и водич за многе предузетнике.",
+      "slike": [
+        "https://upload.wikimedia.org/wikipedia/commons/7/74/TechCrunch_Disrupt_San_Francisco_2019_-_Day_1_%2848833699041%29.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/1/1f/Web_Summit_2018_-_Forum_-_Day_2%2C_November_7_HM1_7481_%2844858045925%29.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/b/b1/Web_Summit_2018_-_Centre_Stage_-_Day_2%2C_November_7_DSC_5227_%2845043376044%29.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/a/a7/Ray_Dalio_Sept_23_2017_NYC.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/f/f3/Web_Summit_2018_-_Forum_-_Day_2%2C_November_7_HM1_7502_%2844858046555%29.jpg",
+        "https://images.gr-assets.com/authors/1505763841p8/5289593.jpg"
+      ],
+      "datumRodjenja": "1949-08-08",
+      "status": "Активан",
+      "brojOsvojenihNagrada": 3,
+      "brojProdatihPrimeraka": 5000000,
+      "kontaktTelefonMenadzera": "+381 61 123-1049"
+    },
+    "aut050": {
+      "ime": "Мери",
+      "prezime": "Берд",
+      "biografija": "Винифред Мери Берд је истакнута британска историчарка, класични филолог и професорка на Универзитету у Кембриџу. Широкој јавности позната је по својим телевизијским документарцима и књигама које античку историју чине доступном и занимљивом савременом читаоцу. Њена најпознатија књига „SPQR: Историја античког Рима” пружа освежавајући и критички поглед на успон и развој Римског царства.",
+      "slike": [
+        "https://images.gr-assets.com/authors/1530842450p8/97783.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/2/21/Mary_Beard_UC3M_2017_%28cropped%29.JPG"
+      ],
+      "datumRodjenja": "1955-01-01",
+      "status": "Активан",
+      "brojOsvojenihNagrada": 4,
+      "brojProdatihPrimeraka": 3000000,
+      "kontaktTelefonMenadzera": "+381 62 234-1050"
+    },
+    "aut051": {
+      "ime": "Исидора",
+      "prezime": "Секулић",
+      "biografija": "Исидора Секулић била је српска књижевница, есејиста, полиглота и прва жена члан Српске академије наука и уметности. Њено дело одликује се дубоком рефлексивношћу, аналитичношћу и изузетним књижевним стилом. Најпознатија је по делима као што су „Кроника паланачког гробља”, „Сапутници” и путопису „Писма из Норвешке”, који представљају врхунац српске интелектуалне прозе 20. века.",
+      "slike": [
+        "https://images.gr-assets.com/authors/1258476834p8/1255344.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/0/09/Isidora_Sekuli%C4%87_oko_1920._god.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/6/67/Isidora_Sekulic.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/2/2a/Isidora_Sekuli%C4%87_%281900%2C_3x4%29.jpg"
+      ],
+      "datumRodjenja": "1877-02-16",
+      "status": "Преминуо",
+      "brojOsvojenihNagrada": 3,
+      "brojProdatihPrimeraka": 500000,
+      "kontaktTelefonMenadzera": "+381 64 890-1051"
+    },
+    "aut052": {
+      "ime": "Роберт",
+      "prezime": "Корам",
+      "biografija": "Роберт Корам је амерички аутор и новинар, који је током своје каријере два пута номинован за престижну Пулицерову награду. Најпознатији је по писању изузетно детаљних биографских и историјских књига са војном тематиком. Његово најзначајније дело је „Бојд: Пилот ловац који је променио уметност ратовања”, свеобухватна биографија Џона Бојда, бриљантног војног стратега чије су теорије револуционаризовале модерно ваздухопловство.",
+      "slike": [
+        "https://images.gr-assets.com/authors/1283371132p8/21873.jpg"
+      ],
+      "datumRodjenja": "1937-01-01",
+      "status": "Активан",
+      "brojOsvojenihNagrada": 2,
+      "brojProdatihPrimeraka": 2000000,
+      "kontaktTelefonMenadzera": "+381 65 901-1052"
+    },
+    "aut053": {
+      "ime": "Десанка",
+      "prezime": "Максимовић",
+      "biografija": "Десанка Максимовић била је једна од најзначајнијих и највољенијих српских песникиња, професорка књижевности и чланица Српске академије наука и уметности. Њена поезија одише љубављу, родољубљем и дубоким саосећањем према човеку и природи. Међу њеним најпознатијим делима су збирке „Тражим помиловање”, „Мирис земље” и чувена родољубива песма „Крвава бајка”, која сведочи о трагедији у Крагујевцу.",
+      "slike": [
+        "https://images.gr-assets.com/authors/1276778152p8/1379158.jpg"
+      ],
+      "datumRodjenja": "1898-05-16",
+      "status": "Преминуо",
+      "brojOsvojenihNagrada": 7,
+      "brojProdatihPrimeraka": 3000000,
+      "kontaktTelefonMenadzera": "+381 63 012-1053"
+    }
+  },
+  "knjige": {
+    "knj000": {
+      "naziv": "Фауст",
+      "opis": "Гетеова трагедија у два дела, једно од најзначајнијих дела светске књижевности, која истражује границе људског сазнања, етику и вечну борбу између добра и зла кроз пакт са Мефистофелесом.",
+      "slike": [
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1482220452i/24070672.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1758424096i/406373.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1362834257i/14704.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1400955910i/18723460.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1434554972i/23769361.jpg"
+      ],
+      "zanr": "Класика",
+      "format": "Тврди повез",
+      "cena": 1950,
+      "brojStrana": "512",
+      "idAutora": "aut001",
+      "isbn": "978-8683507115"
+    },
+    "knj001": {
+      "naziv": "Проблем повећања људске енергије",
+      "opis": "Један од најзначајнијих филозофско-научних есеја Николе Тесле у којем детаљно разматра будућност човечанства, алтернативне изворе енергије и дубоке филозофске аспекте људског напретка у хармонији са природом.",
+      "slike": [
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1347595178i/7030634.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1544743284i/43227468.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1347450176i/5902267.jpg"
+      ],
+      "zanr": "Наука",
+      "format": "Меки повез",
+      "cena": 1250,
+      "brojStrana": 120,
+      "idAutora": "aut002",
+      "isbn": "978-1612034089"
+    },
+    "knj002": {
+      "naziv": "Логика научног открића",
+      "opis": "Капитално дело филозофије науке у којем Карл Попер одбацује индуктивни метод и уводи чувени принцип фалсификабилности као основног критеријума за разграничење праве науке од псеудонауке.",
+      "slike": [
+        "https://covers.openlibrary.org/b/isbn/9780415278447-L.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1444027258i/21480512.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1444792945i/27190653.jpg"
+      ],
+      "zanr": "Филозофија",
+      "format": "Меки повез",
+      "cena": 1890,
+      "brojStrana": 480,
+      "idAutora": "aut003",
+      "isbn": "978-0415278447"
+    },
+    "knj003": {
+      "naziv": "Тканина стварности",
+      "opis": "У овој револуционарној књизи, Дејвид Дојч интегрише квантну физику, теорију еволуције, теорију рачунања и епистемологију како би пружио јединствен, разуман поглед на мултиверзум и саму природу стварности.",
+      "slike": [
+        "https://covers.openlibrary.org/b/isbn/9780140275414-L.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1386920742i/19413762.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1686927510i/178751417.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1545767372i/43355119.jpg"
+      ],
+      "zanr": "Наука",
+      "format": "Меки повез",
+      "cena": 1650,
+      "brojStrana": 400,
+      "idAutora": "aut004",
+      "isbn": "978-0140275414"
+    },
+    "knj004": {
+      "naziv": "Почетак бесконачности",
+      "opis": "Наставак истраживања природе стварности, у ком Дејвид Дојч објашњава моћ добрих објашњења и њихов капацитет да трансформишу свет, промовишући дубоки оптимизам у погледу неограниченог људског напретка.",
+      "slike": [
+        "https://covers.openlibrary.org/b/isbn/9780143121350-L.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1727775193i/170260517.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1341613337i/2006163.jpg"
+      ],
+      "zanr": "Филозофија",
+      "format": "Меки повез",
+      "cena": 1780,
+      "brojStrana": 496,
+      "idAutora": "aut004",
+      "isbn": "978-0143121350"
+    },
+    "knj005": {
+      "naziv": "1984",
+      "opis": "Један од најважнијих дистопијских романа 20. века који застрашујуће прецизно описује тоталитарни режим Океаније, масовни надзор, системску цензуру и губитак индивидуалне слободе под будним оком Великог Брата.",
+      "slike": [
+        "https://covers.openlibrary.org/b/isbn/9780451524935-L.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1657781256i/61439040.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1532714506i/40961427.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1327144697i/3744438.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1609804984i/56557080.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1527446945i/40222447.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1551446527i/21934594.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1616476203i/57502604.jpg"
+      ],
+      "zanr": "Научна фантастика",
+      "format": "Меки повез",
+      "cena": 890,
+      "brojStrana": 328,
+      "idAutora": "aut005",
+      "isbn": "978-0451524935"
+    },
+    "knj006": {
+      "naziv": "Метаморфоза главног интелекта",
+      "opis": "Изузетно утицајан роман који истражује дубоке филозофске и етичке последице технолошког сингуларитета, у којем свемоћна вештачка интелигенција преузима контролу над универзумом како би заштитила човечанство од њега самог, стварајући свет у ком су смрт и болест побеђени, али по високу цену.",
+      "slike": [
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1347689279i/64341.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1441663147i/26247314.jpg"
+      ],
+      "zanr": "Научна фантастика",
+      "format": "еКњига",
+      "cena": 1450,
+      "brojStrana": 280,
+      "idAutora": "aut006",
+      "isbn": "978-1936466078"
+    },
+    "knj007": {
+      "naziv": "Приче о твом животу и друге приче",
+      "opis": "Бриљантна збирка кратких прича која је освојила бројне награде. Насловна новела, по којој је снимљен култни филм „Долазак” (Arrival), фасцинантно истражује лингвистику, детерминизам и начин на који учење новог језика може обликовати нашу перцепцију времена и стварности.",
+      "slike": [
+        "https://covers.openlibrary.org/b/isbn/9781101972120-L.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1356138316i/223380.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1752849239i/25670162.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1328690141i/8130318.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1646250645i/53934234.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1312063655i/729760.jpg"
+      ],
+      "zanr": "Научна фантастика",
+      "format": "Меки повез",
+      "cena": 1350,
+      "brojStrana": 352,
+      "idAutora": "aut007",
+      "isbn": "978-1101972120"
+    },
+    "knj008": {
+      "naziv": "Издах",
+      "opis": "Друга дугоишчекивана збирка прича Теда Чанга у којој аутор кроз девет научнофантастичних приповедака мајсторски преиспитује концепте слободне воље, вештачке интелигенције, путовања кроз време и етике у технологији, пружајући читаоцима дубоко хуману перспективу на будућност.",
+      "slike": [
+        "https://covers.openlibrary.org/b/isbn/9781101947883-L.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1588687939i/53334982.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1646250474i/50624715.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1552820537i/44175374.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1623923562i/58359792.jpg"
+      ],
+      "zanr": "Научна фантастика",
+      "format": "Меки повез",
+      "cena": 1420,
+      "brojStrana": 368,
+      "idAutora": "aut007",
+      "isbn": "978-1101947883"
+    },
+    "knj009": {
+      "naziv": "Сигурно се шалите, господине Фајнман!",
+      "opis": "Урнебесна и дубоко инспиративна аутобиографија једног од највећих умова 20. века, физичара и нобеловца Ричарда Фајнмана, у којој он кроз серију анегдота дели своја искуства о науци, уметности, пројекту Менхетн, обијању сефова и свирању бонга.",
+      "slike": [
+        "https://covers.openlibrary.org/b/isbn/9780393316049-L.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1328550349i/17364.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1504936953i/35167685.jpg"
+      ],
+      "zanr": "Биографија",
+      "format": "Меки повез",
+      "cena": 1250,
+      "brojStrana": 352,
+      "idAutora": "aut008",
+      "isbn": "978-0393316049"
+    },
+    "knj010": {
+      "naziv": "Еуклидов прозор",
+      "opis": "Фасцинантно путовање кроз историју геометрије, од античке Грчке и паралелних линија, преко Рекарта и Гауса, па све до Ајнштајнове теорије релативитета, модерних теорија хиперпростора и квантне физике, испричано кроз животе великих математичара.",
+      "slike": [
+        "https://covers.openlibrary.org/b/isbn/9780684865232-L.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1348969130i/32583.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1382194760i/18688736.jpg"
+      ],
+      "zanr": "Наука",
+      "format": "Меки повез",
+      "cena": 1180,
+      "brojStrana": 320,
+      "idAutora": "aut009",
+      "isbn": "978-0684865232"
+    },
+    "knj011": {
+      "naziv": "Бенџамин Френклин: Један амерички живот",
+      "opis": "Маестрална биографија која оживљава живот и дело Бенџамина Френклина. Ајзаксон детаљно прати његов пут од штампарског шегрта до изумитеља, дипломате и једног од најзначајнијих Очева оснивача Америке, приказујући његову јединствену практичну мудрост.",
+      "slike": [
+        "https://covers.openlibrary.org/b/isbn/9780743258074-L.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1451424635i/28385320.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1592858293i/54229030.jpg"
+      ],
+      "zanr": "Биографија",
+      "format": "Тврди повез",
+      "cena": 2038,
+      "brojStrana": 448,
+      "idAutora": "aut010",
+      "isbn": "978-0743258074"
+    },
+    "knj012": {
+      "naziv": "Ајнштајн: Његов живот и универзум",
+      "opis": "Свеобухватна биографија Алберта Ајнштајна која открива како је његов бунтовнички карактер био нераскидиво повезан са његовим научним генијем. Књига објашњава како је један маштовити службеник у патентном заводу успео да откључа најдубље тајне универзума.",
+      "slike": [
+        "https://covers.openlibrary.org/b/isbn/9780743264730-L.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1533833071i/19031590.jpg"
+      ],
+      "zanr": "Биографија",
+      "format": "Тврди повез",
+      "cena": 1729,
+      "brojStrana": 659,
+      "idAutora": "aut010",
+      "isbn": "978-0743264730"
+    },
+    "knj013": {
+      "naziv": "Стив Џобс",
+      "opis": "Ексклузивна и дефинитивна биографија оснивача компаније Apple, заснована на више од четрдесет интервјуа са Џобсом. Књига без улепшавања приказује његову интензивну личност, перфекционизам и страст за иновацијама које су промениле свет модерне технологије.",
+      "slike": [
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1560819186l/52054094.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1511288339i/18051086.jpg",
+        "https://covers.openlibrary.org/b/isbn/9781451648539-L.jpg"
+      ],
+      "zanr": "Биографија",
+      "format": "Тврди повез",
+      "cena": 3615,
+      "brojStrana": 590,
+      "idAutora": "aut010",
+      "isbn": "978-1451648539"
+    },
+    "knj014": {
+      "naziv": "Леонардо да Винчи",
+      "opis": "Фасцинантна прича о најкреативнијем генију у историји човечанства. Користећи хиљаде страница из Леонардових бележница, Ајзаксон показује како је његова неутољива радозналост на граници опсесије брисала границе између науке, уметности и инжењерства.",
+      "slike": [
+        "https://covers.openlibrary.org/b/isbn/9781501139154-L.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1504722187i/36192695.jpg"
+      ],
+      "zanr": "Биографија",
+      "format": "Тврди повез",
+      "cena": 2890,
+      "brojStrana": 624,
+      "idAutora": "aut010",
+      "isbn": "978-1501139154"
+    },
+    "knj015": {
+      "naziv": "Илон Маск",
+      "opis": "Интимна и свеобухватна биографија једног од најфасцинантнијих и најконтроверзнијих иноватора данашњице. Ајзаксон пружа јединствен поглед иза кулиса његових компанија SpaceX и Tesla, истражујући његову немилосрдну амбицију и визију будућности.",
+      "slike": [
+        "https://covers.openlibrary.org/b/isbn/9781982181284-L.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1697040285i/199399435.jpg"
+      ],
+      "zanr": "Биографија",
+      "format": "Тврди повез",
+      "cena": 2450,
+      "brojStrana": 688,
+      "idAutora": "aut010",
+      "isbn": "978-1982181284"
+    },
+    "knj016": {
+      "naziv": "Мајстор и Маргарита",
+      "opis": "Маестрално ремек-дело Михаила Булгакова које кроз три паралелне приче спаја оштру сатиру совјетског друштва, магични реализам посете ђавола Москви и библијску причу о Понтију Пилату, стварајући један од најбољих романа 20. века.",
+      "slike": [
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1439419734i/25716554.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1327867963i/117833.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1651610994i/339472.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1630155574i/56969549.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1518558599i/6718272.jpg",
+        "https://covers.openlibrary.org/b/isbn/9780141180144-L.jpg"
+      ],
+      "zanr": "Књижевност",
+      "format": "Меки повез",
+      "cena": 980,
+      "brojStrana": 432,
+      "idAutora": "aut011",
+      "isbn": "978-0141180144"
+    },
+    "knj017": {
+      "naziv": "Неуромансер",
+      "opis": "Револуционарни научнофантастични роман Вилијама Гибсона који је дефинисао жанр киберпанка. Књига уводи концепте сајберспејса, вештачке интелигенције и корпоративне дистопије кроз мрачну причу о хакеру Кејсу.",
+      "slike": [
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1479819110i/33035581.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1752514552i/6088007.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1167348726i/22328.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1327269970i/9623430.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1460493835i/29889257.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1388256615i/14770.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1629659965i/826097.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1473712796i/31950544.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1379202509i/11440264.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1305845761i/953070.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1572387046i/756098.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1748770197i/7546430.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1260379286i/14775.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1550691276i/826100.jpg"
+      ],
+      "zanr": "Научна фантастика",
+      "format": "Меки повез",
+      "cena": 1120,
+      "brojStrana": 288,
+      "idAutora": "aut012",
+      "isbn": "978-0441569595"
+    },
+    "knj018": {
+      "naziv": "Против методе",
+      "opis": "Провокативно филозофско дело у којем Пол Фајерабенд деконструише мит о јединственој научној методи, залажући се за епистемолошки анархизам и тврдећи да је једино правило које не спутава напредак знања: све је дозвољено.",
+      "slike": [
+        "https://covers.openlibrary.org/b/isbn/9781844674428-L.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1373999202i/137979.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1480800784i/2303871.jpg"
+      ],
+      "zanr": "Филозофија",
+      "format": "Меки повез",
+      "cena": 1560,
+      "brojStrana": 336,
+      "idAutora": "aut013",
+      "isbn": "978-1844674428"
+    },
+    "knj019": {
+      "naziv": "Себични ген",
+      "opis": "Прекретничко дело еволуционе биологије у ком Ричард Докинс уводи геноцентрични поглед на еволуцију, објашњавајући како су гени прави покретачи природног одабира, уз чувено увођење концепта мема.",
+      "slike": [
+        "https://covers.openlibrary.org/b/isbn/9780198788607-L.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1366758096i/61535.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1440949126i/315240.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1327860148i/8116629.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1550733215i/29780118.jpg"
+      ],
+      "zanr": "Наука",
+      "format": "Меки повез",
+      "cena": 1340,
+      "brojStrana": 384,
+      "idAutora": "aut014",
+      "isbn": "978-0198788607"
+    },
+    "knj020": {
+      "naziv": "Структура научних револуција",
+      "opis": "Једна од најутицајнијих књига 20. века у којој Томас Кун трансформише наше разумевање научног напретка, уводећи концепт промене парадигме и доказујући да се наука не развија линеарно, већ кроз повремене револуције.",
+      "slike": [
+        "https://covers.openlibrary.org/b/isbn/9780226458113-L.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1396422530i/61539.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1611485340i/16119260.jpg"
+      ],
+      "zanr": "Филозофија",
+      "format": "Меки повез",
+      "cena": 1450,
+      "brojStrana": 264,
+      "idAutora": "aut015",
+      "isbn": "978-0226458113"
+    },
+    "knj021": {
+      "naziv": "Задужбина",
+      "opis": "Први роман из култног серијала „Задужбина” Ајзака Азимова. Прича прати математичара Харија Селдона који користи науку психоисторије како би предвидео неминовни пад Галактичког царства и основао Задужбину са циљем да сачува људско знање и скрати период предстојећег мрачног доба.",
+      "slike": [
+        "https://covers.openlibrary.org/b/isbn/9780553293357-L.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1417900846i/29579.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1558401363i/40793127.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1629666224i/58831139.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1520376086i/39037823.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1615038172i/414853.jpg"
+      ],
+      "zanr": "Научна фантастика",
+      "format": "Меки повез",
+      "cena": 1073,
+      "brojStrana": 230,
+      "idAutora": "aut016",
+      "isbn": "978-0553293357"
+    },
+    "knj022": {
+      "naziv": "Последње питање",
+      "opis": "Једна од најпознатијих и најцењенијих кратких прича Ајзака Азимова. Кроз милионе година људске еволуције и технолошког напретка, људи непрестано постављају исто егзистенцијално питање суперкомпјутеру: може ли се ентропија универзума преокренути?",
+      "slike": [
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1415397166i/1719846.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1274107046i/4808763.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1375886757i/18299452.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1634815184i/59424960.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1634814847i/59424922.jpg"
+      ],
+      "zanr": "Научна фантастика",
+      "format": "еКњига",
+      "cena": 890,
+      "brojStrana": 48,
+      "idAutora": "aut016",
+      "isbn": "978-0553294385"
+    },
+    "knj023": {
+      "naziv": "Ја, робот",
+      "opis": "Култна збирка међусобно повезаних научнофантастичних прича у којима Ајзак Азимов формулише своја чувена Три закона роботике. Кроз различите сценарије, књига истражује моралне, логичке и етичке дилеме у интеракцији између људи и вештачке интелигенције.",
+      "slike": [
+        "https://covers.openlibrary.org/b/isbn/9780553294385-L.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1597704465i/55001095.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1536494104i/40226738.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1384552575i/18808023.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1326830681i/837144.jpg"
+      ],
+      "zanr": "Научна фантастика",
+      "format": "Меки повез",
+      "cena": 980,
+      "brojStrana": 224,
+      "idAutora": "aut016",
+      "isbn": "978-0553294385"
+    },
+    "knj024": {
+      "naziv": "Хамлет",
+      "opis": "Једна од најпознатијих и најизвођенијих трагедија Вилијама Шекспира. Ово безвремено ремек-дело прати данског краљевића Хамлета у његовој борби са лудилом, жељом за осветом, моралном корупцијом и егзистенцијалним питањима о смислу живота и смрти.",
+      "slike": [
+        "https://covers.openlibrary.org/b/isbn/9780141396507-L.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1502418892i/35435896.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1660271391i/329519.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1555160733i/1432.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1288388201i/89338.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1487262981i/25853022.jpg"
+      ],
+      "zanr": "Класика",
+      "format": "Меки повез",
+      "cena": 890,
+      "brojStrana": 400,
+      "idAutora": "aut017",
+      "isbn": "978-0141396507"
+    },
+    "knj025": {
+      "naziv": "Од пашњака до научењака",
+      "opis": "Инспиративна аутобиографија Михајла Пупина за коју је награђен престижном Пулицеровом наградом. Књига детаљно описује његов животни пут од родног Идвора, преко тешких почетака у Америци, све до врхунских научних достигнућа у области телекомуникација.",
+      "slike": [
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1485803166i/34069937.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1672633523i/75498623.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1348305009i/2134208.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1485803812i/34069998.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1358982107i/17281509.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1511760659i/36669917.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1589794922i/53437152.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1446275249i/27398272.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1493230975i/26931617.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1382708892i/18716251.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1538658114i/42176223.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1485803377i/34069955.jpg"
+      ],
+      "zanr": "Биографија",
+      "format": "Меки повез",
+      "cena": 1350,
+      "brojStrana": 396,
+      "idAutora": "aut018",
+      "isbn": "978-1596050457"
+    },
+    "knj026": {
+      "naziv": "Нова реформација",
+      "opis": "Друго изузетно значајно дело Михајла Пупина у ком аутор дубоко истражује однос између науке и религије, доказујући да духовни и научни развој човечанства нису у сукобу, већ се међусобно инспиришу и надопуњују.",
+      "slike": [
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1348313485i/7551299.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1699636788i/7161720.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1677855518i/64038605.jpg"
+      ],
+      "zanr": "Наука",
+      "format": "Меки повез",
+      "cena": 1280,
+      "brojStrana": 280,
+      "idAutora": "aut018",
+      "isbn": "978-1596050464"
+    },
+    "knj027": {
+      "naziv": "Кроз васиону и векове",
+      "opis": "Маестрално научно-популарно дело Милутина Миланковића које читаоца води на узбудљиво путовање кроз историју астрономије, климатологије и развој научне мисли од античких времена до модерног доба.",
+      "slike": [
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1624846349i/58443132.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1475863531i/32495318.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1448020416i/22045520.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1703928077i/162544235.jpg"
+      ],
+      "zanr": "Наука",
+      "format": "Меки повез",
+      "cena": 1450,
+      "brojStrana": 312,
+      "idAutora": "aut019",
+      "isbn": "978-8680287123"
+    },
+    "knj028": {
+      "naziv": "Логичко-филозофски трактат",
+      "opis": "Једно од најзначајнијих дела модерне филозофије у којем Лудвиг Витгенштајн покушава да постави строге границе између онога што се може јасно изрећи кроз језик и онога о чему се мора ћутати.",
+      "slike": [
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1416873339i/913171.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1396830687i/12075.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1532332329i/28767168.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1441890064i/12996164.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1328331478i/6617557.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1677855136i/62871643.jpg"
+      ],
+      "zanr": "Филозофија",
+      "format": "Меки повез",
+      "cena": 1560,
+      "brojStrana": 144,
+      "idAutora": "aut020",
+      "isbn": "978-0415254083"
+    },
+    "knj029": {
+      "naziv": "Браћа Карамазови",
+      "opis": "Капитално ремек-дело Фјодора Достојевског и један од највећих романа светске књижевности, који кроз причу о једној разореној породици дубоко истражује теме вере, слободне воље, морала и људске природе.",
+      "slike": [
+        "https://covers.openlibrary.org/b/isbn/9780140449242-L.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1427728126i/4934.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1681758580i/62585959.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1542216153i/4937.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1657562621i/138502.jpg"
+      ],
+      "zanr": "Класика",
+      "format": "Меки повез",
+      "cena": 1680,
+      "brojStrana": 912,
+      "idAutora": "aut021",
+      "isbn": "978-0140449242"
+    },
+    "knj030": {
+      "naziv": "Злочин и казна",
+      "opis": "Врхунски психолошки роман који прати сиромашног студента Раскољникова након што изврши убиство, маестрално описујући његову унутрашњу борбу, грижу савести и коначан пут ка духовном искупљењу.",
+      "slike": [
+        "https://covers.openlibrary.org/b/isbn/9780143058144-L.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1552037881i/44304279.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1657562532i/17879.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1657562466i/28348.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1388706751i/181309.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1388377689i/20351058.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1494307172i/35101197.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1678913606i/123251520.jpg"
+      ],
+      "zanr": "Класика",
+      "format": "Меки повез",
+      "cena": 1250,
+      "brojStrana": 464,
+      "idAutora": "aut021",
+      "isbn": "978-0143058144"
+    },
+    "knj031": {
+      "naziv": "Записи из подземља",
+      "opis": "Једно од првих егзистенцијалистичких дела у историји књижевности, у којем Фјодор Достојевски кроз монолог неименованог наратора маестрално истражује слободну вољу, људску ирационалност и побуну против утилитарних друштвених норми.",
+      "slike": [
+        "https://covers.openlibrary.org/b/isbn/9780140442526-L.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1400865818i/436982.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1342438826i/15754436.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1657562701i/18809.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1692555113i/196846051.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1361980358i/15827137.jpg"
+      ],
+      "zanr": "Класика",
+      "format": "Меки повез",
+      "cena": 980,
+      "brojStrana": 160,
+      "idAutora": "aut021",
+      "isbn": "978-0140442526"
+    },
+    "knj032": {
+      "naziv": "Сироти Чарлијев алманах",
+      "opis": "Енциклопедија животне мудрости, инвестиционих савета и менталних модела Чарлса Мангера. Књига нуди јединствен увид у процес доношења одлука и мултидисциплинарни приступ решавању проблема овог бриљантног ума.",
+      "slike": [
+        "https://covers.openlibrary.org/b/isbn/9781953953230-L.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1387744370i/944652.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1387754373i/20157104.jpg"
+      ],
+      "zanr": "Бизнис",
+      "format": "Тврди повез",
+      "cena": 1890,
+      "brojStrana": 512,
+      "idAutora": "aut022",
+      "isbn": "978-1953953230"
+    },
+    "knj033": {
+      "naziv": "Беснило",
+      "opis": "Култни трилер и апокалиптични роман Борислава Пекића који прати избијање застрашујуће епидемије мутираног вируса беснила на лондонском аеродрому Хитроу, преплићући судбине мноштва ликова у борби за опстанак.",
+      "slike": [
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1326646123i/8558713.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1394766722i/21459265.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1354817212i/16278289.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1393781464i/20946768.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1326529079i/13142787.jpg"
+      ],
+      "zanr": "Књижевност",
+      "format": "Меки повез",
+      "cena": 1120,
+      "brojStrana": 368,
+      "idAutora": "aut023",
+      "isbn": "978-8673631234"
+    },
+    "knj034": {
+      "naziv": "Горски вијенац",
+      "opis": "Ремек-дело српске књижевности и епска поема Петра II Петровића Његоша која кроз историјски догађај истражује дубока филозофска питања о слободи, моралу, судбини и борби за очување националног идентитета.",
+      "slike": [
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1545285457i/43291553.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1677808080i/18843442.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1328025130i/6747126.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1536870775i/41823767.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1541173302i/42612806.jpg"
+      ],
+      "zanr": "Класика",
+      "format": "Меки повез",
+      "cena": 980,
+      "brojStrana": 280,
+      "idAutora": "aut024",
+      "isbn": "978-8680287123"
+    },
+    "knj035": {
+      "naziv": "Српске народне песме",
+      "opis": "Монументална збирка усмене народне књижевности коју је сакупио и објавио Вук Стефановић Караџић, чувајући од заборава богатство српског језика, митологије, епске историје и лирске традиције.",
+      "slike": [
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1307754939i/11679366.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1661787113i/62132171.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1636849783i/11679404.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1617916446i/57670561.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1307756038i/11679473.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1307756559i/11679546.jpg"
+      ],
+      "zanr": "Класика",
+      "format": "Меки повез",
+      "cena": 1450,
+      "brojStrana": 450,
+      "idAutora": "aut025",
+      "isbn": "978-8680287123"
+    },
+    "knj036": {
+      "naziv": "Проблем три тела",
+      "opis": "Први део монументалне научнофантастичне трилогије „Успомена на Земљину прошлост” аутора Љу Цисина. Књига прати тајни војни пројекат у Кини који успоставља контакт са ванземаљском цивилизацијом на ивици пропасти, након чега та цивилизација одлучује да инвазијом заузме Земљу.",
+      "slike": [
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1415428227i/20518872.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1670961950i/66430143.jpg"
+      ],
+      "zanr": "Научна фантастика",
+      "format": "Меки повез",
+      "cena": 1350,
+      "brojStrana": 416,
+      "idAutora": "aut026",
+      "isbn": "978-0765377067"
+    },
+    "knj037": {
+      "naziv": "Мрачна шума",
+      "opis": "Други део славне трилогије који уводи застрашујући концепт „мрачне шуме” као објашњење Фермијевог парадокса. Док се Земља припрема за долазак ванземаљске флоте, човечанство ствара пројекат Зидобрана како би у тајности осмислило одбрамбену стратегију.",
+      "slike": [
+        "https://covers.openlibrary.org/b/isbn/9780765377081-L.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1670967318i/66562105.jpg"
+      ],
+      "zanr": "Научна фантастика",
+      "format": "Меки повез",
+      "cena": 1420,
+      "brojStrana": 512,
+      "idAutora": "aut026",
+      "isbn": "978-0765377081"
+    },
+    "knj038": {
+      "naziv": "Крај смрти",
+      "opis": "Епски закључак трилогије који проширује причу кроз векове и миленијуме. Књига истражује крајње последице контакта са Трисоларцима и судбину целог универзума, доносећи запањујуће концепте о вишим димензијама и преживљавању врста у хладном свемиру.",
+      "slike": [
+        "https://covers.openlibrary.org/b/isbn/9780765377104-L.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1670807828i/65645376.jpg"
+      ],
+      "zanr": "Научна фантастика",
+      "format": "Меки повез",
+      "cena": 1480,
+      "brojStrana": 608,
+      "idAutora": "aut026",
+      "isbn": "978-0765377104"
+    },
+    "knj039": {
+      "naziv": "Од нуле до један",
+      "opis": "Инспиративна књига Питера Тила која пружа потпуно другачији поглед на иновације и стварање успешних стартап компанија. Тил објашњава зашто је стварање монопола кроз јединствене иновације кључ успеха, уместо такмичења на већ постојећим тржиштима.",
+      "slike": [
+        "https://covers.openlibrary.org/b/isbn/9780804139298-L.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1435515337i/23346490.jpg"
+      ],
+      "zanr": "Бизнис",
+      "format": "Меки повез",
+      "cena": 1250,
+      "brojStrana": 224,
+      "idAutora": "aut027",
+      "isbn": "978-0804139298"
+    },
+    "knj040": {
+      "naziv": "Закачен",
+      "opis": "Револуционарни водич Нира Ејала који детаљно описује модел од четири корака којим се успешне компаније служе како би изградиле производе који стварају навике код корисника. Незаобилазно штиво за дизајнере, маркетаре и предузетнике у дигиталном добу.",
+      "slike": [
+        "https://covers.openlibrary.org/b/isbn/9781591847786-L.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1387391251i/19404862.jpg"
+      ],
+      "zanr": "Бизнис",
+      "format": "Меки повез",
+      "cena": 1180,
+      "brojStrana": 256,
+      "idAutora": "aut028",
+      "isbn": "978-1591847786"
+    },
+    "knj041": {
+      "naziv": "Илон Маск: Тесла, СпејсИкс и потрага за фантастичном будућношћу",
+      "opis": "Ауторизована, детаљна и објективна биографија коју је написао новинар Ашли Венс. Књига прати невероватан животни пут Илона Маска од тешког детињства у Јужној Африци до врхунца глобалног пословног света, пружајући дубок увид у његову визију и бескомпромисан стил вођења компанија.",
+      "slike": [
+        "https://covers.openlibrary.org/b/isbn/9780062301239-L.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1432093414i/25567859.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1651051560i/29219785.jpg"
+      ],
+      "zanr": "Биографија",
+      "format": "Тврди повез",
+      "cena": 1890,
+      "brojStrana": 400,
+      "idAutora": "aut029",
+      "isbn": "978-0062301239"
+    },
+    "knj042": {
+      "naziv": "Човекова судбина",
+      "opis": "Потресна приповетка Михаила Шолохова која кроз живот обичног човека, возача Андреја Соколова, приказује сву трагедију, суровост и патњу коју доноси Други светски рат, али и неуништиву снагу људског духа, наде и љубави која помаже да се преживе и најтежи губици.",
+      "slike": [
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1346307834i/15895229.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1669113021i/63495286.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1578588196i/425891.jpg"
+      ],
+      "zanr": "Класика",
+      "format": "Меки повез",
+      "cena": 1120,
+      "brojStrana": 128,
+      "idAutora": "aut030",
+      "isbn": "978-0140185140"
+    },
+    "knj043": {
+      "naziv": "Живот 3.0: Људско биће у добу вештачке интелигенције",
+      "opis": "Провокативно истраживање Макса Тегмарка о томе како ће вештачка интелигенција трансформисати свет. Књига анализира различите сценарије будућности, од тржишта рада и правосуђа до оружја и самог опстанка људске врсте, нудећи перспективу о томе како да технологију задржимо под контролом.",
+      "slike": [
+        "https://covers.openlibrary.org/b/isbn/9781101946596-L.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1522047003i/37857021.jpg"
+      ],
+      "zanr": "Наука",
+      "format": "Меки повез",
+      "cena": 1560,
+      "brojStrana": 384,
+      "idAutora": "aut031",
+      "isbn": "978-1101946596"
+    },
+    "knj044": {
+      "naziv": "Зашто спавамо: Моћ сна и снова",
+      "opis": "Револуционарна књига неуролога Метјуа Вокера која на популаран и научно утемељен начин објашњава кључну улогу сна за наше здравље. Аутор демистификује шта се дешава у мозгу док спавамо и како недостатак сна директно утиче на појаву најтежих обољења модерног доба.",
+      "slike": [
+        "https://covers.openlibrary.org/b/isbn/9781501144318-L.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1514887741i/36303871.jpg"
+      ],
+      "zanr": "Наука",
+      "format": "Меки повез",
+      "cena": 1350,
+      "brojStrana": 368,
+      "idAutora": "aut032",
+      "isbn": "978-1501144318"
+    },
+    "knj045": {
+      "naziv": "Фактологија: Десет разлога зашто погрешно видимо свет",
+      "opis": "Инспиративно дело Ханса Рослинга које нас учи како да превазиђемо укорењене предрасуде и инстинкте који нас наводе на песимизам. Користећи обиље статистичких података, аутор доказује да је стање у свету, упркос изазовима, знатно боље него што то већина људи мисли.",
+      "slike": [
+        "https://covers.openlibrary.org/b/isbn/9781250107817-L.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1544963815i/34890015.jpg"
+      ],
+      "zanr": "Наука",
+      "format": "Меки повез",
+      "cena": 1280,
+      "brojStrana": 352,
+      "idAutora": "aut033",
+      "isbn": "978-1250107817"
+    },
+    "knj046": {
+      "naziv": "Трајно забележено",
+      "opis": "Аутобиографија Едварда Сноудена у којој аутор први пут детаљно износи своју животну причу. Књига објашњава како је помогао у изградњи система за масовни надзор, шта га је навело да проговори и како је дошло до једног од највећих цурења обавештајних података у историји.",
+      "slike": [
+        "https://covers.openlibrary.org/b/isbn/9781250237231-L.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1595816824i/53696657.jpg"
+      ],
+      "zanr": "Биографија",
+      "format": "Меки повез",
+      "cena": 1450,
+      "brojStrana": 352,
+      "idAutora": "aut034",
+      "isbn": "978-1250237231"
+    },
+    "knj047": {
+      "naziv": "Геометријско дубоко учење",
+      "opis": "Напредна и револуционарна књига Мајкла Бронштајна која проширује концепте дубоког учења са једнодимензионалних низова и 2Д слика на комплексне структуре попут графова и многострукости, са огромном применом у биоинформатици и мрежној анализи.",
+      "slike": [
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1770391791i/247668850.jpg"
+      ],
+      "zanr": "Технологија",
+      "format": "Меки повез",
+      "cena": 2450,
+      "brojStrana": 300,
+      "idAutora": "aut035",
+      "isbn": "978-1681738239"
+    },
+    "knj048": {
+      "naziv": "Унутрашња игра тениса",
+      "opis": "Класик спортске психологије В. Тимотија Голвеја који открива како се највећа битка не води против противника на терену, већ против сопствене самокритике и сумње. Књига нуди технике за постизање стања опуштене концентрације применљиве у спорту и животу.",
+      "slike": [
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1750018611i/905.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1715347975i/198563663.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1441251912i/24483762.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1348301162i/1471595.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1436869069i/25906856.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1716819790i/213901653.jpg"
+      ],
+      "zanr": "Психологија",
+      "format": "Меки повез",
+      "cena": 1120,
+      "brojStrana": 192,
+      "idAutora": "aut036",
+      "isbn": "978-0394725673"
+    },
+    "knj049": {
+      "naziv": "На Дрини ћуприја",
+      "opis": "Ремек-дело Иве Андрића за које је награђен Нобеловом наградом. Овај историјски роман кроз четири века прати судбину вишеградског моста Мехмед-паше Соколовића, сведочећи о сукобу источних и западних цивилизација, империја и људских судбина.",
+      "slike": [
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1452876407i/6206305.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1391505254i/3140.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1614904732i/3142.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1618281691i/56637954.jpg"
+      ],
+      "zanr": "Класика",
+      "format": "Меки повез",
+      "cena": 1350,
+      "brojStrana": 432,
+      "idAutora": "aut037",
+      "isbn": "978-0140185126"
+    },
+    "knj050": {
+      "naziv": "Аутостоперски водич кроз галаксију",
+      "opis": "Култни сатирични научнофантастични класик Дагласа Адамса. Пратимо авантуре Артура Дента који напушта Земљу само неколико секунди пре њеног уништења, путујући кроз апсурдни универзум уз помоћ свог пријатеља ванземаљца и најнеобичнијег водича икада написаног.",
+      "slike": [
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1404613595i/13.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1531891848i/11.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1429997177i/18.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1661021422i/2591661.jpg",
+        "https://covers.openlibrary.org/b/isbn/9780345453747-L.jpg"
+      ],
+      "zanr": "Научна фантастика",
+      "format": "Тврди повез",
+      "cena": 2450,
+      "brojStrana": 832,
+      "idAutora": "aut038",
+      "isbn": "978-0345453747"
+    },
+    "knj051": {
+      "naziv": "Одбрана Сократова",
+      "opis": "Класично филозофско дело у ком Платон преноси говор који је његов учитељ Сократ одржао на суђењу у Атини, маестрално се бранећи од оптужби да квари омладину и не верује у богове, и постављајући темеље критичког размишљања.",
+      "slike": [
+        "https://covers.openlibrary.org/b/isbn/9780140455496-L.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1423750716i/24874318.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1212606317i/73945.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1471593658i/31557033.jpg"
+      ],
+      "zanr": "Филозофија",
+      "format": "Меки повез",
+      "cena": 890,
+      "brojStrana": 128,
+      "idAutora": "aut039",
+      "isbn": "978-0140455496"
+    },
+    "knj052": {
+      "naziv": "Црни лабуд: Утицај крајње нероватног",
+      "opis": "Револуционарна књига у којој Насим Николас Талеб истражује феномен „црних лабудова” – високо нероватних, непредвидивих догађаја који имају масиван утицај на светску економију, историју и наше животе, а које људи накнадно рационализују.",
+      "slike": [
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1659249464i/2962025.jpg",
+        "https://covers.openlibrary.org/b/isbn/9780812973815-L.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1714172313i/242472.jpg"
+      ],
+      "zanr": "Филозофија",
+      "format": "Меки повез",
+      "cena": 1350,
+      "brojStrana": 400,
+      "idAutora": "aut040",
+      "isbn": "978-0812973815"
+    },
+    "knj053": {
+      "naziv": "Мали принц",
+      "opis": "Безвременски класик и филозофска бајка Антоана де Сент-Егзиперија. Кроз сусрет пилота и дечака са друге планете у пустињи Сахари, аутор преноси дубоке поруке о љубави, пријатељству, усамљености и правим животним вредностима.",
+      "slike": [
+        "https://covers.openlibrary.org/b/isbn/9780156012195-L.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1330090508i/578618.jpg"
+      ],
+      "zanr": "Књижевност",
+      "format": "Меки повез",
+      "cena": 780,
+      "brojStrana": 96,
+      "idAutora": "aut041",
+      "isbn": "978-0156012195"
+    },
+    "knj054": {
+      "naziv": "Врли нови свет",
+      "opis": "Један од најважнијих дистопијских романа у ком Олдос Хаксли слика застрашујућу визију будућег друштва. У том свету, људи се стварају у лабораторијама, а контрола се одржава кроз генетски инжењеринг, испирање мозга и дрогу која брише све бриге.",
+      "slike": [
+        "https://covers.openlibrary.org/b/isbn/9780060850524-L.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1575509280i/5129.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1737546671i/3180338.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1657143100i/61403176.jpg"
+      ],
+      "zanr": "Научна фантастика",
+      "format": "Меки повез",
+      "cena": 1120,
+      "brojStrana": 288,
+      "idAutora": "aut042",
+      "isbn": "978-0060850524"
+    },
+    "knj055": {
+      "naziv": "Човекова потрага за смислом",
+      "opis": "Потресно сведочанство чувеног психијатра Виктора Франкла о преживљавању у нацистичким концентрационим логорима. Аутор износи темеље своје логотерапије, доказујући да човек може преживети све страхоте уколико пронађе смисао свог постојања.",
+      "slike": [
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1386573716i/19306508.jpg",
+        "https://covers.openlibrary.org/b/isbn/9780807014295-L.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1357174224i/17204679.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1688591394i/26146.jpg"
+      ],
+      "zanr": "Психологија",
+      "format": "Меки повез",
+      "cena": 980,
+      "brojStrana": 192,
+      "idAutora": "aut043",
+      "isbn": "978-0807014295"
+    },
+    "knj056": {
+      "naziv": "У одбрану Републике",
+      "opis": "Класична филозофско-политичка расправа у којој Цицерон, анализирајући идеално државно уређење, концепт правде и дужности грађана према отаџбини, страствено брани вредности Римске републике пред њеним падом.",
+      "slike": [
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1547293255i/11162892.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1545151360i/43263728.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1608337612i/56333440.jpg"
+      ],
+      "zanr": "Филозофија",
+      "format": "Меки повез",
+      "cena": 1250,
+      "brojStrana": 320,
+      "idAutora": "aut044",
+      "isbn": "978-0691167787"
+    },
+    "knj057": {
+      "naziv": "Благо цара Радована",
+      "opis": "Култна збирка филозофских есеја Јована Дучића која се бави најдубљим питањима људског постојања – срећом, љубављу, женом, пријатељством, младима и старима, песницима и херојима. Ово дело представља врхунац српске есејистике.",
+      "slike": [
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1499107985i/35585143.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1422756387i/24782903.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1554820169i/44996703.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1536759729i/25895711.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1509390072i/36505100.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1515791074i/36822574.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1448714879i/28001996.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1327829006i/11649353.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1358414502i/3394741.jpg"
+      ],
+      "zanr": "Књижевност",
+      "format": "Меки повез",
+      "cena": 890,
+      "brojStrana": 180,
+      "idAutora": "aut045",
+      "isbn": "978-8680287123"
+    },
+    "knj058": {
+      "naziv": "Суперинтелигенција: Путеви, опасности, стратегије",
+      "opis": "Проницљива и детаљна анализа о томе шта ће се догодити када машине надмаше људски интелект. Ник Бостром истражује потенцијалне путеве ка суперинтелигенцији и наглашава хитну потребу да се осигура њено поравнање са људским вредностима.",
+      "slike": [
+        "https://covers.openlibrary.org/b/isbn/9780199678112-L.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1492854632i/34934882.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1500299946i/35693494.jpg"
+      ],
+      "zanr": "Наука",
+      "format": "Меки повез",
+      "cena": 1680,
+      "brojStrana": 352,
+      "idAutora": "aut046",
+      "isbn": "978-0199678112"
+    },
+    "knj059": {
+      "naziv": "Правила по којима се велико царство може свести на мало",
+      "opis": "Бриљантан сатирични есеј Бенџамина Френклина у којем он, користећи оштру иронију, критикује британску колонијалну политику према Америци, нудећи „савете” како сигурно уништити сопствену империју кроз бахатост и тиранију.",
+      "slike": [
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1400893937i/22297604.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1531086724i/40750488.jpg"
+      ],
+      "zanr": "Историја",
+      "format": "Меки повез",
+      "cena": 780,
+      "brojStrana": 64,
+      "idAutora": "aut047",
+      "isbn": "978-0486282114"
+    },
+    "knj060": {
+      "naziv": "Аутобиографија Бенџамина Френклина",
+      "opis": "Једно од најпознатијих мемоарских дела у историји које прати живот Бенџамина Френклина од сиромашног шегрта до једне од најзначајнијих фигура америчке историје. Књига обилује практичним саветима о врлинама, раду и личном усавршавању.",
+      "slike": [
+        "https://covers.openlibrary.org/b/isbn/9780486290737-L.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1428170518i/52309.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1757150176i/241284209.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1605742168i/55933198.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1463951925i/26245270.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1388712766i/52311.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1328102827i/6329460.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1717316440i/214139880.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1544248189i/11238783.jpg"
+      ],
+      "zanr": "Биографија",
+      "format": "Меки повез",
+      "cena": 980,
+      "brojStrana": 144,
+      "idAutora": "aut047",
+      "isbn": "978-0486290737"
+    },
+    "knj061": {
+      "naziv": "Просветитељство сада",
+      "opis": "Оптимистична и подацима поткрепљена студија Стивена Пинкера у којој аутор доказује да су разум, наука и хуманизам значајно унапредили људски живот. Кроз обиље графикона, Пинкер показује да свет постаје здравији, богатији, безбеднији и мирнији.",
+      "slike": [
+        "https://covers.openlibrary.org/b/isbn/9780525427575-L.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1534608615i/36619831.jpg"
+      ],
+      "zanr": "Наука",
+      "format": "Тврди повез",
+      "cena": 1560,
+      "brojStrana": 576,
+      "idAutora": "aut048",
+      "isbn": "978-0525427575"
+    },
+    "knj062": {
+      "naziv": "Принципи",
+      "opis": "Бестселер једног од најуспешнијих светских инвеститора, Реја Далија. Аутор дели своје јединствене животне и пословне принципе, засноване на радикалној транспарентности и меритократији идеја, који су му помогли да изгради једну од највећих компанија на свету.",
+      "slike": [
+        "https://covers.openlibrary.org/b/isbn/9781501124020-L.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1697787306i/149832353.jpg"
+      ],
+      "zanr": "Бизнис",
+      "format": "Тврди повез",
+      "cena": 1890,
+      "brojStrana": 592,
+      "idAutora": "aut049",
+      "isbn": "978-1501124020"
+    },
+    "knj063": {
+      "naziv": "SPQR: Историја античког Рима",
+      "opis": "Бриљантна и модерна историја Рима из пера Мери Берд. Књига разбија многе митове и пружа освежавајући поглед на то како је мало и неугледно село у централној Италији израсло у немилосрдну империју која је обликовала читав западни свет.",
+      "slike": [
+        "https://covers.openlibrary.org/b/isbn/9780871404237-L.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1447235727i/27798689.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1464587040i/26831123.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1567698040l/50746733.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1739609184i/228032090.jpg"
+      ],
+      "zanr": "Историја",
+      "format": "Тврди повез",
+      "cena": 1780,
+      "brojStrana": 608,
+      "idAutora": "aut050",
+      "isbn": "978-0871404237"
+    },
+    "knj064": {
+      "naziv": "Кроника паланачког гробља",
+      "opis": "Једно од најпознатијих прозних дела Исидоре Секулић. Кроз серију психолошких портрета и прича о људским судбинама, ауторка маестрално слика менталитет, пролазност живота и меланхолију мале српске паланке.",
+      "slike": [
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1328020336i/2898707.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1752225381i/238528310.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1689408505i/190130542.jpg"
+      ],
+      "zanr": "Књижевност",
+      "format": "Меки повез",
+      "cena": 980,
+      "brojStrana": 280,
+      "idAutora": "aut051",
+      "isbn": "978-8680287123"
+    },
+    "knj065": {
+      "naziv": "Бојд: Пилот ловац који је променио уметност ратовања",
+      "opis": "Фасцинантна биографија Роберта Корама о Џону Бојду, непризнатом војном генију чије су теорије о маневрисању и чувена OODA петља револуционаризовале тактику ваздушних борби и модерно ратовање уопште.",
+      "slike": [
+        "https://covers.openlibrary.org/b/isbn/9780316881463-L.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1328308029i/6323016.jpg"
+      ],
+      "zanr": "Биографија",
+      "format": "Тврди повез",
+      "cena": 1890,
+      "brojStrana": 512,
+      "idAutora": "aut052",
+      "isbn": "978-0316881463"
+    },
+    "knj066": {
+      "naziv": "Изабране песме",
+      "opis": "Прелепа збирка која обухвата најзначајнија поетска остварења Десанке Максимовић, у којима су сабране њене најлепше песме о љубави, пролазности, природи и дубоком родољубљу које је обележило њен живот.",
+      "slike": [
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1327585162i/5461345.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1379252187i/18490418.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1617924293i/57671571.jpg"
+      ],
+      "zanr": "Поезија",
+      "format": "Меки повез",
+      "cena": 890,
+      "brojStrana": 240,
+      "idAutora": "aut053",
+      "isbn": "978-8680287123"
+    },
+    "knj067": {
+      "naziv": "Тражим помиловање",
+      "opis": "Једна од најзначајнијих и најлепших песничких збирки Десанке Максимовић, написана као лирска дискусија са Душановим закоником, кроз коју песникиња тражи разумевање, милост и опроштај за све људске слабости.",
+      "slike": [
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1375548215i/12381397.jpg"
+      ],
+      "zanr": "Поезија",
+      "format": "Меки повез",
+      "cena": 780,
+      "brojStrana": 180,
+      "idAutora": "aut053",
+      "isbn": "978-8680287123"
+    },
+    "knj068": {
+      "naziv": "Животињска фарма",
+      "opis": "Бриљантни алегоријски роман Џорџа Орвела који кроз причу о побуни животиња на једној фарми пружа оштру и безвременску критику тоталитаризма, корупције власти и издаје револуционарних идеала.",
+      "slike": [
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1327959366i/5472.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1590607841i/53497456.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1386690718i/19346103.jpg",
+        "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1472051771i/31674030.jpg"
+      ],
+      "zanr": "Књижевност",
+      "format": "Меки повез",
+      "cena": 890,
+      "brojStrana": 144,
+      "idAutora": "aut005",
+      "isbn": "978-0451526342"
+    }
+  },
+  "korisnici": {
+    "kor001": {
+      "korisnickoIme": "tatjana_p",
+      "lozinka": "tatjana123",
+      "ime": "Татјана",
+      "prezime": "Петровић",
+      "email": "tatjana.petrovic@example.com",
+      "datumRodjenja": "2003-01-01",
+      "adresa": "Београдска 1, Београд",
+      "zanimanje": "Економисткиња"
+    },
+    "kor002": {
+      "korisnickoIme": "jelena_j",
+      "lozinka": "jelena123",
+      "ime": "Јелена",
+      "prezime": "Јовановић",
+      "email": "jelena.jovanovic@example.com",
+      "datumRodjenja": "1985-05-05",
+      "adresa": "Новосадска 2, Нови Сад",
+      "zanimanje": "Правница"
+    },
+    "kor003": {
+      "korisnickoIme": "milica_n",
+      "lozinka": "milica123",
+      "ime": "Милица",
+      "prezime": "Николић",
+      "email": "milica.nikolic@example.com",
+      "datumRodjenja": "1992-10-10",
+      "adresa": "Нишка 3, Ниш",
+      "zanimanje": "Лекарка"
+    },
+    "kor004": {
+      "korisnickoIme": "marija_m",
+      "lozinka": "marija123",
+      "ime": "Марија",
+      "prezime": "Милановић",
+      "email": "marija.milanovic@example.com",
+      "datumRodjenja": "1988-08-08",
+      "adresa": "Крагујевачка 4, Крагујевац",
+      "zanimanje": "Инжењерка"
+    },
+    "kor005": {
+      "korisnickoIme": "ana_m",
+      "lozinka": "ana123",
+      "ime": "Ана",
+      "prezime": "Марковић",
+      "email": "ana.markovic@example.com",
+      "datumRodjenja": "1995-12-12",
+      "adresa": "Суботичка 5, Суботица",
+      "zanimanje": "Професорка"
+    },
+    "kor006": {
+      "korisnickoIme": "djordje_dj",
+      "lozinka": "djordje123",
+      "ime": "Ђорђе",
+      "prezime": "Ђорђевић",
+      "email": "djordje.djordjevic@example.com",
+      "datumRodjenja": "1991-03-03",
+      "adresa": "Зрењанинска 6, Зрењанин",
+      "zanimanje": "Програмер"
+    },
+    "kor007": {
+      "korisnickoIme": "stefan_s",
+      "lozinka": "stefan123",
+      "ime": "Стефан",
+      "prezime": "Стефановић",
+      "email": "stefan.stefanovic@example.com",
+      "datumRodjenja": "1994-07-07",
+      "adresa": "Шабачка 7, Шабац",
+      "zanimanje": "Архитекта"
+    },
+    "kor008": {
+      "korisnickoIme": "ilija_i",
+      "lozinka": "ilija123",
+      "ime": "Илија",
+      "prezime": "Илић",
+      "email": "ilija.ilic@example.com",
+      "datumRodjenja": "1989-09-09",
+      "adresa": "Ужичка 8, Ужице",
+      "zanimanje": "Новинар"
+    },
+    "kor009": {
+      "korisnickoIme": "luka_l",
+      "lozinka": "luka123",
+      "ime": "Лука",
+      "prezime": "Лукић",
+      "email": "luka.lukic@example.com",
+      "datumRodjenja": "1996-11-11",
+      "adresa": "Чачанска 9, Чачак",
+      "zanimanje": "Дизајнер"
+    },
+    "kor010": {
+      "korisnickoIme": "ivan_i",
+      "lozinka": "ivan123",
+      "ime": "Иван",
+      "prezime": "Ивановић",
+      "email": "ivan.ivanovic@example.com",
+      "datumRodjenja": "1987-02-02",
+      "adresa": "Врањска 10, Врање",
+      "zanimanje": "Менаџер"
+    }
+  },
+  "recenzije": {
+    "rec001": {
+      "tekst": "Изузетно детаљна биографија, иако на моменте можда превише фокусирана на техничке детаље. Ипак, пружа одличан увид у његов ум и бескомпромисну радну етику.",
+      "datum": "2024-03-15",
+      "idKnjige": "knj015",
+      "idKorisnika": "kor004"
+    },
+    "rec002": {
+      "tekst": "Кратка, али невероватно снажна прича која ме дубоко дирнула. Шолохов мајсторски преноси патњу, али и несаломљиви дух. Чита се у једном даху.",
+      "datum": "2025-01-10",
+      "idKnjige": "knj042",
+      "idKorisnika": "kor007"
+    },
+    "rec003": {
+      "tekst": "Фасцинантно повезивање квантне физике, еволуције и теорије рачунања. Захтева велику концентрацију при читању, али се труд апсолутно исплати. Мења поглед на свет.",
+      "datum": "2024-08-22",
+      "idKnjige": "knj003",
+      "idKorisnika": "kor001"
+    },
+    "rec004": {
+      "tekst": "Класик који никада не губи на актуелности. Орвелова оштроумност и алегоријски приказ моћи су невероватни. Књига којој се увек изнова враћам.",
+      "datum": "2026-02-05",
+      "idKnjige": "knj068",
+      "idKorisnika": "kor010"
+    },
+    "rec005": {
+      "tekst": "Истински темељац научне фантастике. Концепт психоисторије је генијалан, мада су ликови понекад помало плошни у корист саме грандиозне идеје.",
+      "datum": "2023-11-18",
+      "idKnjige": "knj021",
+      "idKorisnika": "kor005"
+    },
+    "rec006": {
+      "tekst": "Књига која темељно мења поглед на живот и патњу. Франклово искуство и основе логотерапије су непроцењиви за свако људско биће.",
+      "datum": "2025-09-30",
+      "idKnjige": "knj055",
+      "idKorisnika": "kor002"
+    },
+    "rec007": {
+      "tekst": "Збирка која заиста помера границе маште. Насловна прича је апсолутно бриљантна студија о језику, времену и детерминизму.",
+      "datum": "2024-05-12",
+      "idKnjige": "knj007",
+      "idKorisnika": "kor009"
+    },
+    "rec008": {
+      "tekst": "Пекић мајсторски гради напетост. Атмосфера на лондонском аеродрому је клаустрофобична и савршено дочарана. Одличан трилер са дубљом филозофском поруком.",
+      "datum": "2025-07-21",
+      "idKnjige": "knj033",
+      "idKorisnika": "kor008"
+    },
+    "rec009": {
+      "tekst": "Одлично истражена биографија која Ајнштајна приказује не само као недостижног генија, већ и као човека са свим његовим манама и специфичностима.",
+      "datum": "2024-12-04",
+      "idKnjige": "knj012",
+      "idKorisnika": "kor006"
+    },
+    "rec010": {
+      "tekst": "Урнебесно смешно! Адамс има јединствен стил и апсурдни хумор који вас тера да се смејете наглас. Савршено штиво за опуштање.",
+      "datum": "2026-04-01",
+      "idKnjige": "knj050",
+      "idKorisnika": "kor003"
+    },
+    "rec011": {
+      "tekst": "Фантастичан увид у живот једног од оснивача Америке. Ајзаксон пише невероватно питко и држи пажњу до последње странице.",
+      "datum": "2023-11-05",
+      "idKnjige": "knj011",
+      "idKorisnika": "kor001"
+    },
+    "rec012": {
+      "tekst": "Исидора Секулић у свом најбољем издању. Прелепа, али меланхолична слика нашег менталитета и пролазности живота.",
+      "datum": "2024-02-14",
+      "idKnjige": "knj064",
+      "idKorisnika": "kor008"
+    },
+    "rec013": {
+      "tekst": "Врло провокативно штиво. Фајерабенд тера на размишљање, руши догме у науци и захтева од читаоца отворен ум.",
+      "datum": "2025-06-20",
+      "idKnjige": "knj018",
+      "idKorisnika": "kor003"
+    },
+    "rec014": {
+      "tekst": "Класик коме се увек враћам кад ми треба смех. Артур Дент је легенда, а Адамсов хумор је једноставно непревазиђен!",
+      "datum": "2024-10-11",
+      "idKnjige": "knj050",
+      "idKorisnika": "kor010"
+    },
+    "rec015": {
+      "tekst": "Пупинова прича је толико инспиративна. Како је од малог пашњака стигао до светског врха... Сваки млади човек би требало ово да прочита.",
+      "datum": "2026-01-22",
+      "idKnjige": "knj025",
+      "idKorisnika": "kor002"
+    },
+    "rec016": {
+      "tekst": "Потпуно луда идеја и феноменална разрада. Кинеска научна фантастика доноси право освежење у жанр. Једва чекам да читам наставке.",
+      "datum": "2023-09-08",
+      "idKnjige": "knj036",
+      "idKorisnika": "kor005"
+    },
+    "rec017": {
+      "tekst": "Ова књига ми је променила поглед на свет. Много смо мање објективни него што мислимо. Подаци које Рослинг износи су охрабрујући.",
+      "datum": "2025-03-30",
+      "idKnjige": "knj045",
+      "idKorisnika": "kor007"
+    },
+    "rec018": {
+      "tekst": "Дојч је геније. Објашњења су му кристално јасна, а оптимизам у вези са људским напретком је невероватно заразан.",
+      "datum": "2024-07-16",
+      "idKnjige": "knj004",
+      "idKorisnika": "kor009"
+    },
+    "rec019": {
+      "tekst": "Бенџамин Френклин је био врхунски сатиричар. Овај есеј је врло кратак, али погађа право у мету. Историја се стално понавља.",
+      "datum": "2025-11-12",
+      "idKnjige": "knj059",
+      "idKorisnika": "kor006"
+    },
+    "rec020": {
+      "tekst": "Ремек-дело светске књижевности. Психолошка дубина ликова је ненадмашна, посебно део који се односи на Великог инквизитора.",
+      "datum": "2023-12-25",
+      "idKnjige": "knj029",
+      "idKorisnika": "kor004"
+    },
+    "rec021": {
+      "tekst": "Попер бриљантно објашњава концепт фалсификабилности. Књига је темељна и захтева пажњу, али је неопходна за свакога ко жели да разуме шта је права наука.",
+      "datum": "2024-01-15",
+      "idKnjige": "knj002",
+      "idKorisnika": "kor001"
+    },
+    "rec022": {
+      "tekst": "Чанг поново одушевљава. Свака прича је мало ремек-дело које тера на дубоко размишљање о слободној вољи и технологији. Права филозофска фантастика.",
+      "datum": "2025-08-11",
+      "idKnjige": "knj008",
+      "idKorisnika": "kor003"
+    },
+    "rec023": {
+      "tekst": "Зачетник сајберпанка! Невероватно је колико је Гибсон прецизно предвидео будућност интернета и виртуелне стварности. Атмосфера је мрачна и савршена.",
+      "datum": "2023-10-02",
+      "idKnjige": "knj017",
+      "idKorisnika": "kor008"
+    },
+    "rec024": {
+      "tekst": "Безвременска трагедија. Сваким новим читањем откривам неки нови слој значења. Шекспиров језик је непревазиђен.",
+      "datum": "2026-03-14",
+      "idKnjige": "knj024",
+      "idKorisnika": "kor005"
+    },
+    "rec025": {
+      "tekst": "Тешка, али апсолутно феноменална књига. Психолошка трансформација Раскољникова и његова грижа савести су описани до савршенства.",
+      "datum": "2024-05-27",
+      "idKnjige": "knj030",
+      "idKorisnika": "kor007"
+    },
+    "rec026": {
+      "tekst": "Какав завршетак трилогије! Идеје су толико грандиозне и застрашујуће да ми је требало времена да их процесуирам након читања.",
+      "datum": "2025-11-09",
+      "idKnjige": "knj038",
+      "idKorisnika": "kor002"
+    },
+    "rec027": {
+      "tekst": "Ово није само књига о спорту, већ о животу генерално. Технике за превазилажење унутрашњег критичара су применљиве у свакодневним изазовима.",
+      "datum": "2023-08-18",
+      "idKnjige": "knj048",
+      "idKorisnika": "kor010"
+    },
+    "rec028": {
+      "tekst": "Талеб је бриљантан аутор. Концепт црног лабуда ми је потпуно променио начин на који посматрам ризик и историјске догађаје.",
+      "datum": "2025-02-03",
+      "idKnjige": "knj052",
+      "idKorisnika": "kor004"
+    },
+    "rec029": {
+      "tekst": "Право освежење у мору песимистичних вести. Пинкер јасним подацима и графиконима аргументовано доказује да човечанство иде у добром правцу.",
+      "datum": "2024-09-21",
+      "idKnjige": "knj061",
+      "idKorisnika": "kor006"
+    },
+    "rec030": {
+      "tekst": "Прелепи стихови. Десанкина топлина и хуманост исијавају из сваке песме. Предивно уклопљено са строгим правилима Душановог законика.",
+      "datum": "2026-04-10",
+      "idKnjige": "knj067",
+      "idKorisnika": "kor009"
+    },
+    "rec031": {
+      "tekst": "Застрашујуће актуелна књига. Сваки пут када је читам, пронађем неку нову паралелу са данашњим друштвом и системима надзора.",
+      "datum": "2024-04-12",
+      "idKnjige": "knj005",
+      "idKorisnika": "kor002"
+    },
+    "rec032": {
+      "tekst": "Ајзаксон је поново успео. Ова биографија није само препуна чињеница, већ прича о Леонардовој незајажљивој радозналости делује невероватно инспиративно.",
+      "datum": "2023-11-28",
+      "idKnjige": "knj014",
+      "idKorisnika": "kor007"
+    },
+    "rec033": {
+      "tekst": "Кунов концепт промене парадигме је нешто што сваки истраживач мора да разуме. Ово је апсолутно класично дело филозофије науке.",
+      "datum": "2025-01-09",
+      "idKnjige": "knj020",
+      "idKorisnika": "kor004"
+    },
+    "rec034": {
+      "tekst": "Врло захтевно штиво, али пружа дубок увид у границе језика и мисли. Витгенштајн не нуди лаке одговоре, али тера на размишљање.",
+      "datum": "2024-06-17",
+      "idKnjige": "knj028",
+      "idKorisnika": "kor001"
+    },
+    "rec035": {
+      "tekst": "Наше највеће културно благо сабрано на једном месту. Вуков рад на очувању ове усмене традиције је заиста непроцењив.",
+      "datum": "2026-02-21",
+      "idKnjige": "knj035",
+      "idKorisnika": "kor009"
+    },
+    "rec036": {
+      "tekst": "Ова књига ме је натерала да потпуно променим своје животне навике. Нисам ни био свестан колико је квалитетан сан критичан за дугорочно здравље.",
+      "datum": "2023-12-03",
+      "idKnjige": "knj044",
+      "idKorisnika": "kor003"
+    },
+    "rec037": {
+      "tekst": "Андрићев стил је јединствен. Мост као неми сведок векова, царстава и људских судбина је савршена метафора. Заслужена Нобелова награда.",
+      "datum": "2025-10-14",
+      "idKnjige": "knj049",
+      "idKorisnika": "kor010"
+    },
+    "rec038": {
+      "tekst": "Хакслијева визија будућности је можда чак и страшнија од Орвелове, јер овде људи добровољно пристају на контролу зарад комфора и задовољства.",
+      "datum": "2024-08-05",
+      "idKnjige": "knj054",
+      "idKorisnika": "kor008"
+    },
+    "rec039": {
+      "tekst": "Далиови принципи радикалне транспарентности су можда оштри за неке, али очигледно дају резултате. Одлична књига за свакога ко води тим или компанију.",
+      "datum": "2025-05-22",
+      "idKnjige": "knj062",
+      "idKorisnika": "kor006"
+    },
+    "rec040": {
+      "tekst": "Тесла није био само генијалан инжењер, већ и дубоки мислилац и филозоф. Његова визија хармоније са природом је данас актуелнија него икад.",
+      "datum": "2024-03-08",
+      "idKnjige": "knj001",
+      "idKorisnika": "kor005"
+    },
+    "rec041": {
+      "tekst": "Каква инспиративна и духовита књига! Фајнман показује да врхунска наука и одличан смисао за хумор и те како могу да иду заједно.",
+      "datum": "2023-11-20",
+      "idKnjige": "knj009",
+      "idKorisnika": "kor001"
+    },
+    "rec042": {
+      "tekst": "Ајзаксон није улепшавао ствари. Џобс је приказан са свим својим манама, али је његов утицај на модерну технологију апсолутно непорецив.",
+      "datum": "2024-05-18",
+      "idKnjige": "knj013",
+      "idKorisnika": "kor007"
+    },
+    "rec043": {
+      "tekst": "Докинс пише тако јасно и логично. Идеја о генима као главним покретачима еволуције ми је потпуно променила начин на који посматрам биологију.",
+      "datum": "2025-02-28",
+      "idKnjige": "knj019",
+      "idKorisnika": "kor004"
+    },
+    "rec044": {
+      "tekst": "Азимов је мајстор логичких загонетки. Свака прича тестира Три закона роботике до крајњих граница, уз сјајне етичке дилеме.",
+      "datum": "2024-09-05",
+      "idKnjige": "knj023",
+      "idKorisnika": "kor009"
+    },
+    "rec045": {
+      "tekst": "Нико не познаје мрачне дубине људске душе као Достојевски. Монолог главног јунака је тежак, али маестрално написан.",
+      "datum": "2023-07-12",
+      "idKnjige": "knj031",
+      "idKorisnika": "kor002"
+    },
+    "rec046": {
+      "tekst": "Обавезно штиво за свакога ко покреће стартап. Тил објашњава зашто је стварање монопола кроз иновацију кључ дугорочног успеха.",
+      "datum": "2025-11-03",
+      "idKnjige": "knj039",
+      "idKorisnika": "kor006"
+    },
+    "rec047": {
+      "tekst": "Храбра и помало застрашујућа исповест. Сноуденова књига отвара очи када је у питању дигитална приватност у савременом свету.",
+      "datum": "2026-01-15",
+      "idKnjige": "knj046",
+      "idKorisnika": "kor003"
+    },
+    "rec048": {
+      "tekst": "Темељ критичког мишљења. Сократова храброст пред судом и његова непоколебљива оданост истини су инспиративни и након толико векова.",
+      "datum": "2024-03-22",
+      "idKnjige": "knj051",
+      "idKorisnika": "kor008"
+    },
+    "rec049": {
+      "tekst": "Мери Берд пише историју која је жива и узбудљива. Ово није само суво набрајање битака, већ права слика римског друштва.",
+      "datum": "2025-08-09",
+      "idKnjige": "knj063",
+      "idKorisnika": "kor010"
+    },
+    "rec050": {
+      "tekst": "Десанкина поезија увек доноси мир и носталгију. Њени стихови о природи и љубави су нешто најлепше у нашој књижевности.",
+      "datum": "2023-12-19",
+      "idKnjige": "knj066",
+      "idKorisnika": "kor005"
+    },
+    "rec051": {
+      "tekst": "Невероватна визија сингуларитета. Питање да ли је савршен свет без болести и смрти заправо утопија или дистопија је овде обрађено на маестралан начин.",
+      "datum": "2024-02-18",
+      "idKnjige": "knj006",
+      "idKorisnika": "kor004"
+    },
+    "rec052": {
+      "tekst": "Као неко ко није математичар, искрено сам уживао у овој књизи. Историја геометрије је испричана кроз фасцинантне животе великих научника.",
+      "datum": "2025-07-11",
+      "idKnjige": "knj010",
+      "idKorisnika": "kor001"
+    },
+    "rec053": {
+      "tekst": "Тешко је речима описати генијалност овог дела. Оштра сатира совјетског друштва помешана са магичним реализмом ствара јединствено читалачко искуство.",
+      "datum": "2023-10-30",
+      "idKnjige": "knj016",
+      "idKorisnika": "kor007"
+    },
+    "rec054": {
+      "tekst": "Иако је ово само кратка прича, носи тежину дебелог романа. Концепт ентропије и еволуције човечанства је приказан на застрашујуће логичан начин.",
+      "datum": "2026-01-05",
+      "idKnjige": "knj022",
+      "idKorisnika": "kor002"
+    },
+    "rec055": {
+      "tekst": "Пупинов поглед на однос науке и вере је освежавајући. Књига је дубоко филозофска, али и веома приступачна и питка за читање.",
+      "datum": "2024-11-14",
+      "idKnjige": "knj026",
+      "idKorisnika": "kor009"
+    },
+    "rec056": {
+      "tekst": "Ово није само књига о инвестирању, ово је приручник за живот. Мангерови ментални модели су апсолутно суво злато за доношење бољих одлука.",
+      "datum": "2025-04-02",
+      "idKnjige": "knj032",
+      "idKorisnika": "kor005"
+    },
+    "rec057": {
+      "tekst": "Концепт 'мрачне шуме' ме је натерао да се најежим. Други део ове невероватне трилогије је још бољи и напетији од првог. Сјајно!",
+      "datum": "2023-08-25",
+      "idKnjige": "knj037",
+      "idKorisnika": "kor003"
+    },
+    "rec058": {
+      "tekst": "Одлична и веома детаљна биографија. Ешли Венс је урадио невероватан посао у покушају да деконструише Масков карактер и неумољиву радну етику.",
+      "datum": "2024-12-19",
+      "idKnjige": "knj041",
+      "idKorisnika": "kor008"
+    },
+    "rec059": {
+      "tekst": "Ово је напредна литература, али за инжењере и истраживаче у домену вештачке интелигенције представља апсолутно обавезно штиво. Врло прецизно објашњено.",
+      "datum": "2026-03-08",
+      "idKnjige": "knj047",
+      "idKorisnika": "kor006"
+    },
+    "rec060": {
+      "tekst": "Књига којој се враћам у сваком животном добу и увек научим нешто ново. Филозофија љубави и пријатељства савршено упакована у дечју бајку.",
+      "datum": "2025-09-27",
+      "idKnjige": "knj053",
+      "idKorisnika": "kor010"
+    },
+    "rec061": {
+      "tekst": "Цицеронова одбрана републиканских вредности је фасцинантна. Иако је писана пре више од два миленијума, многа запажања о политици, моћи и правди су и даље невероватно актуелна.",
+      "datum": "2023-09-15",
+      "idKnjige": "knj056",
+      "idKorisnika": "kor003"
+    },
+    "rec062": {
+      "tekst": "Јован Дучић је мајстор стила. Његова запажања о љубави, срећи и пријатељству су толико дубока да вас терају да застанете и размислите после сваког прочитаног пасуса.",
+      "datum": "2024-11-20",
+      "idKnjige": "knj057",
+      "idKorisnika": "kor008"
+    },
+    "rec063": {
+      "tekst": "Бостром врло аналитично и хладнокрвно сагледава све ризике развоја вештачке интелигенције. Књига која ће вас натерати да се озбиљно замислите над будућношћу човечанства.",
+      "datum": "2025-05-14",
+      "idKnjige": "knj058",
+      "idKorisnika": "kor001"
+    },
+    "rec064": {
+      "tekst": "Френклинова аутобиографија је препуна практичних савета. Невероватно је колико је овај човек био свестран и фокусиран на константно лично усавршавање.",
+      "datum": "2024-02-10",
+      "idKnjige": "knj060",
+      "idKorisnika": "kor005"
+    },
+    "rec065": {
+      "tekst": "Нисам знао много о Бојду пре ове књиге, али његова ООДА петља и тактички геније су апсолутно променили начин на који размишљам о стратегији и брзини доношења одлука.",
+      "datum": "2026-03-25",
+      "idKnjige": "knj065",
+      "idKorisnika": "kor009"
+    },
+    "rec066": {
+      "tekst": "Милутин Миланковић није био само врхунски научник, већ и сјајан писац. Путовање кроз свемир и време је дочарано на прелеп, готово поетски начин.",
+      "datum": "2023-12-08",
+      "idKnjige": "knj027",
+      "idKorisnika": "kor002"
+    },
+    "rec067": {
+      "tekst": "Стихови Његоша су уклесани у наш менталитет. Читање ове ванвременске филозофске поеме у зрелим годинама доноси потпуно ново и дубље разумевање.",
+      "datum": "2025-10-02",
+      "idKnjige": "knj034",
+      "idKorisnika": "kor007"
+    },
+    "rec068": {
+      "tekst": "Одлична анализа о томе како технологија задржава нашу пажњу. Модел од четири корака који Нир Ејал описује је нешто што сваки дизајнер дигиталних производа мора да познаје.",
+      "datum": "2024-06-18",
+      "idKnjige": "knj040",
+      "idKorisnika": "kor004"
+    },
+    "rec069": {
+      "tekst": "Тегмарк нуди врло уравнотежен поглед на АИ. Нити је превише песимистичан нити наиван, већ директно позива на акцију како бисмо осигурали добру будућност.",
+      "datum": "2025-01-29",
+      "idKnjige": "knj043",
+      "idKorisnika": "kor006"
+    },
+    "rec070": {
+      "tekst": "Поново сам прочитао Орвела и поново се одушевио. Начин на који су свиње преузеле контролу и постепено мењале законе је бриљантна и језива студија тоталитаризма.",
+      "datum": "2026-04-20",
+      "idKnjige": "knj068",
+      "idKorisnika": "kor010"
+    },
+    "rec071": {
+      "tekst": "Орвел је геније. Ово је једна од оних књига које апсолутно морате прочитати макар једном у животу. Застрашујућа и истинита.",
+      "datum": "2025-11-22",
+      "idKnjige": "knj005",
+      "idKorisnika": "kor001"
+    },
+    "rec072": {
+      "tekst": "Достојевски бриљантно слика унутрашње конфликте људске душе. Дијалог Ивана и Аљоше је нешто најдубље што сам икада прочитао.",
+      "datum": "2024-03-10",
+      "idKnjige": "knj029",
+      "idKorisnika": "kor005"
+    },
+    "rec073": {
+      "tekst": "Веома занимљив увид у његов живот. Ајзаксон поново показује да је неприкосновени мајстор модерне биографије.",
+      "datum": "2026-02-14",
+      "idKnjige": "knj011",
+      "idKorisnika": "kor009"
+    },
+    "rec074": {
+      "tekst": "Хари Селдон и психоисторија су концепти који и данас невероватно инспиришу. Азимов је био прави визионар свог времена.",
+      "datum": "2023-09-01",
+      "idKnjige": "knj021",
+      "idKorisnika": "kor002"
+    },
+    "rec075": {
+      "tekst": "Пекићев трилер је невероватно напет. Аеродром Хитроу је овде приказан као микрокосмос целог човечанства које се налази у кризи.",
+      "datum": "2025-06-28",
+      "idKnjige": "knj033",
+      "idKorisnika": "kor006"
+    },
+    "rec076": {
+      "tekst": "Не знам колико сам се пута искрено насмејао. Број 42 коначно има смисла! Адамсов апсурдни хумор је потпуно савршен.",
+      "datum": "2024-12-05",
+      "idKnjige": "knj050",
+      "idKorisnika": "kor008"
+    },
+    "rec077": {
+      "tekst": "Иако су неки принципи сувише ригидни за мој укус, књига дефинитивно нуди сјајне алате за анализу сопствених грешака и пословни развој.",
+      "datum": "2025-04-18",
+      "idKnjige": "knj062",
+      "idKorisnika": "kor003"
+    },
+    "rec078": {
+      "tekst": "Сваки пут кад читам Андрића, изнова се одушевим његовим смиреним, а опет тако моћним и сликовитим приповедањем.",
+      "datum": "2024-08-30",
+      "idKnjige": "knj049",
+      "idKorisnika": "kor007"
+    },
+    "rec079": {
+      "tekst": "Ајзаксон даје веома објективан приказ. Можете се слагати са Маском или не, али његова амбиција и визија су апсолутно неспорни.",
+      "datum": "2026-05-02",
+      "idKnjige": "knj015",
+      "idKorisnika": "kor010"
+    },
+    "rec080": {
+      "tekst": "Предиван језик Исидоре Секулић. Приче које носе дубоку тугу, али истовремено приказују и лепоту људског трајања и сећања.",
+      "datum": "2023-10-15",
+      "idKnjige": "knj064",
+      "idKorisnika": "kor004"
+    },
+    "rec081": {
+      "tekst": "Поперов приступ науци је строг, али неопходан. Ова књига је темељ за свакога ко жели да разуме како се теорије заправо доказују и обарају кроз експерименте.",
+      "datum": "2024-03-20",
+      "idKnjige": "knj002",
+      "idKorisnika": "kor002"
+    },
+    "rec082": {
+      "tekst": "Једна од најбољих књига о вештачкој интелигенцији коју сам прочитао. Сингуларитет је овде описан скоро као верско искуство, што је врло интересантан угао.",
+      "datum": "2024-04-12",
+      "idKnjige": "knj006",
+      "idKorisnika": "kor003"
+    },
+    "rec083": {
+      "tekst": "Фајнман је био легенда. Његове анегдоте нису само смешне, већ показују како један генијалан ум посматра наизглед обичне свакодневне проблеме.",
+      "datum": "2024-05-18",
+      "idKnjige": "knj009",
+      "idKorisnika": "kor004"
+    },
+    "rec084": {
+      "tekst": "Математика никада није била овако узбудљива. Млодинов пише тако да чак и компликоване геометријске концепте разумете из прве. Сјајна историја науке.",
+      "datum": "2024-06-25",
+      "idKnjige": "knj010",
+      "idKorisnika": "kor005"
+    },
+    "rec085": {
+      "tekst": "Џобс је био тежак човек, али Ајзаксон је успео да ухвати ту његову енергију која је вукла цео Apple напред. Биографија која се чита као најбољи трилер.",
+      "datum": "2024-07-30",
+      "idKnjige": "knj013",
+      "idKorisnika": "kor006"
+    },
+    "rec086": {
+      "tekst": "Да Винчијеве бележнице су фасцинантне. Ова књига савршено спаја уметност и инжењерство, баш онако како је то и сам Леонардо радио целог свог живота.",
+      "datum": "2024-08-14",
+      "idKnjige": "knj014",
+      "idKorisnika": "kor008"
+    },
+    "rec087": {
+      "tekst": "Мајстор и Маргарита је књига коју разумете тек након другог или трећег читања. Булгаков је био мајстор сатире и скривених значења.",
+      "datum": "2024-09-05",
+      "idKnjige": "knj016",
+      "idKorisnika": "kor009"
+    },
+    "rec088": {
+      "tekst": "Зачетник сајберпанка! Гибсонова визија будућности је данас актуелнија него икад. Мрачна атмосфера и врхунски стил писања.",
+      "datum": "2024-10-12",
+      "idKnjige": "knj017",
+      "idKorisnika": "kor010"
+    },
+    "rec089": {
+      "tekst": "Докинс пише врло директно и логично. Ово је књига која вам потпуно мења перспективу о томе како еволуција заправо функционише на нивоу гена.",
+      "datum": "2024-11-20",
+      "idKnjige": "knj019",
+      "idKorisnika": "kor001"
+    },
+    "rec090": {
+      "tekst": "Кунов концепт парадигми је револуционаран. Ова књига помаже да схватите зашто се наука понекад споро мења и како долази до великих обрта.",
+      "datum": "2024-12-05",
+      "idKnjige": "knj020",
+      "idKorisnika": "kor002"
+    },
+    "rec091": {
+      "tekst": "Најкраћа, а можда и најмоћнија Азимовљева прича. Крај је један од најбољих у целој историји научне фантастике.",
+      "datum": "2025-01-15",
+      "idKnjige": "knj022",
+      "idKorisnika": "kor004"
+    },
+    "rec092": {
+      "tekst": "Три закона роботике су овде тестирана кроз низ генијалних логичких загонетки. Азимов је заиста био испред свог времена.",
+      "datum": "2025-02-10",
+      "idKnjige": "knj023",
+      "idKorisnika": "kor005"
+    },
+    "rec093": {
+      "tekst": "Шекспирова драма која никада не стари. Питање 'бити или не бити' и даље погађа суштину људског постојања.",
+      "datum": "2025-03-08",
+      "idKnjige": "knj024",
+      "idKorisnika": "kor006"
+    },
+    "rec094": {
+      "tekst": "Пупинова аутобиографија је изузетно мотивишућа. Како један дечак из малог села може да постане један од највећих светских научника захваљујући раду и упорности.",
+      "datum": "2025-04-22",
+      "idKnjige": "knj025",
+      "idKorisnika": "kor007"
+    },
+    "rec095": {
+      "tekst": "Миланковић је био велики визионар. Његов опис свемира и времена је тако поетичан да заборавите да је ово заправо научна књига.",
+      "datum": "2025-05-12",
+      "idKnjige": "knj027",
+      "idKorisnika": "kor008"
+    },
+    "rec096": {
+      "tekst": "Витгенштајн не нуди лаке одговоре, али вас тера да размислите о језику на начин на који никада раније нисте.",
+      "datum": "2025-06-18",
+      "idKnjige": "knj028",
+      "idKorisnika": "kor003"
+    },
+    "rec097": {
+      "tekst": "Трактат о људској патњи и слободи. Достојевски је био највећи психолог међу писцима, а ова књига је најбољи доказ за то.",
+      "datum": "2025-07-25",
+      "idKnjige": "knj031",
+      "idKorisnika": "kor001"
+    },
+    "rec098": {
+      "tekst": "Пекићев трилер о вирусу беснила је невероватно напет. Аеродром као место где се руши цела цивилизација је сјајна метафора.",
+      "datum": "2025-08-30",
+      "idKnjige": "knj033",
+      "idKorisnika": "kor010"
+    },
+    "rec099": {
+      "tekst": "Вуков рад на очувању наше народне баштине је непроцењив. Ове песме су темељ наше културе и језика.",
+      "datum": "2025-09-14",
+      "idKnjige": "knj035",
+      "idKorisnika": "kor007"
+    },
+    "rec100": {
+      "tekst": "Шолохов је мајсторски приказао сурову ратну стварност. Прича о човеку који је све изгубио, а опет пронашао снагу да настави даље.",
+      "datum": "2025-10-05",
+      "idKnjige": "knj042",
+      "idKorisnika": "kor009"
+    },
+    "rec101": {
+      "tekst": "Фауст је дело које ме изнова фасцинира својом слојевитошћу. Свако читање открива нове филозофске дилеме о којима вреди размишљати недељама.",
+      "datum": "2024-03-12",
+      "idKnjige": "knj000",
+      "idKorisnika": "kor001"
+    },
+    "rec102": {
+      "tekst": "Мефистофелес је заправо најискренији лик у књизи. Гете је успео да кроз њега прикаже све оне циничне, али истините аспекте људске природе.",
+      "datum": "2024-05-22",
+      "idKnjige": "knj000",
+      "idKorisnika": "kor002"
+    },
+    "rec103": {
+      "tekst": "Књига која поставља суштинско питање: шта смо све спремни да жртвујемо за тренутак апсолутног задовољства? Безвременско ремек-дело.",
+      "datum": "2024-08-14",
+      "idKnjige": "knj000",
+      "idKorisnika": "kor003"
+    },
+    "rec104": {
+      "tekst": "Први део је динамичнији и лакши за праћење, док је други део права симболичка енигма. Ово је књига за цео живот.",
+      "datum": "2024-11-05",
+      "idKnjige": "knj000",
+      "idKorisnika": "kor004"
+    },
+    "rec105": {
+      "tekst": "Трагедија која превазилази границе времена. Гетеов језик је моћан, а симболика толико богата да вас потпуно увуче у свој свет.",
+      "datum": "2025-01-20",
+      "idKnjige": "knj000",
+      "idKorisnika": "kor005"
+    },
+    "rec106": {
+      "tekst": "Борба за људску душу никада није била боље описана. Свака реченица одише дубоком мудрошћу и животним искуством.",
+      "datum": "2025-04-18",
+      "idKnjige": "knj000",
+      "idKorisnika": "kor006"
+    },
+    "rec107": {
+      "tekst": "Фаустова жеља за знањем је инспиративна, али и опомињућа. Књига која тера на озбиљну интроспекцију и преиспитивање сопствених вредности.",
+      "datum": "2025-07-30",
+      "idKnjige": "knj000",
+      "idKorisnika": "kor007"
+    },
+    "rec108": {
+      "tekst": "Један од оних наслова који чине стуб светске цивилизације. Гете је савршено ухватио дух модерног човека који је вечито незадовољан достигнутим.",
+      "datum": "2025-10-12",
+      "idKnjige": "knj000",
+      "idKorisnika": "kor008"
+    },
+    "rec109": {
+      "tekst": "Изузетно захтевно, али и невероватно награђујуће читалачко искуство. Фауст је огледало свих наших тежњи и падова.",
+      "datum": "2026-02-14",
+      "idKnjige": "knj000",
+      "idKorisnika": "kor009"
+    },
+    "rec110": {
+      "tekst": "Мефистова духовитост и цинизам су савршен контраст Фаустовом патосу. Генијално написана драма која се не сме заобићи.",
+      "datum": "2026-05-02",
+      "idKnjige": "knj000",
+      "idKorisnika": "kor010"
+    },
+    "rec111": {
+      "tekst": "Невероватно је колико је Тесла био испред свог времена. Посматрао је људску цивилизацију кроз објектив енергије читавих 64 године пре него што је Кардашев уопште осмислио своју скалу. Његова предвиђања су данас стварност – уз роботе и вештачку интелигенцију, наша способност да контролишемо и користимо енергију коначно достиже ниво који оправдава ширење у свемир.",
+      "datum": "2024-03-25",
+      "idKnjige": "knj001",
+      "idKorisnika": "kor001"
+    },
+    "rec112": {
+      "tekst": "Овај есеј је прави визионарски путоказ. Тесла не само да је био научник, већ и дубоки мислилац који је разумео нераскидиву повезаност материје, кретања и људског духа кроз концепт енергије.",
+      "datum": "2024-05-14",
+      "idKnjige": "knj001",
+      "idKorisnika": "kor002"
+    },
+    "rec113": {
+      "tekst": "Сваки инжењер би ово требало да прочита барем једном. Теслин стил писања је кристално јасан, а његове идеје о директном искоришћавању сунчеве енергије су и данас невероватно актуелне.",
+      "datum": "2024-08-20",
+      "idKnjige": "knj001",
+      "idKorisnika": "kor003"
+    },
+    "rec114": {
+      "tekst": "Књига која ме је натерала да потпуно другачије посматрам ресурсе којима располажемо. Теслин оптимизам у вези са научним напретком је заиста заразан и инспиративан за младе истраживаче.",
+      "datum": "2024-11-05",
+      "idKnjige": "knj001",
+      "idKorisnika": "kor004"
+    },
+    "rec115": {
+      "tekst": "Фасциниран сам дубином филозофске анализе коју Тесла овде спроводи. Његово разумевање енергетских токова као техничке основе за трајни мир у свету је нешто што нам данас очајнички недостаје.",
+      "datum": "2025-01-12",
+      "idKnjige": "knj001",
+      "idKorisnika": "kor006"
+    },
+    "rec116": {
+      "tekst": "Тесла је у овом делу више филозоф него проналазач. Његова теорија о повећању људске масе кроз знање и енергију је јединствен допринос светској мисли који заслужује много већу пажњу.",
+      "datum": "2025-02-28",
+      "idKnjige": "knj001",
+      "idKorisnika": "kor007"
+    },
+    "rec117": {
+      "tekst": "Ово је темељ модерног размишљања о одрживости и еволуцији. Невероватно је како је Тесла предвидео готово све велике енергетске проблеме којима се бавимо више од једног века касније.",
+      "datum": "2025-04-10",
+      "idKnjige": "knj001",
+      "idKorisnika": "kor008"
+    },
+    "rec118": {
+      "tekst": "Тесла је био истински човек будућности. Читајући овај есеј, осећате се као да имате привилегију да завирите у ум који је јасно видео столећима унапред и разумео механизме универзума.",
+      "datum": "2025-06-15",
+      "idKnjige": "knj001",
+      "idKorisnika": "kor009"
+    },
+    "rec119": {
+      "tekst": "Кратко, али изузетно моћно штиво које мења поглед на свет. Тесла нам поручује да је прогрес човечанства неминован само ако научимо како да каналишемо природне силе на прави начин.",
+      "datum": "2025-09-02",
+      "idKnjige": "knj001",
+      "idKorisnika": "kor010"
+    }
+  },
+  "ocene": {
+    "oce001": {
+      "vrednost": 5,
+      "datum": "2024-03-12",
+      "idAutora": "aut001",
+      "idKorisnika": "kor001"
+    },
+    "oce002": {
+      "vrednost": 4,
+      "datum": "2024-04-15",
+      "idAutora": "aut001",
+      "idKorisnika": "kor002"
+    },
+    "oce003": {
+      "vrednost": 5,
+      "datum": "2024-05-20",
+      "idAutora": "aut001",
+      "idKorisnika": "kor003"
+    },
+    "oce004": {
+      "vrednost": 3,
+      "datum": "2024-06-10",
+      "idAutora": "aut001",
+      "idKorisnika": "kor004"
+    },
+    "oce005": {
+      "vrednost": 5,
+      "datum": "2024-07-01",
+      "idAutora": "aut001",
+      "idKorisnika": "kor005"
+    },
+    "oce006": {
+      "vrednost": 2,
+      "datum": "2024-08-25",
+      "idAutora": "aut001",
+      "idKorisnika": "kor006"
+    },
+    "oce007": {
+      "vrednost": 4,
+      "datum": "2024-09-12",
+      "idAutora": "aut001",
+      "idKorisnika": "kor007"
+    },
+    "oce008": {
+      "vrednost": 5,
+      "datum": "2024-10-05",
+      "idAutora": "aut001",
+      "idKorisnika": "kor008"
+    },
+    "oce009": {
+      "vrednost": 5,
+      "datum": "2024-11-18",
+      "idAutora": "aut001",
+      "idKorisnika": "kor009"
+    },
+    "oce010": {
+      "vrednost": 5,
+      "datum": "2024-12-20",
+      "idAutora": "aut001",
+      "idKorisnika": "kor010"
+    },
+    "oce011": {
+      "vrednost": 5,
+      "datum": "2025-01-10",
+      "idAutora": "aut002",
+      "idKorisnika": "kor001"
+    },
+    "oce012": {
+      "vrednost": 5,
+      "datum": "2025-02-14",
+      "idAutora": "aut002",
+      "idKorisnika": "kor003"
+    },
+    "oce013": {
+      "vrednost": 4,
+      "datum": "2025-03-05",
+      "idAutora": "aut002",
+      "idKorisnika": "kor005"
+    },
+    "oce014": {
+      "vrednost": 5,
+      "datum": "2025-04-22",
+      "idAutora": "aut002",
+      "idKorisnika": "kor007"
+    },
+    "oce015": {
+      "vrednost": 5,
+      "datum": "2025-05-30",
+      "idAutora": "aut002",
+      "idKorisnika": "kor009"
+    },
+    "oce016": {
+      "vrednost": 4,
+      "datum": "2023-12-15",
+      "idAutora": "aut003",
+      "idKorisnika": "kor002"
+    },
+    "oce017": {
+      "vrednost": 5,
+      "datum": "2024-02-10",
+      "idAutora": "aut003",
+      "idKorisnika": "kor004"
+    },
+    "oce018": {
+      "vrednost": 3,
+      "datum": "2024-04-25",
+      "idAutora": "aut003",
+      "idKorisnika": "kor006"
+    },
+    "oce019": {
+      "vrednost": 4,
+      "datum": "2024-07-12",
+      "idAutora": "aut003",
+      "idKorisnika": "kor008"
+    },
+    "oce020": {
+      "vrednost": 4,
+      "datum": "2024-09-01",
+      "idAutora": "aut003",
+      "idKorisnika": "kor010"
+    },
+    "oce021": {
+      "vrednost": 4,
+      "datum": "2025-06-15",
+      "idAutora": "aut002",
+      "idKorisnika": "kor002"
+    },
+    "oce022": {
+      "vrednost": 5,
+      "datum": "2025-07-20",
+      "idAutora": "aut002",
+      "idKorisnika": "kor004"
+    },
+    "oce023": {
+      "vrednost": 5,
+      "datum": "2025-08-10",
+      "idAutora": "aut002",
+      "idKorisnika": "kor006"
+    },
+    "oce024": {
+      "vrednost": 4,
+      "datum": "2025-09-25",
+      "idAutora": "aut002",
+      "idKorisnika": "kor008"
+    },
+    "oce025": {
+      "vrednost": 5,
+      "datum": "2025-11-05",
+      "idAutora": "aut002",
+      "idKorisnika": "kor010"
+    },
+    "oce026": {
+      "vrednost": 5,
+      "datum": "2024-10-15",
+      "idAutora": "aut003",
+      "idKorisnika": "kor001"
+    },
+    "oce027": {
+      "vrednost": 4,
+      "datum": "2024-11-20",
+      "idAutora": "aut003",
+      "idKorisnika": "kor003"
+    },
+    "oce028": {
+      "vrednost": 2,
+      "datum": "2025-01-12",
+      "idAutora": "aut003",
+      "idKorisnika": "kor005"
+    },
+    "oce029": {
+      "vrednost": 5,
+      "datum": "2025-02-28",
+      "idAutora": "aut003",
+      "idKorisnika": "kor007"
+    },
+    "oce030": {
+      "vrednost": 4,
+      "datum": "2025-04-14",
+      "idAutora": "aut003",
+      "idKorisnika": "kor009"
+    },
+    "oce031": {
+      "vrednost": 5,
+      "datum": "2024-03-05",
+      "idAutora": "aut004",
+      "idKorisnika": "kor001"
+    },
+    "oce032": {
+      "vrednost": 5,
+      "datum": "2024-04-18",
+      "idAutora": "aut004",
+      "idKorisnika": "kor002"
+    },
+    "oce033": {
+      "vrednost": 4,
+      "datum": "2024-06-22",
+      "idAutora": "aut004",
+      "idKorisnika": "kor003"
+    },
+    "oce034": {
+      "vrednost": 5,
+      "datum": "2024-08-10",
+      "idAutora": "aut004",
+      "idKorisnika": "kor004"
+    },
+    "oce035": {
+      "vrednost": 3,
+      "datum": "2024-10-25",
+      "idAutora": "aut004",
+      "idKorisnika": "kor005"
+    },
+    "oce036": {
+      "vrednost": 5,
+      "datum": "2024-12-12",
+      "idAutora": "aut004",
+      "idKorisnika": "kor006"
+    },
+    "oce037": {
+      "vrednost": 4,
+      "datum": "2025-02-15",
+      "idAutora": "aut004",
+      "idKorisnika": "kor007"
+    },
+    "oce038": {
+      "vrednost": 5,
+      "datum": "2025-04-20",
+      "idAutora": "aut004",
+      "idKorisnika": "kor008"
+    },
+    "oce039": {
+      "vrednost": 5,
+      "datum": "2025-06-05",
+      "idAutora": "aut004",
+      "idKorisnika": "kor009"
+    },
+    "oce040": {
+      "vrednost": 4,
+      "datum": "2025-08-30",
+      "idAutora": "aut004",
+      "idKorisnika": "kor010"
+    },
+    "oce041": {
+      "vrednost": 5,
+      "datum": "2024-02-12",
+      "idAutora": "aut005",
+      "idKorisnika": "kor001"
+    },
+    "oce042": {
+      "vrednost": 5,
+      "datum": "2024-03-15",
+      "idAutora": "aut005",
+      "idKorisnika": "kor003"
+    },
+    "oce043": {
+      "vrednost": 4,
+      "datum": "2024-05-20",
+      "idAutora": "aut005",
+      "idKorisnika": "kor005"
+    },
+    "oce044": {
+      "vrednost": 5,
+      "datum": "2024-07-10",
+      "idAutora": "aut005",
+      "idKorisnika": "kor007"
+    },
+    "oce045": {
+      "vrednost": 4,
+      "datum": "2024-09-22",
+      "idAutora": "aut005",
+      "idKorisnika": "kor009"
+    },
+    "oce046": {
+      "vrednost": 5,
+      "datum": "2024-11-05",
+      "idAutora": "aut005",
+      "idKorisnika": "kor002"
+    },
+    "oce047": {
+      "vrednost": 5,
+      "datum": "2025-01-18",
+      "idAutora": "aut005",
+      "idKorisnika": "kor004"
+    },
+    "oce048": {
+      "vrednost": 3,
+      "datum": "2025-03-12",
+      "idAutora": "aut005",
+      "idKorisnika": "kor006"
+    },
+    "oce049": {
+      "vrednost": 5,
+      "datum": "2025-05-25",
+      "idAutora": "aut005",
+      "idKorisnika": "kor008"
+    },
+    "oce050": {
+      "vrednost": 4,
+      "datum": "2025-07-30",
+      "idAutora": "aut005",
+      "idKorisnika": "kor010"
+    },
+    "oce051": {
+      "vrednost": 4,
+      "datum": "2024-04-05",
+      "idAutora": "aut006",
+      "idKorisnika": "kor001"
+    },
+    "oce052": {
+      "vrednost": 5,
+      "datum": "2024-06-18",
+      "idAutora": "aut006",
+      "idKorisnika": "kor003"
+    },
+    "oce053": {
+      "vrednost": 4,
+      "datum": "2024-08-22",
+      "idAutora": "aut006",
+      "idKorisnika": "kor005"
+    },
+    "oce054": {
+      "vrednost": 5,
+      "datum": "2024-11-12",
+      "idAutora": "aut006",
+      "idKorisnika": "kor007"
+    },
+    "oce055": {
+      "vrednost": 3,
+      "datum": "2025-02-10",
+      "idAutora": "aut006",
+      "idKorisnika": "kor009"
+    },
+    "oce056": {
+      "vrednost": 5,
+      "datum": "2024-05-14",
+      "idAutora": "aut007",
+      "idKorisnika": "kor002"
+    },
+    "oce057": {
+      "vrednost": 5,
+      "datum": "2024-07-20",
+      "idAutora": "aut007",
+      "idKorisnika": "kor004"
+    },
+    "oce058": {
+      "vrednost": 4,
+      "datum": "2024-09-30",
+      "idAutora": "aut007",
+      "idKorisnika": "kor006"
+    },
+    "oce059": {
+      "vrednost": 5,
+      "datum": "2024-12-15",
+      "idAutora": "aut007",
+      "idKorisnika": "kor008"
+    },
+    "oce060": {
+      "vrednost": 5,
+      "datum": "2025-03-22",
+      "idAutora": "aut007",
+      "idKorisnika": "kor010"
+    },
+    "oce061": {
+      "vrednost": 5,
+      "datum": "2024-06-10",
+      "idAutora": "aut008",
+      "idKorisnika": "kor001"
+    },
+    "oce062": {
+      "vrednost": 4,
+      "datum": "2024-08-15",
+      "idAutora": "aut008",
+      "idKorisnika": "kor003"
+    },
+    "oce063": {
+      "vrednost": 5,
+      "datum": "2024-10-22",
+      "idAutora": "aut008",
+      "idKorisnika": "kor005"
+    },
+    "oce064": {
+      "vrednost": 3,
+      "datum": "2025-01-05",
+      "idAutora": "aut008",
+      "idKorisnika": "kor007"
+    },
+    "oce065": {
+      "vrednost": 5,
+      "datum": "2025-03-14",
+      "idAutora": "aut008",
+      "idKorisnika": "kor009"
+    },
+    "oce066": {
+      "vrednost": 5,
+      "datum": "2024-05-12",
+      "idAutora": "aut009",
+      "idKorisnika": "kor002"
+    },
+    "oce067": {
+      "vrednost": 5,
+      "datum": "2024-07-20",
+      "idAutora": "aut009",
+      "idKorisnika": "kor004"
+    },
+    "oce068": {
+      "vrednost": 4,
+      "datum": "2024-09-18",
+      "idAutora": "aut009",
+      "idKorisnika": "kor006"
+    },
+    "oce069": {
+      "vrednost": 5,
+      "datum": "2024-12-01",
+      "idAutora": "aut009",
+      "idKorisnika": "kor008"
+    },
+    "oce070": {
+      "vrednost": 4,
+      "datum": "2025-02-25",
+      "idAutora": "aut009",
+      "idKorisnika": "kor010"
+    },
+    "oce071": {
+      "vrednost": 4,
+      "datum": "2024-04-30",
+      "idAutora": "aut010",
+      "idKorisnika": "kor001"
+    },
+    "oce072": {
+      "vrednost": 3,
+      "datum": "2024-07-11",
+      "idAutora": "aut010",
+      "idKorisnika": "kor002"
+    },
+    "oce073": {
+      "vrednost": 4,
+      "datum": "2024-09-05",
+      "idAutora": "aut010",
+      "idKorisnika": "kor003"
+    },
+    "oce074": {
+      "vrednost": 5,
+      "datum": "2024-11-20",
+      "idAutora": "aut010",
+      "idKorisnika": "kor004"
+    },
+    "oce075": {
+      "vrednost": 4,
+      "datum": "2025-01-15",
+      "idAutora": "aut010",
+      "idKorisnika": "kor005"
+    },
+    "oce076": {
+      "vrednost": 5,
+      "datum": "2024-03-25",
+      "idAutora": "aut011",
+      "idKorisnika": "kor006"
+    },
+    "oce077": {
+      "vrednost": 5,
+      "datum": "2024-06-12",
+      "idAutora": "aut011",
+      "idKorisnika": "kor007"
+    },
+    "oce078": {
+      "vrednost": 4,
+      "datum": "2024-08-30",
+      "idAutora": "aut011",
+      "idKorisnika": "kor008"
+    },
+    "oce079": {
+      "vrednost": 5,
+      "datum": "2024-11-14",
+      "idAutora": "aut011",
+      "idKorisnika": "kor009"
+    },
+    "oce080": {
+      "vrednost": 2,
+      "datum": "2025-02-08",
+      "idAutora": "aut011",
+      "idKorisnika": "kor010"
+    },
+    "oce081": {
+      "vrednost": 5,
+      "datum": "2024-05-10",
+      "idAutora": "aut012",
+      "idKorisnika": "kor001"
+    },
+    "oce082": {
+      "vrednost": 4,
+      "datum": "2024-07-14",
+      "idAutora": "aut012",
+      "idKorisnika": "kor003"
+    },
+    "oce083": {
+      "vrednost": 5,
+      "datum": "2024-09-20",
+      "idAutora": "aut012",
+      "idKorisnika": "kor005"
+    },
+    "oce084": {
+      "vrednost": 5,
+      "datum": "2024-11-05",
+      "idAutora": "aut012",
+      "idKorisnika": "kor007"
+    },
+    "oce085": {
+      "vrednost": 4,
+      "datum": "2025-01-18",
+      "idAutora": "aut012",
+      "idKorisnika": "kor009"
+    },
+    "oce086": {
+      "vrednost": 4,
+      "datum": "2024-04-12",
+      "idAutora": "aut013",
+      "idKorisnika": "kor002"
+    },
+    "oce087": {
+      "vrednost": 3,
+      "datum": "2024-06-25",
+      "idAutora": "aut013",
+      "idKorisnika": "kor004"
+    },
+    "oce088": {
+      "vrednost": 5,
+      "datum": "2024-08-30",
+      "idAutora": "aut013",
+      "idKorisnika": "kor006"
+    },
+    "oce089": {
+      "vrednost": 4,
+      "datum": "2024-11-12",
+      "idAutora": "aut013",
+      "idKorisnika": "kor008"
+    },
+    "oce090": {
+      "vrednost": 5,
+      "datum": "2025-02-14",
+      "idAutora": "aut013",
+      "idKorisnika": "kor010"
+    },
+    "oce091": {
+      "vrednost": 5,
+      "datum": "2024-03-22",
+      "idAutora": "aut014",
+      "idKorisnika": "kor001"
+    },
+    "oce092": {
+      "vrednost": 5,
+      "datum": "2024-05-30",
+      "idAutora": "aut014",
+      "idKorisnika": "kor003"
+    },
+    "oce093": {
+      "vrednost": 4,
+      "datum": "2024-08-11",
+      "idAutora": "aut014",
+      "idKorisnika": "kor005"
+    },
+    "oce094": {
+      "vrednost": 5,
+      "datum": "2024-10-25",
+      "idAutora": "aut014",
+      "idKorisnika": "kor007"
+    },
+    "oce095": {
+      "vrednost": 3,
+      "datum": "2025-01-05",
+      "idAutora": "aut014",
+      "idKorisnika": "kor009"
+    },
+    "oce096": {
+      "vrednost": 4,
+      "datum": "2024-06-02",
+      "idAutora": "aut015",
+      "idKorisnika": "kor002"
+    },
+    "oce097": {
+      "vrednost": 4,
+      "datum": "2024-08-19",
+      "idAutora": "aut015",
+      "idKorisnika": "kor004"
+    },
+    "oce098": {
+      "vrednost": 5,
+      "datum": "2024-11-20",
+      "idAutora": "aut015",
+      "idKorisnika": "kor006"
+    },
+    "oce099": {
+      "vrednost": 5,
+      "datum": "2025-02-05",
+      "idAutora": "aut015",
+      "idKorisnika": "kor008"
+    },
+    "oce100": {
+      "vrednost": 2,
+      "datum": "2025-04-12",
+      "idAutora": "aut015",
+      "idKorisnika": "kor010"
+    },
+    "oce101": {
+      "vrednost": 5,
+      "datum": "2024-06-15",
+      "idAutora": "aut016",
+      "idKorisnika": "kor001"
+    },
+    "oce102": {
+      "vrednost": 4,
+      "datum": "2024-08-20",
+      "idAutora": "aut016",
+      "idKorisnika": "kor002"
+    },
+    "oce103": {
+      "vrednost": 3,
+      "datum": "2024-09-12",
+      "idAutora": "aut017",
+      "idKorisnika": "kor003"
+    },
+    "oce104": {
+      "vrednost": 5,
+      "datum": "2024-11-25",
+      "idAutora": "aut017",
+      "idKorisnika": "kor004"
+    },
+    "oce105": {
+      "vrednost": 4,
+      "datum": "2024-12-05",
+      "idAutora": "aut018",
+      "idKorisnika": "kor005"
+    },
+    "oce106": {
+      "vrednost": 5,
+      "datum": "2025-02-14",
+      "idAutora": "aut018",
+      "idKorisnika": "kor006"
+    },
+    "oce107": {
+      "vrednost": 5,
+      "datum": "2024-07-22",
+      "idAutora": "aut019",
+      "idKorisnika": "kor007"
+    },
+    "oce108": {
+      "vrednost": 4,
+      "datum": "2024-10-01",
+      "idAutora": "aut019",
+      "idKorisnika": "kor008"
+    },
+    "oce109": {
+      "vrednost": 5,
+      "datum": "2024-08-30",
+      "idAutora": "aut020",
+      "idKorisnika": "kor009"
+    },
+    "oce110": {
+      "vrednost": 5,
+      "datum": "2024-11-15",
+      "idAutora": "aut020",
+      "idKorisnika": "kor010"
+    },
+    "oce111": {
+      "vrednost": 4,
+      "datum": "2025-01-20",
+      "idAutora": "aut021",
+      "idKorisnika": "kor001"
+    },
+    "oce112": {
+      "vrednost": 5,
+      "datum": "2025-03-05",
+      "idAutora": "aut021",
+      "idKorisnika": "kor003"
+    },
+    "oce113": {
+      "vrednost": 5,
+      "datum": "2024-12-10",
+      "idAutora": "aut022",
+      "idKorisnika": "kor005"
+    },
+    "oce114": {
+      "vrednost": 5,
+      "datum": "2025-02-18",
+      "idAutora": "aut022",
+      "idKorisnika": "kor007"
+    },
+    "oce115": {
+      "vrednost": 5,
+      "datum": "2024-10-28",
+      "idAutora": "aut023",
+      "idKorisnika": "kor009"
+    },
+    "oce116": {
+      "vrednost": 5,
+      "datum": "2025-01-12",
+      "idAutora": "aut023",
+      "idKorisnika": "kor002"
+    },
+    "oce117": {
+      "vrednost": 5,
+      "datum": "2024-11-30",
+      "idAutora": "aut024",
+      "idKorisnika": "kor004"
+    },
+    "oce118": {
+      "vrednost": 4,
+      "datum": "2025-02-05",
+      "idAutora": "aut024",
+      "idKorisnika": "kor006"
+    },
+    "oce119": {
+      "vrednost": 3,
+      "datum": "2024-09-20",
+      "idAutora": "aut025",
+      "idKorisnika": "kor008"
+    },
+    "oce120": {
+      "vrednost": 4,
+      "datum": "2024-12-15",
+      "idAutora": "aut025",
+      "idKorisnika": "kor010"
+    },
+    "oce121": {
+      "vrednost": 5,
+      "datum": "2024-07-10",
+      "idAutora": "aut026",
+      "idKorisnika": "kor001"
+    },
+    "oce122": {
+      "vrednost": 5,
+      "datum": "2024-10-15",
+      "idAutora": "aut026",
+      "idKorisnika": "kor002"
+    },
+    "oce123": {
+      "vrednost": 4,
+      "datum": "2024-11-20",
+      "idAutora": "aut027",
+      "idKorisnika": "kor003"
+    },
+    "oce124": {
+      "vrednost": 5,
+      "datum": "2025-01-12",
+      "idAutora": "aut027",
+      "idKorisnika": "kor004"
+    },
+    "oce125": {
+      "vrednost": 3,
+      "datum": "2024-08-05",
+      "idAutora": "aut028",
+      "idKorisnika": "kor005"
+    },
+    "oce126": {
+      "vrednost": 4,
+      "datum": "2024-12-18",
+      "idAutora": "aut028",
+      "idKorisnika": "kor006"
+    },
+    "oce127": {
+      "vrednost": 5,
+      "datum": "2025-02-14",
+      "idAutora": "aut029",
+      "idKorisnika": "kor007"
+    },
+    "oce128": {
+      "vrednost": 5,
+      "datum": "2025-03-22",
+      "idAutora": "aut029",
+      "idKorisnika": "kor008"
+    },
+    "oce129": {
+      "vrednost": 4,
+      "datum": "2024-09-30",
+      "idAutora": "aut030",
+      "idKorisnika": "kor009"
+    },
+    "oce130": {
+      "vrednost": 2,
+      "datum": "2024-11-05",
+      "idAutora": "aut030",
+      "idKorisnika": "kor010"
+    },
+    "oce131": {
+      "vrednost": 5,
+      "datum": "2025-01-25",
+      "idAutora": "aut031",
+      "idKorisnika": "kor001"
+    },
+    "oce132": {
+      "vrednost": 4,
+      "datum": "2025-04-10",
+      "idAutora": "aut031",
+      "idKorisnika": "kor003"
+    },
+    "oce133": {
+      "vrednost": 5,
+      "datum": "2024-12-01",
+      "idAutora": "aut032",
+      "idKorisnika": "kor005"
+    },
+    "oce134": {
+      "vrednost": 3,
+      "datum": "2025-02-28",
+      "idAutora": "aut032",
+      "idKorisnika": "kor007"
+    },
+    "oce135": {
+      "vrednost": 5,
+      "datum": "2024-10-20",
+      "idAutora": "aut033",
+      "idKorisnika": "kor009"
+    },
+    "oce136": {
+      "vrednost": 4,
+      "datum": "2025-01-15",
+      "idAutora": "aut033",
+      "idKorisnika": "kor002"
+    },
+    "oce137": {
+      "vrednost": 4,
+      "datum": "2024-11-12",
+      "idAutora": "aut034",
+      "idKorisnika": "kor004"
+    },
+    "oce138": {
+      "vrednost": 5,
+      "datum": "2025-03-08",
+      "idAutora": "aut034",
+      "idKorisnika": "kor006"
+    },
+    "oce139": {
+      "vrednost": 5,
+      "datum": "2024-09-14",
+      "idAutora": "aut035",
+      "idKorisnika": "kor008"
+    },
+    "oce140": {
+      "vrednost": 1,
+      "datum": "2024-12-25",
+      "idAutora": "aut035",
+      "idKorisnika": "kor010"
+    },
+    "oce141": {
+      "vrednost": 5,
+      "datum": "2024-06-12",
+      "idAutora": "aut036",
+      "idKorisnika": "kor001"
+    },
+    "oce142": {
+      "vrednost": 4,
+      "datum": "2024-09-18",
+      "idAutora": "aut036",
+      "idKorisnika": "kor003"
+    },
+    "oce143": {
+      "vrednost": 5,
+      "datum": "2025-02-14",
+      "idAutora": "aut037",
+      "idKorisnika": "kor005"
+    },
+    "oce144": {
+      "vrednost": 5,
+      "datum": "2025-04-20",
+      "idAutora": "aut037",
+      "idKorisnika": "kor007"
+    },
+    "oce145": {
+      "vrednost": 5,
+      "datum": "2024-10-10",
+      "idAutora": "aut038",
+      "idKorisnika": "kor009"
+    },
+    "oce146": {
+      "vrednost": 4,
+      "datum": "2025-01-05",
+      "idAutora": "aut038",
+      "idKorisnika": "kor002"
+    },
+    "oce147": {
+      "vrednost": 5,
+      "datum": "2024-08-22",
+      "idAutora": "aut039",
+      "idKorisnika": "kor004"
+    },
+    "oce148": {
+      "vrednost": 5,
+      "datum": "2024-11-30",
+      "idAutora": "aut039",
+      "idKorisnika": "kor006"
+    },
+    "oce149": {
+      "vrednost": 4,
+      "datum": "2025-03-15",
+      "idAutora": "aut040",
+      "idKorisnika": "kor008"
+    },
+    "oce150": {
+      "vrednost": 3,
+      "datum": "2025-05-02",
+      "idAutora": "aut040",
+      "idKorisnika": "kor010"
+    },
+    "oce151": {
+      "vrednost": 5,
+      "datum": "2024-07-04",
+      "idAutora": "aut041",
+      "idKorisnika": "kor001"
+    },
+    "oce152": {
+      "vrednost": 5,
+      "datum": "2024-12-12",
+      "idAutora": "aut041",
+      "idKorisnika": "kor003"
+    },
+    "oce153": {
+      "vrednost": 4,
+      "datum": "2025-01-28",
+      "idAutora": "aut042",
+      "idKorisnika": "kor005"
+    },
+    "oce154": {
+      "vrednost": 5,
+      "datum": "2025-04-14",
+      "idAutora": "aut042",
+      "idKorisnika": "kor007"
+    },
+    "oce155": {
+      "vrednost": 5,
+      "datum": "2024-09-30",
+      "idAutora": "aut043",
+      "idKorisnika": "kor009"
+    },
+    "oce156": {
+      "vrednost": 5,
+      "datum": "2024-11-18",
+      "idAutora": "aut043",
+      "idKorisnika": "kor002"
+    },
+    "oce157": {
+      "vrednost": 4,
+      "datum": "2025-02-10",
+      "idAutora": "aut044",
+      "idKorisnika": "kor004"
+    },
+    "oce158": {
+      "vrednost": 3,
+      "datum": "2025-05-22",
+      "idAutora": "aut044",
+      "idKorisnika": "kor006"
+    },
+    "oce159": {
+      "vrednost": 5,
+      "datum": "2024-10-05",
+      "idAutora": "aut045",
+      "idKorisnika": "kor008"
+    },
+    "oce160": {
+      "vrednost": 5,
+      "datum": "2025-01-15",
+      "idAutora": "aut045",
+      "idKorisnika": "kor010"
+    },
+    "oce161": {
+      "vrednost": 4,
+      "datum": "2024-06-20",
+      "idAutora": "aut046",
+      "idKorisnika": "kor001"
+    },
+    "oce162": {
+      "vrednost": 5,
+      "datum": "2024-11-12",
+      "idAutora": "aut046",
+      "idKorisnika": "kor003"
+    },
+    "oce163": {
+      "vrednost": 5,
+      "datum": "2025-01-15",
+      "idAutora": "aut047",
+      "idKorisnika": "kor005"
+    },
+    "oce164": {
+      "vrednost": 4,
+      "datum": "2025-04-22",
+      "idAutora": "aut047",
+      "idKorisnika": "kor007"
+    },
+    "oce165": {
+      "vrednost": 5,
+      "datum": "2024-08-30",
+      "idAutora": "aut048",
+      "idKorisnika": "kor009"
+    },
+    "oce166": {
+      "vrednost": 5,
+      "datum": "2024-12-05",
+      "idAutora": "aut048",
+      "idKorisnika": "kor002"
+    },
+    "oce167": {
+      "vrednost": 4,
+      "datum": "2025-02-14",
+      "idAutora": "aut049",
+      "idKorisnika": "kor004"
+    },
+    "oce168": {
+      "vrednost": 3,
+      "datum": "2025-05-10",
+      "idAutora": "aut049",
+      "idKorisnika": "kor006"
+    },
+    "oce169": {
+      "vrednost": 5,
+      "datum": "2024-09-18",
+      "idAutora": "aut050",
+      "idKorisnika": "kor008"
+    },
+    "oce170": {
+      "vrednost": 5,
+      "datum": "2025-01-20",
+      "idAutora": "aut050",
+      "idKorisnika": "kor010"
+    },
+    "oce171": {
+      "vrednost": 4,
+      "datum": "2024-07-12",
+      "idAutora": "aut051",
+      "idKorisnika": "kor001"
+    },
+    "oce172": {
+      "vrednost": 5,
+      "datum": "2024-10-30",
+      "idAutora": "aut051",
+      "idKorisnika": "kor003"
+    },
+    "oce173": {
+      "vrednost": 5,
+      "datum": "2025-02-05",
+      "idAutora": "aut052",
+      "idKorisnika": "kor005"
+    },
+    "oce174": {
+      "vrednost": 4,
+      "datum": "2025-04-12",
+      "idAutora": "aut052",
+      "idKorisnika": "kor007"
+    },
+    "oce175": {
+      "vrednost": 5,
+      "datum": "2024-12-25",
+      "idAutora": "aut053",
+      "idKorisnika": "kor009"
+    },
+    "oce176": {
+      "vrednost": 5,
+      "datum": "2025-03-14",
+      "idAutora": "aut053",
+      "idKorisnika": "kor010"
+    }
+  }
+}

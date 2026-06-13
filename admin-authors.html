@@ -19,71 +19,47 @@
             </ul>
         </nav>
     </header>
+
     <main class="container">
         <h1>Администрација аутора</h1>
-        <div class="grid" style="grid-template-columns: 1fr 1fr; align-items: start;">
-            <div class="card" style="text-align: left; align-items: flex-start;">
-                <h3>Додај новог аутора</h3>
-                <form style="width: 100%;">
-                    <div class="form-group">
-                        <label for="author-name">Име и презиме:</label>
-                        <input type="text" id="author-name" placeholder="Унесите име аутора">
-                    </div>
-                    <div class="form-group">
-                        <label for="author-bio">Биографија:</label>
-                        <textarea id="author-bio" rows="3" placeholder="Кратка биографија..."></textarea>
-                    </div>
-                    <button type="button" class="btn btn-primary">Сачувај</button>
-                </form>
-            </div>
-            <div class="card" style="text-align: left; align-items: flex-start;">
-                <h3>Измени аутора</h3>
-                <form style="width: 100%;">
-                    <div class="form-group">
-                        <label for="edit-author-name">Име и презиме:</label>
-                        <input type="text" id="edit-author-name" value="Иво Андрић">
-                    </div>
-                    <div class="form-group">
-                        <label for="edit-author-bio">Биографија:</label>
-                        <textarea id="edit-author-bio" rows="3">Српски и југословенски писац, добитник Нобелове награде.</textarea>
-                    </div>
-                    <button type="button" class="btn btn-primary">Ажурирај</button>
-                </form>
-            </div>
+
+        <div class="grid admin-grid">
+            <section class="card admin-card">
+                <h2>Додај аутора</h2>
+                <p class="status-message hidden" data-author-message="add"></p>
+                <form data-author-form="add" novalidate></form>
+            </section>
+
+            <section class="card admin-card">
+                <h2>Измени аутора</h2>
+                <p class="status-message hidden" data-author-message="edit"></p>
+                <form data-author-form="edit" novalidate></form>
+            </section>
         </div>
-        <div class="card" style="text-align: left; align-items: flex-start;">
-            <h3>Листа аутора</h3>
-            <table style="width: 100%; border-collapse: collapse;">
-                <thead>
-                    <tr>
-                        <th style="text-align: left; padding: 0.8rem; border-bottom: 2px solid var(--gray-light);">Име</th>
-                        <th style="text-align: left; padding: 0.8rem; border-bottom: 2px solid var(--gray-light);">Акције</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-light);">Иво Андрић</td>
-                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-light);">
-                            <a href="author-details-andric.html" class="btn btn-secondary" style="padding: 0.3rem 0.6rem; font-size: 0.8rem;">Детаљи</a>
-                            <button class="btn btn-secondary" style="padding: 0.3rem 0.6rem; font-size: 0.8rem;">Измени</button>
-                            <button class="btn" style="padding: 0.3rem 0.6rem; font-size: 0.8rem; background-color: #ef5350; color: white;">Обриши</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-light);">Габор Мате</td>
-                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-light);">
-                            <a href="author-details-mate.html" class="btn btn-secondary" style="padding: 0.3rem 0.6rem; font-size: 0.8rem;">Детаљи</a>
-                            <button class="btn btn-secondary" style="padding: 0.3rem 0.6rem; font-size: 0.8rem;">Измени</button>
-                            <button class="btn" style="padding: 0.3rem 0.6rem; font-size: 0.8rem; background-color: #ef5350; color: white;">Обриши</button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+
+        <section class="card admin-card">
+            <h2>Листа аутора</h2>
+            <p class="status-message" data-admin-authors-status>Учитавање аутора...</p>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Име и презиме</th>
+                            <th>Статус</th>
+                            <th>Награде</th>
+                            <th>Акције</th>
+                        </tr>
+                    </thead>
+                    <tbody data-admin-authors></tbody>
+                </table>
+            </div>
+        </section>
     </main>
+
     <footer>
-        <p>Заједница Читалаца — Пројекат из веб дизајна 2026</p>
+        <p>Заједница Читалаца - Пројекат из веб дизајна 2026</p>
     </footer>
     <script src="js/shared.js"></script>
+    <script src="js/student2-authors.js"></script>
 </body>
 </html>
