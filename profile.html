@@ -68,7 +68,7 @@
                 </div>
             </div>
 
-            <button type="button" class="btn btn-secondary">Измени податке</button>
+            <a href="#edit-profile" class="btn btn-secondary">Измени податке</a>
         </section>
 
         <section class="profile-summary">
@@ -84,6 +84,54 @@
                 <strong>5.0</strong>
                 <span>просечна оцена</span>
             </article>
+        </section>
+
+        <section class="card profile-edit-card" id="edit-profile">
+            <h2>Измена података</h2>
+            <form class="profile-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="profile-first-name">Име:</label>
+                        <input type="text" id="profile-first-name" name="first-name" value="Петар">
+                    </div>
+                    <div class="form-group">
+                        <label for="profile-last-name">Презиме:</label>
+                        <input type="text" id="profile-last-name" name="last-name" value="Петровић">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="profile-email">Е-пошта:</label>
+                        <input type="email" id="profile-email" name="email" value="petar.petrovic@primer.rs">
+                    </div>
+                    <div class="form-group">
+                        <label for="profile-username">Корисничко име:</label>
+                        <input type="text" id="profile-username" name="username" value="petar95">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="profile-address">Адреса:</label>
+                    <input type="text" id="profile-address" name="address" value="Булевар краља Александра 73, Београд">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="profile-birth-date">Датум рођења:</label>
+                        <input type="date" id="profile-birth-date" name="birth-date" value="1995-05-15">
+                    </div>
+                    <div class="form-group">
+                        <label for="profile-occupation">Занимање:</label>
+                        <input type="text" id="profile-occupation" name="occupation" value="Столар">
+                    </div>
+                </div>
+
+                <div class="profile-form-actions">
+                    <button type="submit" class="btn btn-primary">Сачувај измене</button>
+                    <button type="reset" class="btn btn-secondary">Врати податке</button>
+                </div>
+            </form>
         </section>
 
         <div class="grid profile-activity-grid">
