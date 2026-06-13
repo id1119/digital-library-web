@@ -122,6 +122,10 @@ h1, h2, h3 {
     background-color: var(--secondary-color);
     color: var(--white);
 }
+.btn-danger {
+    background-color: #ef5350;
+    color: var(--white);
+}
 .btn-small {
     padding: 0.4rem 0.7rem;
     font-size: 0.85rem;
@@ -133,6 +137,81 @@ h1, h2, h3 {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 2rem;
+}
+.admin-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+}
+.admin-card {
+    align-items: flex-start;
+    min-height: auto;
+    text-align: left;
+}
+.book-card {
+    min-height: auto;
+}
+.plain-link {
+    color: var(--text-color);
+    text-decoration: none;
+}
+.plain-link:hover {
+    color: var(--accent-color);
+}
+.book-cover {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    display: block;
+    margin-top: 0.5rem;
+    border: 2px dashed var(--accent-color);
+    border-radius: var(--border-radius);
+}
+.book-detail-card {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2rem;
+    text-align: left;
+    flex-wrap: wrap;
+}
+.book-detail-cover {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed var(--accent-color);
+    border-radius: var(--border-radius);
+    background-color: var(--gray-light);
+}
+.book-detail-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+}
+.book-detail-info {
+    flex: 2;
+    min-width: 300px;
+}
+.book-review-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    align-items: start;
+    margin-top: 2rem;
+}
+.review-card {
+    align-items: flex-start;
+    min-height: auto;
+    text-align: left;
+}
+.full-width-form {
+    width: 100%;
+}
+.table-actions {
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
 }
 table {
     width: 100%;
@@ -327,22 +406,6 @@ input, textarea, select {
 .profile-activity-grid {
     align-items: start;
 }
-.profile-edit-card {
-    align-items: flex-start;
-    min-height: auto;
-    text-align: left;
-}
-.profile-form {
-    width: 100%;
-}
-.profile-form-actions {
-    display: flex;
-    gap: 0.75rem;
-    flex-wrap: wrap;
-}
-.profile-form-actions .btn {
-    margin-top: 0;
-}
 .activity-card {
     align-items: flex-start;
     min-height: auto;
@@ -356,6 +419,18 @@ input, textarea, select {
 .rating-stars {
     color: var(--accent-color);
     letter-spacing: 0;
+}
+.review-item {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--gray-light);
+}
+.dialog-actions {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
 }
 @media (max-width: 768px) {
     header {
@@ -372,6 +447,9 @@ input, textarea, select {
         font-size: 0.9rem;
     }
     .grid {
+        grid-template-columns: 1fr;
+    }
+    .admin-grid {
         grid-template-columns: 1fr;
     }
     .auth-actions {

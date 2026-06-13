@@ -19,16 +19,16 @@
             </ul>
         </nav>
     </header>
-    <main class="container">
+    <main class="container" data-book-detail="umovi">
         <h1>Детаљи књиге</h1>
-        <div class="card" style="display: flex; flex-direction: row; align-items: flex-start; text-align: left; gap: 2rem; flex-wrap: wrap;">
-            <div style="flex: 1; min-width: 250px; max-width: 300px; height: 400px; background-color: var(--gray-light); border-radius: var(--border-radius); display: flex; align-items: center; justify-content: center; border: 2px dashed var(--accent-color);">
-                <img src="images/rasuti-umovi.jpg" alt="Расути умови" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--border-radius);">
+        <div class="card book-detail-card">
+            <div class="book-detail-cover">
+                <img src="images/rasuti-umovi.jpg" alt="Расути умови">
             </div>
-            <div style="flex: 2; min-width: 300px;">
+            <div class="book-detail-info">
                 <h2>Расути умови</h2>
                 <p><strong>Аутор ID:</strong> 2</p>
-                <p><strong>Аутор:</strong> <a href="author-details-mate.html" style="color: var(--accent-color); text-decoration: none; font-weight: 600;">Габор Мате</a></p>
+                <p><strong>Аутор:</strong> <a href="author-details-mate.html" class="text-link">Габор Мате</a></p>
                 <p><strong>Жанр:</strong> Психологија, Популарна наука</p>
                 <p><strong>Формат:</strong> Меки повез</p>
                 <p><strong>Број страна:</strong> 352</p>
@@ -38,33 +38,27 @@
                 <p><strong>Опис:</strong> У овој књизи, др Габор Мате демистификује АДХД (поремећај пажње са хиперактивношћу). Он тврди да АДХД није наследна болест већ последица начина на који мозак реагује на рану стресну средину и трауму. Књига нуди наду и практичне савете за родитеље и одрасле који се суочавају са овим изазовом.</p>
             </div>
         </div>
-        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); align-items: start; margin-top: 2rem;">
-            <div class="card" style="text-align: left; align-items: flex-start;">
+        <div class="grid book-review-grid">
+            <div class="card review-card">
                 <h3>Оставите рецензију</h3>
-                <form style="width: 100%;">
+                <p class="status-message hidden" data-review-message></p>
+                <form class="full-width-form" data-review-form novalidate>
                     <div class="form-group">
                         <label for="username">Ваше име:</label>
                         <input type="text" id="username" name="username" placeholder="Унесите своје име">
+                        <small class="field-error" data-error-for="username"></small>
                     </div>
                     <div class="form-group">
                         <label for="comment">Коментар:</label>
                         <textarea id="comment" name="comment" rows="4" placeholder="Ваша рецензија..."></textarea>
+                        <small class="field-error" data-error-for="comment"></small>
                     </div>
-                    <button type="button" class="btn btn-primary">Пошаљи</button>
+                    <button type="submit" class="btn btn-primary">Пошаљи</button>
                 </form>
             </div>
-            <div class="card" style="text-align: left; align-items: flex-start;">
+            <div class="card review-card">
                 <h3>Претходне рецензије</h3>
-                <div style="border-bottom: 1px solid var(--gray-light); padding-bottom: 1rem; margin-bottom: 1rem; width: 100%;">
-                    <p><strong>Драган Д.</strong> (ID корисника: 104) - <small>10.01.2026.</small></p>
-                    <p><small>ID књиге: 30</small></p>
-                    <p>Потпуно нов поглед на пажњу и концентрацију. Веома поучно за све родитеље.</p>
-                </div>
-                <div style="border-bottom: 1px solid var(--gray-light); padding-bottom: 1rem; margin-bottom: 1rem; width: 100%;">
-                    <p><strong>Снежана С.</strong> (ID корисника: 105) - <small>12.01.2026.</small></p>
-                    <p><small>ID књиге: 30</small></p>
-                    <p>Габор Мате пише са толико емпатије и разумевања. Књига која се чита више пута.</p>
-                </div>
+                <div data-reviews-list></div>
             </div>
         </div>
     </main>
@@ -72,5 +66,6 @@
         <p>Заједница Читалаца — Пројекат из веб дизајна 2026</p>
     </footer>
     <script src="js/shared.js"></script>
+    <script src="js/student1-books.js"></script>
 </body>
 </html>

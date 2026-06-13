@@ -21,70 +21,127 @@
     </header>
     <main class="container">
         <h1>Администрација књига</h1>
-        <div class="grid" style="grid-template-columns: 1fr 1fr; align-items: start;">
-            <div class="card" style="text-align: left; align-items: flex-start;">
+        <div class="grid admin-grid">
+            <div class="card admin-card">
                 <h3>Додај нову књигу</h3>
-                <form style="width: 100%;">
+                <p class="status-message hidden" data-book-form-message="add"></p>
+                <form class="book-form" data-book-form="add" novalidate>
                     <div class="form-group">
                         <label for="book-title">Наслов књиге:</label>
-                        <input type="text" id="book-title" placeholder="Унесите наслов">
+                        <input type="text" id="book-title" name="title" placeholder="Унесите наслов">
+                        <small class="field-error" data-error-for="title"></small>
                     </div>
                     <div class="form-group">
-                        <label for="book-author">Аутор:</label>
-                        <input type="text" id="book-author" placeholder="Унесите име аутора">
+                        <label for="book-description">Опис:</label>
+                        <textarea id="book-description" name="description" rows="3" placeholder="Кратак опис књиге"></textarea>
+                        <small class="field-error" data-error-for="description"></small>
                     </div>
-                    <button type="button" class="btn btn-primary">Сачувај</button>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="book-genre">Жанр:</label>
+                            <input type="text" id="book-genre" name="genre" placeholder="Нпр. класика">
+                            <small class="field-error" data-error-for="genre"></small>
+                        </div>
+                        <div class="form-group">
+                            <label for="book-format">Формат:</label>
+                            <input type="text" id="book-format" name="format" placeholder="Меки или тврди повез">
+                            <small class="field-error" data-error-for="format"></small>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="book-price">Цена:</label>
+                            <input type="number" id="book-price" name="price" min="1" placeholder="1200">
+                            <small class="field-error" data-error-for="price"></small>
+                        </div>
+                        <div class="form-group">
+                            <label for="book-pages">Број страна:</label>
+                            <input type="number" id="book-pages" name="pages" min="1" placeholder="300">
+                            <small class="field-error" data-error-for="pages"></small>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="book-author-id">ID аутора:</label>
+                            <input type="number" id="book-author-id" name="authorId" min="1" placeholder="1">
+                            <small class="field-error" data-error-for="authorId"></small>
+                        </div>
+                        <div class="form-group">
+                            <label for="book-isbn">ISBN:</label>
+                            <input type="text" id="book-isbn" name="isbn" placeholder="978-86-7543-123-4">
+                            <small class="field-error" data-error-for="isbn"></small>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Сачувај</button>
                 </form>
             </div>
-            <div class="card" style="text-align: left; align-items: flex-start;">
+
+            <div class="card admin-card">
                 <h3>Измени књигу</h3>
-                <form style="width: 100%;">
+                <p class="status-message hidden" data-book-form-message="edit"></p>
+                <form class="book-form" data-book-form="edit" novalidate>
                     <div class="form-group">
                         <label for="edit-title">Наслов књиге:</label>
-                        <input type="text" id="edit-title" value="На Дрини ћуприја">
+                        <input type="text" id="edit-title" name="title">
+                        <small class="field-error" data-error-for="title"></small>
                     </div>
                     <div class="form-group">
-                        <label for="edit-author">Аутор:</label>
-                        <select id="edit-author">
-                            <option value="1" selected>Иво Андрић</option>
-                            <option value="2">Габор Мате</option>
-                            <option value="3">Вук Караџић</option>
-                        </select>
+                        <label for="edit-description">Опис:</label>
+                        <textarea id="edit-description" name="description" rows="3"></textarea>
+                        <small class="field-error" data-error-for="description"></small>
                     </div>
-                    <button type="button" class="btn btn-primary">Ажурирај</button>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="edit-genre">Жанр:</label>
+                            <input type="text" id="edit-genre" name="genre">
+                            <small class="field-error" data-error-for="genre"></small>
+                        </div>
+                        <div class="form-group">
+                            <label for="edit-format">Формат:</label>
+                            <input type="text" id="edit-format" name="format">
+                            <small class="field-error" data-error-for="format"></small>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="edit-price">Цена:</label>
+                            <input type="number" id="edit-price" name="price" min="1">
+                            <small class="field-error" data-error-for="price"></small>
+                        </div>
+                        <div class="form-group">
+                            <label for="edit-pages">Број страна:</label>
+                            <input type="number" id="edit-pages" name="pages" min="1">
+                            <small class="field-error" data-error-for="pages"></small>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="edit-author-id">ID аутора:</label>
+                            <input type="number" id="edit-author-id" name="authorId" min="1">
+                            <small class="field-error" data-error-for="authorId"></small>
+                        </div>
+                        <div class="form-group">
+                            <label for="edit-isbn">ISBN:</label>
+                            <input type="text" id="edit-isbn" name="isbn">
+                            <small class="field-error" data-error-for="isbn"></small>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Ажурирај</button>
                 </form>
             </div>
         </div>
-        <div class="card" style="text-align: left; align-items: flex-start;">
+        <div class="card admin-card">
             <h3>Листа књига</h3>
-            <table style="width: 100%; border-collapse: collapse;">
+            <table>
                 <thead>
                     <tr>
-                        <th style="text-align: left; padding: 0.8rem; border-bottom: 2px solid var(--gray-light);">Наслов</th>
-                        <th style="text-align: left; padding: 0.8rem; border-bottom: 2px solid var(--gray-light);">Аутор</th>
-                        <th style="text-align: left; padding: 0.8rem; border-bottom: 2px solid var(--gray-light);">Акције</th>
+                        <th>Наслов</th>
+                        <th>Жанр</th>
+                        <th>ISBN</th>
+                        <th>Акције</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-light);">На Дрини ћуприја</td>
-                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-light);">Иво Андрић</td>
-                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-light);">
-                            <a href="book-details-cuprija.html" class="btn btn-secondary" style="padding: 0.3rem 0.6rem; font-size: 0.8rem;">Детаљи</a>
-                            <button class="btn btn-secondary" style="padding: 0.3rem 0.6rem; font-size: 0.8rem;">Измени</button>
-                            <button class="btn" style="padding: 0.3rem 0.6rem; font-size: 0.8rem; background-color: #ef5350; color: white;">Обриши</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-light);">Расути умови</td>
-                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-light);">Габор Мате</td>
-                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-light);">
-                            <a href="book-details-umovi.html" class="btn btn-secondary" style="padding: 0.3rem 0.6rem; font-size: 0.8rem;">Детаљи</a>
-                            <button class="btn btn-secondary" style="padding: 0.3rem 0.6rem; font-size: 0.8rem;">Измени</button>
-                            <button class="btn" style="padding: 0.3rem 0.6rem; font-size: 0.8rem; background-color: #ef5350; color: white;">Обриши</button>
-                        </td>
-                    </tr>
-                </tbody>
+                <tbody data-admin-books></tbody>
             </table>
         </div>
     </main>
@@ -92,5 +149,6 @@
         <p>Заједница Читалаца — Пројекат из веб дизајна 2026</p>
     </footer>
     <script src="js/shared.js"></script>
+    <script src="js/student1-books.js"></script>
 </body>
 </html>

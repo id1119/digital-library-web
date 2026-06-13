@@ -68,98 +68,29 @@
                 </div>
             </div>
 
-            <a href="#edit-profile" class="btn btn-secondary">Измени податке</a>
+            <a href="book-details-cuprija.html" class="btn btn-secondary">Погледај рецензије</a>
         </section>
 
         <section class="profile-summary">
-            <article class="summary-item">
-                <strong>2</strong>
-                <span>оцењена аутора</span>
-            </article>
             <article class="summary-item">
                 <strong>1</strong>
                 <span>написана рецензија</span>
             </article>
             <article class="summary-item">
-                <strong>5.0</strong>
-                <span>просечна оцена</span>
+                <strong>3</strong>
+                <span>књиге у каталогу</span>
             </article>
-        </section>
-
-        <section class="card profile-edit-card" id="edit-profile">
-            <h2>Измена података</h2>
-            <form class="profile-form">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="profile-first-name">Име:</label>
-                        <input type="text" id="profile-first-name" name="first-name" value="Петар">
-                    </div>
-                    <div class="form-group">
-                        <label for="profile-last-name">Презиме:</label>
-                        <input type="text" id="profile-last-name" name="last-name" value="Петровић">
-                    </div>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="profile-email">Е-пошта:</label>
-                        <input type="email" id="profile-email" name="email" value="petar.petrovic@primer.rs">
-                    </div>
-                    <div class="form-group">
-                        <label for="profile-username">Корисничко име:</label>
-                        <input type="text" id="profile-username" name="username" value="petar95">
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="profile-address">Адреса:</label>
-                    <input type="text" id="profile-address" name="address" value="Булевар краља Александра 73, Београд">
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="profile-birth-date">Датум рођења:</label>
-                        <input type="date" id="profile-birth-date" name="birth-date" value="1995-05-15">
-                    </div>
-                    <div class="form-group">
-                        <label for="profile-occupation">Занимање:</label>
-                        <input type="text" id="profile-occupation" name="occupation" value="Столар">
-                    </div>
-                </div>
-
-                <div class="profile-form-actions">
-                    <button type="submit" class="btn btn-primary">Сачувај измене</button>
-                    <button type="reset" class="btn btn-secondary">Врати податке</button>
-                </div>
-            </form>
+            <article class="summary-item">
+                <strong>1</strong>
+                <span>активна сесија</span>
+            </article>
         </section>
 
         <div class="grid profile-activity-grid">
             <section>
                 <h3>Моје рецензије</h3>
 
-                <article class="card activity-card">
-                    <p><strong>Књига:</strong> <a href="book-details-cuprija.html" class="text-link">На Дрини
-                            ћуприја</a></p>
-                    <p class="activity-meta">Датум: 20.03.2025. | ID књиге: 10</p>
-                    <p><strong>Рецензија:</strong> Ово је била одлична књига! Андрићев стил је заиста уникатан.</p>
-                </article>
-            </section>
-
-            <section>
-                <h3>Моје оцене</h3>
-
-                <article class="card activity-card">
-                    <p><strong>Аутор:</strong> <a href="author-details-andric.html" class="text-link">Иво Андрић</a></p>
-                    <p class="activity-meta">Датум: 20.03.2025. | ID аутора: 21</p>
-                    <p><strong>Оцена:</strong> <span class="rating-stars">★★★★★</span></p>
-                </article>
-
-                <article class="card activity-card">
-                    <p><strong>Аутор:</strong> <a href="author-details-vuk.html" class="text-link">Вук Караџић</a></p>
-                    <p class="activity-meta">Датум: 21.04.2026. | ID аутора: 23</p>
-                    <p><strong>Оцена:</strong> <span class="rating-stars">★★★★★</span></p>
-                </article>
+                <div data-profile-reviews></div>
             </section>
         </div>
     </main>
@@ -167,6 +98,7 @@
         <p>Заједница Читалаца — Пројекат из веб дизајна 2026</p>
     </footer>
     <script src="js/shared.js"></script>
+    <script src="js/student1-books.js"></script>
 </body>
 
 </html>
