@@ -125,7 +125,7 @@ function loadBooks() {
 }
 
 async function getDatabaseFromSource() {
-    const databaseUrl = window.STUDENT1_FIREBASE_URL || window.STUDENT1_DATABASE_URL;
+    const databaseUrl = typeof firebaseDatabaseUrl === "function" ? firebaseDatabaseUrl() : "";
 
     if (!databaseUrl) {
         return getFallbackDatabase();
