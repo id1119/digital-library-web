@@ -298,7 +298,7 @@ function renderBookAdminTable() {
             <td>${book.genre}</td>
             <td>${book.isbn}</td>
             <td class="table-actions">
-                <a href="${book.detailsUrl}" class="btn btn-secondary btn-small">Детаљи</a>
+                <a href="${book.detailsUrl}" class="btn btn-primary btn-small">Детаљи</a>
                 <button type="button" class="btn btn-secondary btn-small" data-edit-book="${book.id}">Измени</button>
                 <button type="button" class="btn btn-danger btn-small" data-delete-book="${book.id}">Обриши</button>
             </td>
@@ -306,7 +306,10 @@ function renderBookAdminTable() {
     `).join("");
 
     tbody.querySelectorAll("[data-edit-book]").forEach((button) => {
-        button.addEventListener("click", () => fillEditBookForm(button.dataset.editBook));
+        button.addEventListener("click", () => {
+            fillEditBookForm(button.dataset.editBook);
+            document.querySelector('[data-book-form="edit"]').scrollIntoView({ behavior: "smooth" });
+        });
     });
 
     tbody.querySelectorAll("[data-delete-book]").forEach((button) => {

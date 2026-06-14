@@ -1,10 +1,56 @@
 const SESSION_KEY = "currentUser";
 
 document.addEventListener("DOMContentLoaded", () => {
+    setupSiteNavigation();
     addAuthControls();
     addAuthModal();
     updateAuthControls();
 });
+
+function setupSiteNavigation() {
+    const nav = document.querySelector("nav.container");
+    const links = nav?.querySelector(".nav-links");
+
+    if (!nav || !links || nav.querySelector("[data-site-menu]")) {
+        return;
+    }
+
+    const menuButton = document.createElement("button");
+    menuButton.type = "button";
+    menuButton.className = "site-menu-button";
+    menuButton.dataset.siteMenu = "";
+    menuButton.setAttribute("aria-expanded", "false");
+    menuButton.setAttribute("aria-controls", "site-navigation");
+    menuButton.textContent = "Мени";
+
+    links.id = "site-navigation";
+    nav.insertBefore(menuButton, links);
+
+    menuButton.addEventListener("click", () => {
+        const isOpen = nav.classList.toggle("menu-open");
+
+        menuButton.setAttribute("aria-expanded", String(isOpen));
+        menuButton.textContent = isOpen ? "Затвори" : "Мени";
+    });
+
+    links.addEventListener("click", (event) => {
+        if (event.target.matches("a")) {
+            closeSiteNavigation(nav, menuButton);
+        }
+    });
+
+    window.addEventListener("resize", () => {
+        if (window.innerWidth > 720) {
+            closeSiteNavigation(nav, menuButton);
+        }
+    });
+}
+
+function closeSiteNavigation(nav, menuButton) {
+    nav.classList.remove("menu-open");
+    menuButton.setAttribute("aria-expanded", "false");
+    menuButton.textContent = "Мени";
+}
 
 function addAuthControls() {
     const nav = document.querySelector("nav.container");

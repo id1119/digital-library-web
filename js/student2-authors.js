@@ -5,57 +5,11 @@ let selectedAuthorId = null;
 let localRatings = [];
 
 document.addEventListener("DOMContentLoaded", () => {
-    setupStudent2Navigation();
     renderAuthorsPage();
     setupAdminAuthorsPage();
     renderAuthorDetailsPage();
     renderProfileRatings();
 });
-
-function setupStudent2Navigation() {
-    const nav = document.querySelector(".student2-page nav.container");
-    const links = nav?.querySelector(".nav-links");
-
-    if (!nav || !links || nav.querySelector("[data-student2-menu]")) {
-        return;
-    }
-
-    const menuButton = document.createElement("button");
-    menuButton.type = "button";
-    menuButton.className = "student2-menu-button";
-    menuButton.dataset.student2Menu = "";
-    menuButton.setAttribute("aria-expanded", "false");
-    menuButton.setAttribute("aria-controls", "student2-navigation");
-    menuButton.textContent = "Мени";
-
-    links.id = "student2-navigation";
-    nav.insertBefore(menuButton, links);
-
-    menuButton.addEventListener("click", () => {
-        const isOpen = nav.classList.toggle("menu-open");
-
-        menuButton.setAttribute("aria-expanded", String(isOpen));
-        menuButton.textContent = isOpen ? "Затвори" : "Мени";
-    });
-
-    links.addEventListener("click", (event) => {
-        if (event.target.matches("a")) {
-            closeStudent2Navigation(nav, menuButton);
-        }
-    });
-
-    window.addEventListener("resize", () => {
-        if (window.innerWidth > 720) {
-            closeStudent2Navigation(nav, menuButton);
-        }
-    });
-}
-
-function closeStudent2Navigation(nav, menuButton) {
-    nav.classList.remove("menu-open");
-    menuButton.setAttribute("aria-expanded", "false");
-    menuButton.textContent = "Мени";
-}
 
 async function loadDatabase() {
     if (!databasePromise) {
@@ -427,7 +381,7 @@ function authorDetailsTemplate(author, books, ratings) {
             <article class="book-link-card">
                 <h3>${escapeHtml(book.naziv)}</h3>
                 <p>${escapeHtml(book.zanr)} | ${escapeHtml(book.format)}</p>
-                <a class="text-link" href="book-details.html?id=${encodeURIComponent(book.id)}">Погледај књигу</a>
+                <a class="text-link" href="${getAuthorBookDetailsUrl(book.id)}">Погледај књигу</a>
             </article>
         `).join("")
         : "<p>За овог аутора нема књига у бази.</p>";
@@ -466,6 +420,10 @@ function authorDetailsTemplate(author, books, ratings) {
             </section>
         </div>
     `;
+}
+
+function getAuthorBookDetailsUrl(bookId) {
+    return `book-details-cuprija.html?id=${encodeURIComponent(bookId)}`;
 }
 
 function setupStarRating(author, databaseRatings) {
