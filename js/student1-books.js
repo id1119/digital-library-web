@@ -4,7 +4,7 @@ const STUDENT1_BOOKS = [
         numericId: 10,
         title: "На Дрини ћуприја",
         authorName: "Иво Андрић",
-        authorUrl: "author-details-andric.html",
+        authorUrl: "author-details.html?id=aut001",
         image: "images/na-drini-cuprija.jpg",
         detailsUrl: "book-details-cuprija.html",
         description: "Четири века балканске историје и људских судбина утканих у несаломиви камени мост.",
@@ -20,7 +20,7 @@ const STUDENT1_BOOKS = [
         numericId: 30,
         title: "Расути умови",
         authorName: "Габор Мате",
-        authorUrl: "author-details-mate.html",
+        authorUrl: "author-details.html?id=aut002",
         image: "images/rasuti-umovi.jpg",
         detailsUrl: "book-details-umovi.html",
         description: "Револуционарни поглед на АДХД као последицу трауме и окружења, а не само генетике.",
@@ -36,7 +36,7 @@ const STUDENT1_BOOKS = [
         numericId: 20,
         title: "Српски ријечник",
         authorName: "Вук Караџић",
-        authorUrl: "author-details-vuk.html",
+        authorUrl: "author-details.html?id=aut003",
         image: "images/srpski-rjecnik.jpg",
         detailsUrl: "book-details-rijecnik.html",
         description: "Комплетан српски ријечник са детаљним објашњењима и примерима употребе.",
@@ -225,13 +225,7 @@ function getAuthorName(authors, authorId) {
 }
 
 function getAuthorUrl(authorId) {
-    const knownPages = {
-        aut001: "author-details-andric.html",
-        aut002: "author-details-mate.html",
-        aut003: "author-details-vuk.html"
-    };
-
-    return knownPages[authorId] || "authors.html";
+    return authorId ? `author-details.html?id=${encodeURIComponent(authorId)}` : "authors.html";
 }
 
 function getBookDetailsUrl(bookId) {
