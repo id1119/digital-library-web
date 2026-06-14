@@ -144,7 +144,9 @@ h1, h2, h3 {
 }
 .admin-card {
     align-items: flex-start;
+    max-width: 100%;
     min-height: auto;
+    overflow-x: auto;
     text-align: left;
 }
 .book-card {
@@ -244,6 +246,7 @@ label {
 }
 input, textarea, select {
     width: 100%;
+    min-width: 0;
     padding: 0.8rem;
     border: 1px solid #ddd;
     border-radius: 8px;
