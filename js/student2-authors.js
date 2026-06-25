@@ -2,7 +2,11 @@ const DEFAULT_USER_ID = "kor001";
 
 let databasePromise;
 let selectedAuthorId = null;
-let localRatings = [];
+let currentAuthorsList = [];
+let currentAuthorFilters = {
+    name: "",
+    status: ""
+};
 let authorDeleteDialog = null;
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -26,6 +30,31 @@ async function loadDatabase() {
     return databasePromise;
 }
 
+async function reloadDatabase() {
+    databasePromise = null;
+    return loadDatabase();
+}
+
+async function firebaseRequest(path, options = {}) {
+    const response = await fetch(firebaseDatabaseUrl(path), {
+        headers: {
+            "Content-Type": "application/json",
+            ...(options.headers || {})
+        },
+        ...options
+    });
+
+    if (!response.ok) {
+        throw new Error("Firebase операција није успела. Покушај поново.");
+    }
+
+    if (response.status === 204) {
+        return null;
+    }
+
+    return response.json();
+}
+
 function objectToArray(collection) {
     return Object.entries(collection || {}).map(([id, value]) => ({ id, ...value }));
 }
@@ -39,27 +68,82 @@ async function renderAuthorsPage() {
 
     try {
         const database = await loadDatabase();
-        const authors = objectToArray(database.autori);
+        currentAuthorsList = objectToArray(database.autori);
 
-        grid.innerHTML = authors.map((author) => `
-            <article class="card author-card">
-                <img
-                    class="author-image"
-                    src="${escapeAttribute(author.slike?.[0] || "")}"
-                    alt="${escapeAttribute(fullName(author))}"
-                    loading="lazy"
-                >
-                <p class="author-status">${escapeHtml(author.status)}</p>
-                <h2>${escapeHtml(fullName(author))}</h2>
-                <p>${escapeHtml(shorten(author.biografija, 180))}</p>
-                <a class="btn btn-primary" href="author-details.html?id=${encodeURIComponent(author.id)}">Детаљи</a>
-            </article>
-        `).join("");
+        setupAuthorSearch();
+        renderFilteredAuthors();
 
         hideStatus("[data-authors-status]");
     } catch (error) {
         showStatus("[data-authors-status]", error.message, "error");
     }
+}
+
+function setupAuthorSearch() {
+    const form = document.querySelector("[data-author-search]");
+
+    if (!form || form.dataset.ready === "true") {
+        return;
+    }
+
+    form.dataset.ready = "true";
+    form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        currentAuthorFilters = Object.fromEntries(new FormData(form));
+        renderFilteredAuthors();
+    });
+
+    document.querySelector("[data-author-search-reset]")?.addEventListener("click", () => {
+        form.reset();
+        currentAuthorFilters = { name: "", status: "" };
+        renderFilteredAuthors();
+    });
+}
+
+function renderFilteredAuthors() {
+    const grid = document.querySelector("[data-authors-grid]");
+    const summary = document.querySelector("[data-authors-result-summary]");
+
+    if (!grid) {
+        return;
+    }
+
+    const nameQuery = normalizeSearch(currentAuthorFilters.name);
+    const statusQuery = currentAuthorFilters.status || "";
+    const authors = currentAuthorsList.filter((author) => {
+        const nameMatches = !nameQuery || normalizeSearch(fullName(author)).includes(nameQuery);
+        const statusMatches = !statusQuery || author.status === statusQuery;
+
+        return nameMatches && statusMatches;
+    });
+
+    grid.innerHTML = authors.length > 0
+        ? authors.map((author) => authorCardTemplate(author, nameQuery, statusQuery)).join("")
+        : `<p class="empty-state">Нема аутора који одговарају претрази.</p>`;
+
+    if (summary) {
+        const activeFilters = [currentAuthorFilters.name, currentAuthorFilters.status].filter(Boolean).length;
+        summary.textContent = activeFilters
+            ? `Пронађено аутора: ${authors.length} од ${currentAuthorsList.length}.`
+            : "";
+    }
+}
+
+function authorCardTemplate(author, nameQuery, statusQuery) {
+    return `
+        <article class="card author-card">
+            <img
+                class="author-image"
+                src="${escapeAttribute(author.slike?.[0] || "")}"
+                alt="${escapeAttribute(fullName(author))}"
+                loading="lazy"
+            >
+            <p class="author-status">${highlightMatch(author.status, statusQuery)}</p>
+            <h2>${highlightMatch(fullName(author), nameQuery)}</h2>
+            <p>${escapeHtml(shorten(author.biografija || "", 180))}</p>
+            <a class="btn btn-primary" href="author-details.html?id=${encodeURIComponent(author.id)}">Детаљи</a>
+        </article>
+    `;
 }
 
 async function setupAdminAuthorsPage() {
@@ -155,7 +239,7 @@ function authorFormFields(prefix) {
         </div>
 
         <button class="btn btn-primary" type="submit">
-            ${prefix === "add" ? "Провери и додај" : "Провери и измени"}
+            ${prefix === "add" ? "Додај аутора" : "Сачувај измене"}
         </button>
     `;
 }
@@ -216,7 +300,7 @@ function fillEditAuthorForm(author) {
     showAuthorFormMessage("edit", `Форма је попуњена подацима аутора: ${fullName(author)}.`, "success");
 }
 
-function handleAuthorFormSubmit(event) {
+async function handleAuthorFormSubmit(event) {
     event.preventDefault();
 
     const form = event.currentTarget;
@@ -230,12 +314,53 @@ function handleAuthorFormSubmit(event) {
         return;
     }
 
-    const action = form.dataset.authorForm === "add" ? "додавање" : `измену (${selectedAuthorId})`;
-    showAuthorFormMessage(
-        form.dataset.authorForm,
-        `Подаци су исправни и спремни за ${action}. Упис у Firebase није обавезан за ДЗ2.`,
-        "success"
-    );
+    try {
+        const authorPayload = formDataToAuthor(data);
+
+        if (form.dataset.authorForm === "add") {
+            const result = await firebaseRequest("autori", {
+                method: "POST",
+                body: JSON.stringify(authorPayload)
+            });
+
+            form.reset();
+            showAuthorFormMessage("add", `Аутор је додат у Firebase базу. ID: ${result.name}.`, "success");
+        } else {
+            if (!selectedAuthorId) {
+                showAuthorFormMessage("edit", "Прво изабери аутора за измену.", "error");
+                return;
+            }
+
+            await firebaseRequest(`autori/${selectedAuthorId}`, {
+                method: "PATCH",
+                body: JSON.stringify(authorPayload)
+            });
+
+            showAuthorFormMessage("edit", `Аутор ${selectedAuthorId} је измењен у Firebase бази.`, "success");
+        }
+
+        await refreshAdminAuthors();
+    } catch (error) {
+        showAuthorFormMessage(form.dataset.authorForm, error.message, "error");
+    }
+}
+
+function formDataToAuthor(data) {
+    return {
+        ime: data.ime.trim(),
+        prezime: data.prezime.trim(),
+        biografija: data.biografija.trim(),
+        slike: splitImages(data.slike),
+        datumRodjenja: data.datumRodjenja,
+        status: data.status,
+        brojOsvojenihNagrada: Number(data.brojOsvojenihNagrada),
+        brojProdatihPrimeraka: Number(data.brojProdatihPrimeraka),
+        kontaktTelefonMenadzera: data.kontaktTelefonMenadzera.trim()
+    };
+}
+
+function splitImages(value) {
+    return (value || "").split(",").map((url) => url.trim()).filter(Boolean);
 }
 
 function validateAuthor(author) {
@@ -288,14 +413,55 @@ function addAuthorDeleteDialog() {
         id: "author-delete-dialog",
         title: "Потврда брисања",
         confirmText: "Обриши",
-        onConfirm: () => {
-            showStatus(
-                "[data-admin-authors-status]",
-                `Брисање аутора ${selectedAuthorId} је потврђено. Упис у Firebase није обавезан за ДЗ2.`,
-                "success"
-            );
+        onConfirm: async () => {
+            if (!selectedAuthorId) {
+                return;
+            }
+
+            try {
+                const deletedAuthorId = selectedAuthorId;
+
+                await firebaseRequest(`autori/${deletedAuthorId}`, { method: "DELETE" });
+                await deleteRatingsForAuthor(deletedAuthorId);
+                await refreshAdminAuthors();
+                showStatus(
+                    "[data-admin-authors-status]",
+                    `Аутор ${deletedAuthorId} је обрисан из Firebase базе.`,
+                    "success"
+                );
+                selectedAuthorId = null;
+            } catch (error) {
+                showStatus("[data-admin-authors-status]", error.message, "error");
+            }
         }
     });
+}
+
+async function deleteRatingsForAuthor(authorId) {
+    const database = await reloadDatabase();
+    const ratingIds = objectToArray(database.ocene)
+        .filter((rating) => rating.idAutora === authorId)
+        .map((rating) => rating.id);
+
+    await Promise.all(ratingIds.map((ratingId) =>
+        firebaseRequest(`ocene/${ratingId}`, { method: "DELETE" })
+    ));
+}
+
+async function refreshAdminAuthors() {
+    const database = await reloadDatabase();
+    const authors = objectToArray(database.autori);
+
+    renderAuthorsTable(authors);
+    fillEditAuthorForm(authors[0]);
+
+    if (document.querySelector("[data-admin-authors-status]")) {
+        showStatus(
+            "[data-admin-authors-status]",
+            `Табела је освежена. Укупно аутора: ${authors.length}.`,
+            "success"
+        );
+    }
 }
 
 function openAuthorDeleteDialog(authorId, author) {
@@ -374,7 +540,7 @@ function authorDetailsTemplate(author, books, ratings) {
         <div class="grid author-content-grid">
             <section class="card content-card">
                 <h2>Оцените аутора</h2>
-                <p>Просечна оцена: <strong data-average-rating>${average}</strong> / 5 (${ratings.length} оцена)</p>
+                <p>Просечна оцена: <strong data-average-rating>${average}</strong> / 5 (<span data-rating-count>${ratings.length}</span> оцена)</p>
                 <div class="interactive-rating" data-star-rating aria-label="Оцена аутора од 1 до 5">
                     ${[1, 2, 3, 4, 5].map((value) =>
                         `<button type="button" data-rating="${value}" aria-label="${value} звездица">☆</button>`
@@ -397,31 +563,59 @@ function getAuthorBookDetailsUrl(bookId) {
 
 function setupStarRating(author, databaseRatings) {
     const ratingBox = document.querySelector("[data-star-rating]");
+    const userRating = databaseRatings.find((rating) => rating.idKorisnika === currentUserId());
+
+    if (!ratingBox) {
+        return;
+    }
+
+    if (userRating) {
+        paintStars(Number(userRating.vrednost));
+    }
 
     ratingBox.querySelectorAll("[data-rating]").forEach((button) => {
         button.addEventListener("mouseenter", () => paintStars(Number(button.dataset.rating)));
         button.addEventListener("focus", () => paintStars(Number(button.dataset.rating)));
-        button.addEventListener("click", () => {
+        button.addEventListener("click", async () => {
             const value = Number(button.dataset.rating);
 
-            localRatings = localRatings.filter((rating) =>
-                !(rating.idAutora === author.id && rating.idKorisnika === currentUserId())
-            );
-            localRatings.push({
-                idAutora: author.id,
-                idKorisnika: currentUserId(),
-                vrednost: value,
-                datum: new Date().toISOString().slice(0, 10)
-            });
+            try {
+                const savedRating = {
+                    idAutora: author.id,
+                    idKorisnika: currentUserId(),
+                    vrednost: value,
+                    datum: new Date().toISOString().slice(0, 10)
+                };
+                const existingRating = databaseRatings.find((rating) => rating.idKorisnika === currentUserId());
 
-            const allRatings = [...databaseRatings, ...localRatings.filter((rating) => rating.idAutora === author.id)];
-            document.querySelector("[data-average-rating]").textContent = calculateAverage(allRatings);
-            paintStars(value);
-            showStatus("[data-rating-message]", `Изабрана оцена: ${value}. Упис у Firebase следи у финалној фази.`, "success");
+                if (existingRating) {
+                    await firebaseRequest(`ocene/${existingRating.id}`, {
+                        method: "PATCH",
+                        body: JSON.stringify(savedRating)
+                    });
+                    Object.assign(existingRating, savedRating);
+                } else {
+                    const result = await firebaseRequest("ocene", {
+                        method: "POST",
+                        body: JSON.stringify(savedRating)
+                    });
+                    databaseRatings.push({ id: result.name, ...savedRating });
+                }
+
+                document.querySelector("[data-average-rating]").textContent = calculateAverage(databaseRatings);
+                document.querySelector("[data-rating-count]").textContent = databaseRatings.length;
+                paintStars(value);
+                showStatus("[data-rating-message]", `Оцена ${value} је сачувана у Firebase бази.`, "success");
+            } catch (error) {
+                showStatus("[data-rating-message]", error.message, "error");
+            }
         });
     });
 
-    ratingBox.addEventListener("mouseleave", () => paintStars(0));
+    ratingBox.addEventListener("mouseleave", () => {
+        const savedUserRating = databaseRatings.find((rating) => rating.idKorisnika === currentUserId());
+        paintStars(savedUserRating ? Number(savedUserRating.vrednost) : 0);
+    });
 }
 
 function paintStars(value) {
@@ -443,9 +637,12 @@ async function renderProfileRatings() {
         const database = await loadDatabase();
         const ratings = objectToArray(database.ocene).filter((rating) => rating.idKorisnika === currentUserId());
 
-        container.innerHTML = ratings.length > 0
-            ? ratings.map((rating) => {
+        const ratingCards = ratings.map((rating) => {
                 const author = database.autori[rating.idAutora];
+
+                if (!author) {
+                    return "";
+                }
 
                 return `
                     <article class="card activity-card">
@@ -458,7 +655,10 @@ async function renderProfileRatings() {
                         <p class="rating-stars">${"★".repeat(rating.vrednost)}${"☆".repeat(5 - rating.vrednost)}</p>
                     </article>
                 `;
-            }).join("")
+            }).filter(Boolean);
+
+        container.innerHTML = ratingCards.length > 0
+            ? ratingCards.join("")
             : "<p>Корисник још није оценио ниједног аутора.</p>";
     } catch (error) {
         container.innerHTML = `<p class="status-message error">${escapeHtml(error.message)}</p>`;
@@ -492,6 +692,32 @@ function formatDate(dateValue) {
 
 function shorten(text, maximumLength) {
     return text.length <= maximumLength ? text : `${text.slice(0, maximumLength).trim()}...`;
+}
+
+function normalizeSearch(value) {
+    return String(value || "").trim().toLocaleLowerCase("sr-RS");
+}
+
+function highlightMatch(value, query) {
+    const text = String(value || "");
+    const normalizedQuery = normalizeSearch(query);
+
+    if (!normalizedQuery) {
+        return escapeHtml(text);
+    }
+
+    const normalizedText = text.toLocaleLowerCase("sr-RS");
+    const index = normalizedText.indexOf(normalizedQuery);
+
+    if (index === -1) {
+        return escapeHtml(text);
+    }
+
+    const before = text.slice(0, index);
+    const match = text.slice(index, index + normalizedQuery.length);
+    const after = text.slice(index + normalizedQuery.length);
+
+    return `${escapeHtml(before)}<mark class="search-highlight">${escapeHtml(match)}</mark>${escapeHtml(after)}`;
 }
 
 function showAuthorFormMessage(formName, message, type) {

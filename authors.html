@@ -23,7 +23,32 @@
 
     <main class="container">
         <h1>Аутори</h1>
+        <section class="card filter-card">
+            <h2>Претрага аутора</h2>
+            <form class="filter-form" data-author-search novalidate>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="author-search-name">Име или презиме:</label>
+                        <input id="author-search-name" name="name" type="search" placeholder="Нпр. Тесла">
+                    </div>
+                    <div class="form-group">
+                        <label for="author-search-status">Статус:</label>
+                        <select id="author-search-status" name="status">
+                            <option value="">Сви статуси</option>
+                            <option value="Активан">Активан</option>
+                            <option value="У пензији">У пензији</option>
+                            <option value="Преминуо">Преминуо</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="filter-actions">
+                    <button class="btn btn-primary" type="submit">Претражи</button>
+                    <button class="btn btn-secondary" type="button" data-author-search-reset>Очисти</button>
+                </div>
+            </form>
+        </section>
         <p class="status-message" data-authors-status>Учитавање аутора...</p>
+        <p class="page-intro" data-authors-result-summary></p>
         <div class="grid authors-grid" data-authors-grid></div>
     </main>
 
