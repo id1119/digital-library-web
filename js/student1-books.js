@@ -49,8 +49,12 @@ const STUDENT1_BOOKS = [
     }
 ];
 
+const STUDENT1_DEFAULT_USER_ID = "kor001";
+const STUDENT1_REVIEW_USER_NAME = "Посетилац";
+
 let currentBooks = [...STUDENT1_BOOKS];
 let currentAuthors = {};
+let currentUsers = {};
 let student1Reviews = [
     {
         id: "r0",
@@ -112,17 +116,66 @@ async function initStudent1Books() {
 
     currentBooks = database.books;
     currentAuthors = database.authors;
+    currentUsers = database.users;
     student1Reviews = database.reviews;
     renderBookCatalog();
     renderBookAdminTable();
     setupBookForms();
     setupBookDetails();
+    renderProfileUser();
     renderProfileReviews();
     updateProfileSummary();
 }
 
 function loadBooks() {
     return currentBooks;
+}
+
+async function requestDatabase(path, options = {}) {
+    if (typeof firebaseDatabaseUrl !== "function") {
+        throw new Error("Firebase конфигурација није доступна.");
+    }
+
+    const response = await fetch(firebaseDatabaseUrl(path), {
+        ...options,
+        headers: {
+            "Content-Type": "application/json",
+            ...options.headers
+        }
+    });
+
+    if (!response.ok) {
+        throw new Error("Упис у Firebase није успео.");
+    }
+
+    if (response.status === 204) {
+        return null;
+    }
+
+    return response.json();
+}
+
+function createBookPayload(data) {
+    return {
+        naziv: data.title.trim(),
+        opis: data.description.trim(),
+        slike: [data.image.trim()],
+        zanr: data.genre.trim(),
+        format: data.format.trim(),
+        cena: Number(data.price),
+        brojStrana: Number(data.pages),
+        idAutora: data.authorId.trim(),
+        isbn: data.isbn.trim()
+    };
+}
+
+function createReviewPayload(bookId, text) {
+    return {
+        datum: new Date().toISOString().slice(0, 10),
+        idKnjige: bookId,
+        idKorisnika: getActiveUserId(),
+        tekst: text.trim()
+    };
 }
 
 async function getDatabaseFromSource() {
@@ -152,6 +205,17 @@ function getFallbackDatabase() {
     return {
         books: [...STUDENT1_BOOKS],
         authors: {},
+        users: {
+            [STUDENT1_DEFAULT_USER_ID]: {
+                ime: "Татјана",
+                prezime: "Петровић",
+                email: "tatjana.petrovic@example.com",
+                korisnickoIme: "tatjana_p",
+                adresa: "Београдска 1, Београд",
+                datumRodjenja: "2003-01-01",
+                zanimanje: "Економисткиња"
+            }
+        },
         reviews: [...student1Reviews]
     };
 }
@@ -162,10 +226,11 @@ function normalizeDatabase(data) {
     }
 
     const authors = data.autori || {};
+    const users = data.korisnici || {};
     const books = normalizeBooks(data.knjige, authors);
-    const reviews = normalizeReviews(data.recenzije || {}, books, data.korisnici || {});
+    const reviews = normalizeReviews(data.recenzije || {}, books, users);
 
-    return { books, authors, reviews };
+    return { books, authors, users, reviews };
 }
 
 function normalizeBooks(data, authors) {
@@ -203,8 +268,51 @@ function normalizeReviews(data, books, users) {
             userId: review.idKorisnika,
             username: getUserName(users, review.idKorisnika),
             date: formatDate(review.datum),
+            dateValue: review.datum || "",
             text: review.tekst || ""
-        }));
+        }))
+        .sort((first, second) => new Date(second.dateValue) - new Date(first.dateValue));
+}
+
+function createReviewFromPayload(id, payload, fallbackUsername = "") {
+    return {
+        id,
+        bookId: payload.idKnjige,
+        bookNumericId: payload.idKnjige,
+        userId: payload.idKorisnika,
+        username: getUserName(currentUsers, payload.idKorisnika) || fallbackUsername.trim() || STUDENT1_REVIEW_USER_NAME,
+        date: formatDate(payload.datum),
+        dateValue: payload.datum,
+        text: payload.tekst || ""
+    };
+}
+
+function getActiveUserId() {
+    const user = typeof getCurrentUser === "function" ? getCurrentUser() : null;
+
+    return user?.id || STUDENT1_DEFAULT_USER_ID;
+}
+
+function getActiveUser() {
+    const user = typeof getCurrentUser === "function" ? getCurrentUser() : null;
+
+    if (user) {
+        return {
+            id: user.id,
+            ime: user.firstName || "",
+            prezime: user.lastName || "",
+            email: user.email || "",
+            korisnickoIme: user.username || "",
+            adresa: user.address || "",
+            datumRodjenja: user.birthDate || "",
+            zanimanje: user.occupation || ""
+        };
+    }
+
+    return {
+        id: STUDENT1_DEFAULT_USER_ID,
+        ...(currentUsers[STUDENT1_DEFAULT_USER_ID] || {})
+    };
 }
 
 function getFirstImage(images) {
@@ -264,11 +372,11 @@ function renderBookCatalog() {
 
     grid.innerHTML = books.length > 0 ? books.map((book) => `
         <article class="card book-card">
-            <h3><a href="${book.detailsUrl}" class="plain-link">${book.title}</a></h3>
-            <p><b>Аутор:</b> <a href="${book.authorUrl}" class="text-link">${book.authorName}</a></p>
-            <img src="${book.image}" alt="${book.title}" class="book-cover">
-            <p>${book.description}</p>
-            <a href="${book.detailsUrl}" class="btn btn-primary">Детаљи</a>
+            <h3><a href="${s1EscapeAttribute(book.detailsUrl)}" class="plain-link">${s1EscapeHtml(book.title)}</a></h3>
+            <p><b>Аутор:</b> <a href="${s1EscapeAttribute(book.authorUrl)}" class="text-link">${s1EscapeHtml(book.authorName)}</a></p>
+            <img src="${s1EscapeAttribute(book.image)}" alt="${s1EscapeAttribute(book.title)}" class="book-cover" loading="lazy">
+            <p>${s1EscapeHtml(shortenText(book.description, 170))}</p>
+            <a href="${s1EscapeAttribute(book.detailsUrl)}" class="btn btn-primary">Детаљи</a>
         </article>
     `).join("") : `<p class="empty-state">Нема књига за приказ.</p>`;
 }
@@ -289,13 +397,13 @@ function renderBookAdminTable() {
 
     tbody.innerHTML = books.map((book) => `
         <tr>
-            <td>${book.title}</td>
-            <td>${book.genre}</td>
-            <td>${book.isbn}</td>
+            <td>${s1EscapeHtml(book.title)}</td>
+            <td>${s1EscapeHtml(book.genre)}</td>
+            <td>${s1EscapeHtml(book.isbn)}</td>
             <td class="table-actions">
-                <a href="${book.detailsUrl}" class="btn btn-primary btn-small">Детаљи</a>
-                <button type="button" class="btn btn-secondary btn-small" data-edit-book="${book.id}">Измени</button>
-                <button type="button" class="btn btn-danger btn-small" data-delete-book="${book.id}">Обриши</button>
+                <a href="${s1EscapeAttribute(book.detailsUrl)}" class="btn btn-primary btn-small">Детаљи</a>
+                <button type="button" class="btn btn-secondary btn-small" data-edit-book="${s1EscapeAttribute(book.id)}">Измени</button>
+                <button type="button" class="btn btn-danger btn-small" data-delete-book="${s1EscapeAttribute(book.id)}">Обриши</button>
             </td>
         </tr>
     `).join("");
@@ -311,12 +419,14 @@ function renderBookAdminTable() {
         button.addEventListener("click", () => openDeleteDialog(button.dataset.deleteBook));
     });
 
-    fillEditBookForm(books[0].id);
+    if (!selectedEditBookId || !books.some((book) => book.id === selectedEditBookId)) {
+        fillEditBookForm(books[0].id);
+    }
 }
 
 function setupBookForms() {
     document.querySelectorAll("[data-book-form]").forEach((form) => {
-        form.addEventListener("submit", (event) => {
+        form.addEventListener("submit", async (event) => {
             event.preventDefault();
 
             const data = Object.fromEntries(new FormData(form));
@@ -330,21 +440,30 @@ function setupBookForms() {
             }
 
             if (form.dataset.bookForm === "add") {
-                addBookLocally(data);
+                const savedInDatabase = await addBook(data);
+
                 form.reset();
-                showBookFormMessage("add", "Књига је додата у локални приказ.", "success");
+                showBookFormMessage(
+                    "add",
+                    savedInDatabase ? "Књига је додата у Firebase базу." : "Књига је додата у локални приказ јер база тренутно није доступна.",
+                    savedInDatabase ? "success" : "error"
+                );
                 return;
             }
 
-            updateBookLocally(data);
-            showBookFormMessage("edit", "Измене су приказане локално. Упис у базу је планиран за финалну предају.", "success");
+            const savedInDatabase = await updateBook(data);
+            showBookFormMessage(
+                "edit",
+                savedInDatabase ? "Измене су сачуване у Firebase бази." : "Измене су приказане локално јер база тренутно није доступна.",
+                savedInDatabase ? "success" : "error"
+            );
         });
     });
 }
 
 function validateBook(data) {
     const errors = {};
-    const isbn = (data.isbn || "").replaceAll("-", "");
+    const isbn = (data.isbn || "").replace(/\D/g, "");
 
     if (!data.title || data.title.trim().length < 2) {
         errors.title = "Наслов мора имати најмање 2 карактера.";
@@ -385,53 +504,91 @@ function validateBook(data) {
     return errors;
 }
 
-function addBookLocally(data) {
-    const id = `book-${Date.now()}`;
+async function addBook(data) {
+    const payload = createBookPayload(data);
+    const localId = `local-book-${Date.now()}`;
 
-    currentBooks.push({
-        id,
-        numericId: currentBooks.length + 100,
-        title: data.title.trim(),
-        authorName: getAuthorName(currentAuthors, data.authorId.trim()),
-        authorUrl: getAuthorUrl(data.authorId.trim()),
-        image: data.image.trim(),
-        detailsUrl: "admin-books.html",
-        description: data.description.trim(),
-        genre: data.genre.trim(),
-        format: data.format.trim(),
-        price: Number(data.price),
-        pages: Number(data.pages),
-        authorId: data.authorId.trim(),
-        isbn: data.isbn.trim()
-    });
+    try {
+        const result = await requestDatabase("knjige", {
+            method: "POST",
+            body: JSON.stringify(payload)
+        });
+        const book = createBookFromPayload(result.name, payload);
 
-    renderBookCatalog();
-    renderBookAdminTable();
-    updateProfileSummary();
+        currentBooks.push(book);
+        renderAfterBookChange();
+        return true;
+    } catch (error) {
+        currentBooks.push(createBookFromPayload(localId, payload));
+        renderAfterBookChange();
+        return false;
+    }
 }
 
-function updateBookLocally(data) {
+async function updateBook(data) {
+    const payload = createBookPayload(data);
+
+    try {
+        await requestDatabase(`knjige/${selectedEditBookId}`, {
+            method: "PUT",
+            body: JSON.stringify(payload)
+        });
+        updateBookLocally(selectedEditBookId, payload);
+        return true;
+    } catch (error) {
+        updateBookLocally(selectedEditBookId, payload);
+        return false;
+    }
+}
+
+function createBookFromPayload(id, payload) {
+    return {
+        id,
+        numericId: id,
+        title: payload.naziv,
+        authorName: getAuthorName(currentAuthors, payload.idAutora),
+        authorUrl: getAuthorUrl(payload.idAutora),
+        image: getFirstImage(payload.slike),
+        detailsUrl: getBookDetailsUrl(id),
+        description: payload.opis,
+        genre: payload.zanr,
+        format: payload.format,
+        price: Number(payload.cena),
+        pages: Number(payload.brojStrana),
+        authorId: payload.idAutora,
+        isbn: payload.isbn
+    };
+}
+
+function updateBookLocally(bookId, payload) {
     currentBooks = currentBooks.map((book) => {
-        if (book.id !== selectedEditBookId) {
+        if (book.id !== bookId) {
             return book;
         }
 
         return {
             ...book,
-            title: data.title.trim(),
-            image: data.image.trim(),
-            description: data.description.trim(),
-            genre: data.genre.trim(),
-            format: data.format.trim(),
-            price: Number(data.price),
-            pages: Number(data.pages),
-            authorId: data.authorId.trim(),
-            isbn: data.isbn.trim()
+            title: payload.naziv,
+            authorName: getAuthorName(currentAuthors, payload.idAutora),
+            authorUrl: getAuthorUrl(payload.idAutora),
+            image: getFirstImage(payload.slike),
+            description: payload.opis,
+            genre: payload.zanr,
+            format: payload.format,
+            price: Number(payload.cena),
+            pages: Number(payload.brojStrana),
+            authorId: payload.idAutora,
+            isbn: payload.isbn
         };
     });
 
+    renderAfterBookChange();
+}
+
+function renderAfterBookChange() {
     renderBookCatalog();
     renderBookAdminTable();
+    renderProfileReviews();
     updateProfileSummary();
 }
 
@@ -477,19 +634,39 @@ function openDeleteDialog(bookId) {
     bookDeleteDialog.open(`Да ли желите да обришете књигу "${book.title}"?`);
 }
 
-function deleteSelectedBook() {
+async function deleteSelectedBook() {
     if (!selectedDeleteBookId) {
         bookDeleteDialog?.close();
         return;
     }
 
-    currentBooks = currentBooks.filter((book) => book.id !== selectedDeleteBookId);
-    student1Reviews = student1Reviews.filter((review) => review.bookId !== selectedDeleteBookId);
+    const bookId = selectedDeleteBookId;
+    const relatedReviews = student1Reviews.filter((review) => review.bookId === bookId);
+    const updates = {
+        [`knjige/${bookId}`]: null
+    };
+
+    relatedReviews.forEach((review) => {
+        updates[`recenzije/${review.id}`] = null;
+    });
+
+    try {
+        await requestDatabase("", {
+            method: "PATCH",
+            body: JSON.stringify(updates)
+        });
+        showBookFormMessage("edit", "Књига и њене рецензије су обрисане из Firebase базе.", "success");
+    } catch (error) {
+        showBookFormMessage("edit", "Књига је обрисана из локалног приказа јер база тренутно није доступна.", "error");
+    }
+
+    currentBooks = currentBooks.filter((book) => book.id !== bookId);
+    student1Reviews = student1Reviews.filter((review) => review.bookId !== bookId);
+    if (selectedEditBookId === bookId) {
+        selectedEditBookId = null;
+    }
     selectedDeleteBookId = null;
-    renderBookCatalog();
-    renderBookAdminTable();
-    renderProfileReviews();
-    updateProfileSummary();
+    renderAfterBookChange();
 }
 
 function setupBookDetails() {
@@ -501,7 +678,8 @@ function setupBookDetails() {
     }
 
     const bookId = getCurrentBookId(page);
-    const book = loadBooks().find((item) => item.id === bookId);
+    const book = loadBooks().find((item) => item.id === bookId)
+        || STUDENT1_BOOKS.find((item) => item.id === bookId);
 
     if (!book) {
         renderMissingBook();
@@ -515,7 +693,7 @@ function setupBookDetails() {
         return;
     }
 
-    form.addEventListener("submit", (event) => {
+    form.addEventListener("submit", async (event) => {
         event.preventDefault();
 
         const data = Object.fromEntries(new FormData(form));
@@ -528,19 +706,36 @@ function setupBookDetails() {
             return;
         }
 
-        student1Reviews.unshift({
-            id: `r-${Date.now()}`,
-            bookId: book.id,
-            bookNumericId: book.numericId,
-            userId: "kor001",
-            username: data.username.trim(),
-            date: new Date().toLocaleDateString("sr-RS"),
-            text: data.comment.trim()
-        });
+        const payload = createReviewPayload(book.id, data.comment);
+        const bookExistsInDatabase = currentBooks.some((item) => item.id === book.id);
+        let message = bookExistsInDatabase
+            ? "Рецензија је сачувана у Firebase бази."
+            : "Рецензија је додата у локални приказ за демо књигу.";
+        let type = "success";
+
+        try {
+            if (!bookExistsInDatabase) {
+                throw new Error("Књига није у Firebase каталогу.");
+            }
+
+            const result = await requestDatabase("recenzije", {
+                method: "POST",
+                body: JSON.stringify(payload)
+            });
+            student1Reviews.unshift(createReviewFromPayload(result.name, payload, data.username));
+        } catch (error) {
+            student1Reviews.unshift(createReviewFromPayload(`local-review-${Date.now()}`, payload, data.username));
+            if (bookExistsInDatabase) {
+                message = "Рецензија је додата у локални приказ јер база тренутно није доступна.";
+                type = "error";
+            }
+        }
 
         form.reset();
         renderReviewsForBook(book.id);
-        showReviewMessage("Рецензија је додата у локални приказ.", "success");
+        renderProfileReviews();
+        updateProfileSummary();
+        showReviewMessage(message, type);
     });
 }
 
@@ -566,17 +761,17 @@ function renderBookDetails(book) {
 
     if (info) {
         info.innerHTML = `
-            <h2>${book.title}</h2>
-            <p><strong>ID књиге:</strong> ${book.id}</p>
-            <p><strong>Аутор ID:</strong> ${book.authorId}</p>
-            <p><strong>Аутор:</strong> <a href="${book.authorUrl}" class="text-link">${book.authorName}</a></p>
-            <p><strong>Жанр:</strong> ${book.genre}</p>
-            <p><strong>Формат:</strong> ${book.format}</p>
-            <p><strong>Број страна:</strong> ${book.pages}</p>
-            <p><strong>Цена:</strong> ${book.price} РСД</p>
-            <p><strong>ISBN:</strong> ${book.isbn}</p>
+            <h2>${s1EscapeHtml(book.title)}</h2>
+            <p><strong>ID књиге:</strong> ${s1EscapeHtml(book.id)}</p>
+            <p><strong>Аутор ID:</strong> ${s1EscapeHtml(book.authorId)}</p>
+            <p><strong>Аутор:</strong> <a href="${s1EscapeAttribute(book.authorUrl)}" class="text-link">${s1EscapeHtml(book.authorName)}</a></p>
+            <p><strong>Жанр:</strong> ${s1EscapeHtml(book.genre)}</p>
+            <p><strong>Формат:</strong> ${s1EscapeHtml(book.format)}</p>
+            <p><strong>Број страна:</strong> ${Number(book.pages).toLocaleString("sr-RS")}</p>
+            <p><strong>Цена:</strong> ${Number(book.price).toLocaleString("sr-RS")} РСД</p>
+            <p><strong>ISBN:</strong> ${s1EscapeHtml(book.isbn)}</p>
             <br>
-            <p><strong>Опис:</strong> ${book.description}</p>
+            <p><strong>Опис:</strong> ${s1EscapeHtml(book.description)}</p>
         `;
     }
 }
@@ -630,7 +825,7 @@ function renderProfileReviews() {
         return;
     }
 
-    const currentUserReviews = student1Reviews.filter((review) => review.userId === "kor001");
+    const currentUserReviews = student1Reviews.filter((review) => review.userId === getActiveUserId());
 
     if (currentUserReviews.length === 0) {
         list.innerHTML = `<article class="card activity-card"><p>Корисник још нема рецензије.</p></article>`;
@@ -639,15 +834,50 @@ function renderProfileReviews() {
 
     list.innerHTML = currentUserReviews.map((review) => {
         const book = loadBooks().find((item) => item.id === review.bookId);
+        const detailsUrl = book?.detailsUrl || getBookDetailsUrl(review.bookId);
+        const title = book?.title || review.bookId;
 
         return `
             <article class="card activity-card">
-                <p><strong>Књига:</strong> <a href="${book.detailsUrl}" class="text-link">${book.title}</a></p>
-                <p class="activity-meta">Датум: ${review.date} | ID књиге: ${review.bookNumericId}</p>
-                <p><strong>Рецензија:</strong> ${review.text}</p>
+                <p><strong>Књига:</strong> <a href="${s1EscapeAttribute(detailsUrl)}" class="text-link">${s1EscapeHtml(title)}</a></p>
+                <p class="activity-meta">Датум: ${s1EscapeHtml(review.date)} | ID књиге: ${s1EscapeHtml(review.bookNumericId)}</p>
+                <p><strong>Рецензија:</strong> ${s1EscapeHtml(review.text)}</p>
             </article>
         `;
     }).join("");
+}
+
+function renderProfileUser() {
+    const card = document.querySelector("[data-profile-user-card]");
+
+    if (!card) {
+        return;
+    }
+
+    const user = getActiveUser();
+    const fields = {
+        ime: user.ime || "Непознато",
+        prezime: user.prezime || "Непознато",
+        email: user.email || "Није унето",
+        korisnickoIme: user.korisnickoIme || "Није унето",
+        adresa: user.adresa || "Није унето",
+        datumRodjenja: user.datumRodjenja ? formatDate(user.datumRodjenja) : "Није унето",
+        zanimanje: user.zanimanje || "Није унето"
+    };
+
+    const badge = document.querySelector("[data-profile-user-id]");
+
+    if (badge) {
+        badge.textContent = `ID корисника: ${user.id}`;
+    }
+
+    Object.entries(fields).forEach(([field, value]) => {
+        const element = card.querySelector(`[data-profile-field="${field}"]`);
+
+        if (element) {
+            element.textContent = value;
+        }
+    });
 }
 
 function updateProfileSummary() {
@@ -655,7 +885,7 @@ function updateProfileSummary() {
     const bookCount = document.querySelector("[data-profile-book-count]");
 
     if (reviewCount) {
-        reviewCount.textContent = student1Reviews.filter((review) => review.userId === "kor001").length;
+        reviewCount.textContent = student1Reviews.filter((review) => review.userId === getActiveUserId()).length;
     }
 
     if (bookCount) {
@@ -666,9 +896,9 @@ function updateProfileSummary() {
 function renderReviewItem(review) {
     return `
         <article class="review-item">
-            <p><strong>${review.username}</strong> (ID корисника: ${review.userId}) - <small>${review.date}</small></p>
-            <p><small>ID књиге: ${review.bookNumericId}</small></p>
-            <p>${review.text}</p>
+            <p><strong>${s1EscapeHtml(review.username)}</strong> (ID корисника: ${s1EscapeHtml(review.userId)}) - <small>${s1EscapeHtml(review.date)}</small></p>
+            <p><small>ID књиге: ${s1EscapeHtml(review.bookNumericId)}</small></p>
+            <p>${s1EscapeHtml(review.text)}</p>
         </article>
     `;
 }
@@ -676,21 +906,27 @@ function renderReviewItem(review) {
 function showBookFormMessage(formName, message, type) {
     const messageBox = document.querySelector(`[data-book-form-message="${formName}"]`);
 
-    if (!messageBox) {
-        return;
-    }
-
-    messageBox.textContent = message;
-    messageBox.className = `status-message ${type}`;
+    showStatus(messageBox, message, type);
 }
 
 function showReviewMessage(message, type) {
     const messageBox = document.querySelector("[data-review-message]");
 
-    if (!messageBox) {
-        return;
-    }
+    showStatus(messageBox, message, type);
+}
 
-    messageBox.textContent = message;
-    messageBox.className = `status-message ${type}`;
+function shortenText(text, maximumLength) {
+    const value = String(text || "");
+
+    return value.length <= maximumLength ? value : `${value.slice(0, maximumLength).trim()}...`;
+}
+
+function s1EscapeHtml(value) {
+    const element = document.createElement("div");
+    element.textContent = String(value ?? "");
+    return element.innerHTML;
+}
+
+function s1EscapeAttribute(value) {
+    return s1EscapeHtml(value).replaceAll('"', "&quot;");
 }
