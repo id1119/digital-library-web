@@ -343,11 +343,90 @@ function clearFormErrors(form) {
     });
 }
 
+function findElement(target) {
+    return typeof target === "string" ? document.querySelector(target) : target;
+}
+
+function showStatus(target, message, type = "") {
+    const status = findElement(target);
+
+    if (!status) {
+        return;
+    }
+
+    status.textContent = message;
+    status.className = `status-message ${type}`.trim();
+}
+
+function hideStatus(target) {
+    findElement(target)?.classList.add("hidden");
+}
+
+function createConfirmDialog(options) {
+    const {
+        id,
+        title,
+        confirmText = "Потврди",
+        cancelText = "Одустани",
+        danger = true,
+        onConfirm
+    } = options;
+    let dialog = document.querySelector(`#${id}`);
+
+    if (!dialog) {
+        document.body.insertAdjacentHTML("beforeend", `
+            <div class="modal-backdrop" id="${id}" aria-hidden="true">
+                <div class="modal-window" role="dialog" aria-modal="true" aria-labelledby="${id}-title">
+                    <h2 id="${id}-title">${title}</h2>
+                    <p data-confirm-dialog-message></p>
+                    <div class="dialog-actions">
+                        <button type="button" class="btn ${danger ? "btn-danger" : "btn-primary"}" data-confirm-dialog-submit>${confirmText}</button>
+                        <button type="button" class="btn btn-secondary" data-confirm-dialog-cancel>${cancelText}</button>
+                    </div>
+                </div>
+            </div>
+        `);
+
+        dialog = document.querySelector(`#${id}`);
+    }
+
+    const close = () => {
+        dialog.classList.remove("is-open");
+        dialog.setAttribute("aria-hidden", "true");
+    };
+
+    const open = (message) => {
+        dialog.querySelector("[data-confirm-dialog-message]").textContent = message;
+        dialog.classList.add("is-open");
+        dialog.setAttribute("aria-hidden", "false");
+    };
+
+    dialog.querySelector("[data-confirm-dialog-cancel]").addEventListener("click", close);
+    dialog.querySelector("[data-confirm-dialog-submit]").addEventListener("click", () => {
+        if (typeof onConfirm === "function") {
+            onConfirm();
+        }
+
+        close();
+    });
+    dialog.addEventListener("click", (event) => {
+        if (event.target === dialog) {
+            close();
+        }
+    });
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && dialog.classList.contains("is-open")) {
+            close();
+        }
+    });
+
+    return { open, close };
+}
+
 function showAuthMessage(message, type) {
     const messageBox = document.querySelector("[data-auth-message]");
 
-    messageBox.textContent = message;
-    messageBox.className = `status-message ${type}`;
+    showStatus(messageBox, message, type);
 }
 
 function clearAuthMessage() {

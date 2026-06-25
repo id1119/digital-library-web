@@ -100,6 +100,7 @@ let student1Reviews = [
 ];
 let selectedEditBookId = STUDENT1_BOOKS[0].id;
 let selectedDeleteBookId = null;
+let bookDeleteDialog = null;
 
 document.addEventListener("DOMContentLoaded", () => {
     initStudent1Books();
@@ -457,40 +458,28 @@ function fillEditBookForm(bookId) {
 }
 
 function addDeleteDialog() {
-    if (document.querySelector("#book-delete-dialog")) {
-        return;
-    }
-
-    document.body.insertAdjacentHTML("beforeend", `
-        <div class="modal-backdrop" id="book-delete-dialog" aria-hidden="true">
-            <div class="modal-window" role="dialog" aria-modal="true" aria-labelledby="book-delete-title">
-                <h2 id="book-delete-title">Потврда брисања</h2>
-                <p data-delete-book-text>Да ли желите да обришете изабрану књигу?</p>
-                <div class="dialog-actions">
-                    <button type="button" class="btn btn-danger" data-confirm-delete-book>Обриши</button>
-                    <button type="button" class="btn btn-secondary" data-cancel-delete-book>Одустани</button>
-                </div>
-            </div>
-        </div>
-    `);
-
-    document.querySelector("[data-cancel-delete-book]").addEventListener("click", closeDeleteDialog);
-    document.querySelector("[data-confirm-delete-book]").addEventListener("click", deleteSelectedBook);
+    bookDeleteDialog = createConfirmDialog({
+        id: "book-delete-dialog",
+        title: "Потврда брисања",
+        confirmText: "Обриши",
+        onConfirm: deleteSelectedBook
+    });
 }
 
 function openDeleteDialog(bookId) {
-    const dialog = document.querySelector("#book-delete-dialog");
     const book = loadBooks().find((item) => item.id === bookId);
 
+    if (!book || !bookDeleteDialog) {
+        return;
+    }
+
     selectedDeleteBookId = bookId;
-    dialog.querySelector("[data-delete-book-text]").textContent = `Да ли желите да обришете књигу "${book.title}"?`;
-    dialog.classList.add("is-open");
-    dialog.setAttribute("aria-hidden", "false");
+    bookDeleteDialog.open(`Да ли желите да обришете књигу "${book.title}"?`);
 }
 
 function deleteSelectedBook() {
     if (!selectedDeleteBookId) {
-        closeDeleteDialog();
+        bookDeleteDialog?.close();
         return;
     }
 
@@ -501,14 +490,6 @@ function deleteSelectedBook() {
     renderBookAdminTable();
     renderProfileReviews();
     updateProfileSummary();
-    closeDeleteDialog();
-}
-
-function closeDeleteDialog() {
-    const dialog = document.querySelector("#book-delete-dialog");
-
-    dialog.classList.remove("is-open");
-    dialog.setAttribute("aria-hidden", "true");
 }
 
 function setupBookDetails() {

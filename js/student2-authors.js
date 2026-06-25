@@ -3,6 +3,7 @@ const DEFAULT_USER_ID = "kor001";
 let databasePromise;
 let selectedAuthorId = null;
 let localRatings = [];
+let authorDeleteDialog = null;
 
 document.addEventListener("DOMContentLoaded", () => {
     renderAuthorsPage();
@@ -283,59 +284,27 @@ function validateAuthor(author) {
 }
 
 function addAuthorDeleteDialog() {
-    document.body.insertAdjacentHTML("beforeend", `
-        <div class="modal-backdrop" id="author-delete-dialog" aria-hidden="true">
-            <div class="modal-window" role="dialog" aria-modal="true" aria-labelledby="author-delete-title">
-                <h2 id="author-delete-title">Потврда брисања</h2>
-                <p data-author-delete-text></p>
-                <div class="dialog-actions">
-                    <button class="btn btn-danger" type="button" data-confirm-author-delete>Обриши</button>
-                    <button class="btn btn-secondary" type="button" data-cancel-author-delete>Одустани</button>
-                </div>
-            </div>
-        </div>
-    `);
-
-    const dialog = document.querySelector("#author-delete-dialog");
-
-    document.querySelector("[data-confirm-author-delete]").addEventListener("click", () => {
-        closeAuthorDeleteDialog();
-        showStatus(
-            "[data-admin-authors-status]",
-            `Брисање аутора ${selectedAuthorId} је потврђено. Упис у Firebase није обавезан за ДЗ2.`,
-            "success"
-        );
-    });
-    document.querySelector("[data-cancel-author-delete]").addEventListener("click", closeAuthorDeleteDialog);
-
-    dialog.addEventListener("click", (event) => {
-        if (event.target === dialog) {
-            closeAuthorDeleteDialog();
-        }
-    });
-
-    document.addEventListener("keydown", (event) => {
-        if (event.key === "Escape" && dialog.classList.contains("is-open")) {
-            closeAuthorDeleteDialog();
+    authorDeleteDialog = createConfirmDialog({
+        id: "author-delete-dialog",
+        title: "Потврда брисања",
+        confirmText: "Обриши",
+        onConfirm: () => {
+            showStatus(
+                "[data-admin-authors-status]",
+                `Брисање аутора ${selectedAuthorId} је потврђено. Упис у Firebase није обавезан за ДЗ2.`,
+                "success"
+            );
         }
     });
 }
 
 function openAuthorDeleteDialog(authorId, author) {
-    const dialog = document.querySelector("#author-delete-dialog");
+    if (!author || !authorDeleteDialog) {
+        return;
+    }
 
     selectedAuthorId = authorId;
-    dialog.querySelector("[data-author-delete-text]").textContent =
-        `Да ли сигурно желиш да обришеш аутора ${fullName(author)}?`;
-    dialog.classList.add("is-open");
-    dialog.setAttribute("aria-hidden", "false");
-}
-
-function closeAuthorDeleteDialog() {
-    const dialog = document.querySelector("#author-delete-dialog");
-
-    dialog.classList.remove("is-open");
-    dialog.setAttribute("aria-hidden", "true");
+    authorDeleteDialog.open(`Да ли сигурно желиш да обришеш аутора ${fullName(author)}?`);
 }
 
 async function renderAuthorDetailsPage() {
@@ -527,21 +496,6 @@ function shorten(text, maximumLength) {
 
 function showAuthorFormMessage(formName, message, type) {
     showStatus(`[data-author-message="${formName}"]`, message, type);
-}
-
-function showStatus(selector, message, type = "") {
-    const status = document.querySelector(selector);
-
-    if (!status) {
-        return;
-    }
-
-    status.textContent = message;
-    status.className = `status-message ${type}`.trim();
-}
-
-function hideStatus(selector) {
-    document.querySelector(selector)?.classList.add("hidden");
 }
 
 function escapeHtml(value) {
