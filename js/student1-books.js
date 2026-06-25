@@ -55,6 +55,10 @@ const STUDENT1_REVIEW_USER_NAME = "Посетилац";
 let currentBooks = [...STUDENT1_BOOKS];
 let currentAuthors = {};
 let currentUsers = {};
+let currentBookFilters = {
+    title: "",
+    genre: ""
+};
 let student1Reviews = [
     {
         id: "r0",
@@ -108,6 +112,7 @@ let bookDeleteDialog = null;
 
 document.addEventListener("DOMContentLoaded", () => {
     initStudent1Books();
+    document.addEventListener("auth-change", updateStudent1Profile);
 });
 
 async function initStudent1Books() {
@@ -118,13 +123,12 @@ async function initStudent1Books() {
     currentAuthors = database.authors;
     currentUsers = database.users;
     student1Reviews = database.reviews;
-    renderBookCatalog();
+    setupBookSearch();
+    renderFilteredBooks();
     renderBookAdminTable();
     setupBookForms();
     setupBookDetails();
-    renderProfileUser();
-    renderProfileReviews();
-    updateProfileSummary();
+    updateStudent1Profile();
 }
 
 function loadBooks() {
@@ -159,7 +163,7 @@ function createBookPayload(data) {
     return {
         naziv: data.title.trim(),
         opis: data.description.trim(),
-        slike: [data.image.trim()],
+        slike: splitBookImages(data.image),
         zanr: data.genre.trim(),
         format: data.format.trim(),
         cena: Number(data.price),
@@ -244,6 +248,7 @@ function normalizeBooks(data, authors) {
         title: book.title || book.naziv || "",
         authorName: getAuthorName(authors, book.idAutora),
         authorUrl: getAuthorUrl(book.idAutora),
+        images: getImagesArray(book.slike || book.image || book.slika),
         image: getFirstImage(book.slike || book.image || book.slika),
         detailsUrl: getBookDetailsUrl(id, index),
         description: book.description || book.opis || "",
@@ -290,37 +295,47 @@ function createReviewFromPayload(id, payload, fallbackUsername = "") {
 function getActiveUserId() {
     const user = typeof getCurrentUser === "function" ? getCurrentUser() : null;
 
-    return user?.id || STUDENT1_DEFAULT_USER_ID;
+    return user?.id || null;
 }
 
 function getActiveUser() {
     const user = typeof getCurrentUser === "function" ? getCurrentUser() : null;
 
-    if (user) {
-        return {
-            id: user.id,
-            ime: user.firstName || "",
-            prezime: user.lastName || "",
-            email: user.email || "",
-            korisnickoIme: user.username || "",
-            adresa: user.address || "",
-            datumRodjenja: user.birthDate || "",
-            zanimanje: user.occupation || ""
-        };
+    if (!user) {
+        return null;
     }
 
     return {
-        id: STUDENT1_DEFAULT_USER_ID,
-        ...(currentUsers[STUDENT1_DEFAULT_USER_ID] || {})
+        id: user.id,
+        ime: user.firstName || "",
+        prezime: user.lastName || "",
+        email: user.email || "",
+        korisnickoIme: user.username || "",
+        adresa: user.address || "",
+        datumRodjenja: user.birthDate || "",
+        zanimanje: user.occupation || ""
     };
 }
 
 function getFirstImage(images) {
-    if (Array.isArray(images) && images.length > 0) {
-        return images[0];
+    const imageList = getImagesArray(images);
+
+    return imageList.length > 0 ? imageList[0] : "images/na-drini-cuprija.jpg";
+}
+
+function getImagesArray(images) {
+    if (Array.isArray(images)) {
+        return images.map((image) => String(image).trim()).filter(Boolean);
     }
 
-    return typeof images === "string" && images ? images : "images/na-drini-cuprija.jpg";
+    return splitBookImages(images);
+}
+
+function splitBookImages(value) {
+    return String(value || "")
+        .split(",")
+        .map((image) => image.trim())
+        .filter(Boolean);
 }
 
 function getAuthorName(authors, authorId) {
@@ -361,24 +376,61 @@ function formatDate(date) {
     return parsedDate.toLocaleDateString("sr-RS");
 }
 
-function renderBookCatalog() {
+function setupBookSearch() {
+    const form = document.querySelector("[data-book-search]");
+
+    if (!form || form.dataset.ready === "true") {
+        return;
+    }
+
+    form.dataset.ready = "true";
+    form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        currentBookFilters = Object.fromEntries(new FormData(form));
+        renderFilteredBooks();
+    });
+
+    document.querySelector("[data-book-search-reset]")?.addEventListener("click", () => {
+        form.reset();
+        currentBookFilters = { title: "", genre: "" };
+        renderFilteredBooks();
+    });
+}
+
+function renderFilteredBooks() {
     const grid = document.querySelector("[data-books-grid]");
+    const summary = document.querySelector("[data-books-result-summary]");
 
     if (!grid) {
         return;
     }
 
-    const books = loadBooks();
+    const titleQuery = s1NormalizeSearch(currentBookFilters.title);
+    const genreQuery = s1NormalizeSearch(currentBookFilters.genre);
+    const books = loadBooks().filter((book) => {
+        const titleMatches = !titleQuery || s1NormalizeSearch(book.title).includes(titleQuery);
+        const genreMatches = !genreQuery || s1NormalizeSearch(book.genre).includes(genreQuery);
+
+        return titleMatches && genreMatches;
+    });
 
     grid.innerHTML = books.length > 0 ? books.map((book) => `
         <article class="card book-card">
-            <h3><a href="${s1EscapeAttribute(book.detailsUrl)}" class="plain-link">${s1EscapeHtml(book.title)}</a></h3>
+            <h3><a href="${s1EscapeAttribute(book.detailsUrl)}" class="plain-link">${s1HighlightMatch(book.title, titleQuery)}</a></h3>
             <p><b>Аутор:</b> <a href="${s1EscapeAttribute(book.authorUrl)}" class="text-link">${s1EscapeHtml(book.authorName)}</a></p>
             <img src="${s1EscapeAttribute(book.image)}" alt="${s1EscapeAttribute(book.title)}" class="book-cover" loading="lazy">
+            <p><b>Жанр:</b> ${s1HighlightMatch(book.genre, genreQuery)}</p>
             <p>${s1EscapeHtml(shortenText(book.description, 170))}</p>
             <a href="${s1EscapeAttribute(book.detailsUrl)}" class="btn btn-primary">Детаљи</a>
         </article>
-    `).join("") : `<p class="empty-state">Нема књига за приказ.</p>`;
+    `).join("") : `<p class="empty-state">Нема књига које одговарају претрази.</p>`;
+
+    if (summary) {
+        const activeFilters = [currentBookFilters.title, currentBookFilters.genre].filter(Boolean).length;
+        summary.textContent = activeFilters
+            ? `Пронађено књига: ${books.length} од ${loadBooks().length}.`
+            : "";
+    }
 }
 
 function renderBookAdminTable() {
@@ -464,6 +516,7 @@ function setupBookForms() {
 function validateBook(data) {
     const errors = {};
     const isbn = (data.isbn || "").replace(/\D/g, "");
+    const images = splitBookImages(data.image);
 
     if (!data.title || data.title.trim().length < 2) {
         errors.title = "Наслов мора имати најмање 2 карактера.";
@@ -473,8 +526,8 @@ function validateBook(data) {
         errors.description = "Опис мора имати најмање 10 карактера.";
     }
 
-    if (!/^(https?:\/\/|images\/).+\.(jpg|jpeg|png|webp)$/i.test(data.image || "")) {
-        errors.image = "Унеси URL слике или путању из images/ фолдера.";
+    if (images.length === 0 || images.some((image) => !/^(https?:\/\/|images\/).+\.(jpg|jpeg|png|webp)$/i.test(image))) {
+        errors.image = "Унеси једну или више слика раздвојених зарезом.";
     }
 
     if (!data.genre || data.genre.trim().length < 2) {
@@ -548,6 +601,7 @@ function createBookFromPayload(id, payload) {
         title: payload.naziv,
         authorName: getAuthorName(currentAuthors, payload.idAutora),
         authorUrl: getAuthorUrl(payload.idAutora),
+        images: getImagesArray(payload.slike),
         image: getFirstImage(payload.slike),
         detailsUrl: getBookDetailsUrl(id),
         description: payload.opis,
@@ -571,6 +625,7 @@ function updateBookLocally(bookId, payload) {
             title: payload.naziv,
             authorName: getAuthorName(currentAuthors, payload.idAutora),
             authorUrl: getAuthorUrl(payload.idAutora),
+            images: getImagesArray(payload.slike),
             image: getFirstImage(payload.slike),
             description: payload.opis,
             genre: payload.zanr,
@@ -586,10 +641,9 @@ function updateBookLocally(bookId, payload) {
 }
 
 function renderAfterBookChange() {
-    renderBookCatalog();
+    renderFilteredBooks();
     renderBookAdminTable();
-    renderProfileReviews();
-    updateProfileSummary();
+    updateStudent1Profile();
 }
 
 function fillEditBookForm(bookId) {
@@ -603,7 +657,7 @@ function fillEditBookForm(bookId) {
     selectedEditBookId = book.id;
     form.elements.title.value = book.title;
     form.elements.description.value = book.description;
-    form.elements.image.value = book.image;
+    form.elements.image.value = (book.images && book.images.length > 0 ? book.images : [book.image]).join(", ");
     form.elements.genre.value = book.genre;
     form.elements.format.value = book.format;
     form.elements.price.value = book.price;
@@ -706,6 +760,11 @@ function setupBookDetails() {
             return;
         }
 
+        if (!getActiveUserId()) {
+            showReviewMessage("Морате бити пријављени да бисте оставили рецензију.", "error");
+            return;
+        }
+
         const payload = createReviewPayload(book.id, data.comment);
         const bookExistsInDatabase = currentBooks.some((item) => item.id === book.id);
         let message = bookExistsInDatabase
@@ -733,8 +792,7 @@ function setupBookDetails() {
 
         form.reset();
         renderReviewsForBook(book.id);
-        renderProfileReviews();
-        updateProfileSummary();
+        updateStudent1Profile();
         showReviewMessage(message, type);
     });
 }
@@ -825,7 +883,14 @@ function renderProfileReviews() {
         return;
     }
 
-    const currentUserReviews = student1Reviews.filter((review) => review.userId === getActiveUserId());
+    const userId = getActiveUserId();
+
+    if (!userId) {
+        list.innerHTML = "";
+        return;
+    }
+
+    const currentUserReviews = student1Reviews.filter((review) => review.userId === userId);
 
     if (currentUserReviews.length === 0) {
         list.innerHTML = `<article class="card activity-card"><p>Корисник још нема рецензије.</p></article>`;
@@ -855,6 +920,11 @@ function renderProfileUser() {
     }
 
     const user = getActiveUser();
+
+    if (!user) {
+        return;
+    }
+
     const fields = {
         ime: user.ime || "Непознато",
         prezime: user.prezime || "Непознато",
@@ -883,14 +953,40 @@ function renderProfileUser() {
 function updateProfileSummary() {
     const reviewCount = document.querySelector("[data-profile-review-count]");
     const bookCount = document.querySelector("[data-profile-book-count]");
+    const userId = getActiveUserId();
 
     if (reviewCount) {
-        reviewCount.textContent = student1Reviews.filter((review) => review.userId === getActiveUserId()).length;
+        reviewCount.textContent = userId
+            ? student1Reviews.filter((review) => review.userId === userId).length
+            : "0";
     }
 
     if (bookCount) {
         bookCount.textContent = loadBooks().length;
     }
+}
+
+function updateStudent1Profile() {
+    const loginMessage = document.querySelector("[data-profile-login-message]");
+    const protectedSections = document.querySelectorAll("[data-profile-protected]");
+    const isLoggedIn = Boolean(getActiveUserId());
+
+    if (!loginMessage && protectedSections.length === 0) {
+        return;
+    }
+
+    loginMessage?.classList.toggle("hidden", isLoggedIn);
+    protectedSections.forEach((section) => {
+        section.classList.toggle("hidden", !isLoggedIn);
+    });
+
+    if (!isLoggedIn) {
+        return;
+    }
+
+    renderProfileUser();
+    renderProfileReviews();
+    updateProfileSummary();
 }
 
 function renderReviewItem(review) {
@@ -929,4 +1025,30 @@ function s1EscapeHtml(value) {
 
 function s1EscapeAttribute(value) {
     return s1EscapeHtml(value).replaceAll('"', "&quot;");
+}
+
+function s1NormalizeSearch(value) {
+    return String(value || "").trim().toLocaleLowerCase("sr-RS");
+}
+
+function s1HighlightMatch(value, query) {
+    const text = String(value || "");
+    const normalizedQuery = s1NormalizeSearch(query);
+
+    if (!normalizedQuery) {
+        return s1EscapeHtml(text);
+    }
+
+    const normalizedText = text.toLocaleLowerCase("sr-RS");
+    const index = normalizedText.indexOf(normalizedQuery);
+
+    if (index === -1) {
+        return s1EscapeHtml(text);
+    }
+
+    const before = text.slice(0, index);
+    const match = text.slice(index, index + normalizedQuery.length);
+    const after = text.slice(index + normalizedQuery.length);
+
+    return `${s1EscapeHtml(before)}<mark class="search-highlight">${s1EscapeHtml(match)}</mark>${s1EscapeHtml(after)}`;
 }

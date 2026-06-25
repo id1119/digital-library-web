@@ -68,10 +68,6 @@ function addAuthControls() {
         </div>
     `);
 
-    nav.querySelectorAll("[data-open-auth]").forEach((button) => {
-        button.addEventListener("click", () => openAuthModal(button.dataset.openAuth));
-    });
-
     nav.querySelector("[data-logout]").addEventListener("click", logoutUser);
 }
 
@@ -173,6 +169,14 @@ function addAuthModal() {
 
     modal.querySelector('[data-auth-form="login"]').addEventListener("submit", handleLogin);
     modal.querySelector('[data-auth-form="register"]').addEventListener("submit", handleRegister);
+
+    document.addEventListener("click", (event) => {
+        const button = event.target.closest("[data-open-auth]");
+
+        if (button) {
+            openAuthModal(button.dataset.openAuth);
+        }
+    });
 }
 
 function openAuthModal(mode) {
@@ -207,7 +211,7 @@ function showAuthForm(mode) {
     });
 }
 
-function handleLogin(event) {
+async function handleLogin(event) {
     event.preventDefault();
 
     const form = event.currentTarget;
@@ -221,20 +225,34 @@ function handleLogin(event) {
         return;
     }
 
-    saveCurrentUser({
-        id: "korisnik-demo",
-        username: data.username.trim(),
-        firstName: "Demo",
-        lastName: "Korisnik",
-        email: data.username.trim()
-    });
+    try {
+        const users = await loadAuthUsers();
+        const identifier = data.username.trim().toLowerCase();
+        const foundUser = users.find((user) => {
+            const username = String(user.korisnickoIme || "").toLowerCase();
+            const email = String(user.email || "").toLowerCase();
+
+            return (username === identifier || email === identifier) && user.lozinka === data.password;
+        });
+
+        if (!foundUser) {
+            showAuthMessage("Корисничко име/email или лозинка нису исправни.", "error");
+            return;
+        }
+
+        saveCurrentUser(mapDatabaseUser(foundUser));
+    } catch (error) {
+        showAuthMessage(error.message, "error");
+        return;
+    }
 
     form.reset();
     closeAuthModal();
     updateAuthControls();
+    notifyAuthChanged();
 }
 
-function handleRegister(event) {
+async function handleRegister(event) {
     event.preventDefault();
 
     const form = event.currentTarget;
@@ -248,20 +266,85 @@ function handleRegister(event) {
         return;
     }
 
-    saveCurrentUser({
-        id: `korisnik-${Date.now()}`,
-        username: data.username.trim(),
-        firstName: data.firstName.trim(),
-        lastName: data.lastName.trim(),
-        email: data.email.trim(),
-        address: data.address.trim(),
-        birthDate: data.birthDate,
-        occupation: data.occupation.trim()
-    });
+    try {
+        const users = await loadAuthUsers();
+        const username = data.username.trim().toLowerCase();
+        const email = data.email.trim().toLowerCase();
+
+        if (users.some((user) => String(user.korisnickoIme || "").toLowerCase() === username)) {
+            showAuthMessage("Корисничко име је већ заузето.", "error");
+            return;
+        }
+
+        if (users.some((user) => String(user.email || "").toLowerCase() === email)) {
+            showAuthMessage("Email је већ регистрован.", "error");
+            return;
+        }
+
+        const payload = {
+            ime: data.firstName.trim(),
+            prezime: data.lastName.trim(),
+            email: data.email.trim(),
+            korisnickoIme: data.username.trim(),
+            lozinka: data.password,
+            adresa: data.address.trim(),
+            datumRodjenja: data.birthDate,
+            zanimanje: data.occupation.trim()
+        };
+        const response = await fetch(firebaseDatabaseUrl("korisnici"), {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(payload)
+        });
+
+        if (!response.ok) {
+            throw new Error("Регистрација тренутно није доступна.");
+        }
+
+        const result = await response.json();
+
+        saveCurrentUser(mapDatabaseUser({ id: result.name, ...payload }));
+    } catch (error) {
+        showAuthMessage(error.message, "error");
+        return;
+    }
 
     form.reset();
     closeAuthModal();
     updateAuthControls();
+    notifyAuthChanged();
+}
+
+async function loadAuthUsers() {
+    if (typeof firebaseDatabaseUrl !== "function") {
+        throw new Error("Firebase конфигурација није доступна.");
+    }
+
+    const response = await fetch(firebaseDatabaseUrl("korisnici"));
+
+    if (!response.ok) {
+        throw new Error("Корисници тренутно нису доступни.");
+    }
+
+    const users = await response.json();
+
+    return Object.entries(users || {}).map(([id, user]) => ({ id, ...user }));
+}
+
+function mapDatabaseUser(user) {
+    return {
+        source: "firebase",
+        id: user.id,
+        username: user.korisnickoIme,
+        firstName: user.ime,
+        lastName: user.prezime,
+        email: user.email,
+        address: user.adresa,
+        birthDate: user.datumRodjenja,
+        occupation: user.zanimanje
+    };
 }
 
 function validateLogin(data) {
@@ -448,7 +531,14 @@ function getCurrentUser() {
     }
 
     try {
-        return JSON.parse(rawUser);
+        const user = JSON.parse(rawUser);
+
+        if (user.source !== "firebase" || !user.id) {
+            localStorage.removeItem(SESSION_KEY);
+            return null;
+        }
+
+        return user;
     } catch (error) {
         localStorage.removeItem(SESSION_KEY);
         return null;
@@ -458,6 +548,11 @@ function getCurrentUser() {
 function logoutUser() {
     localStorage.removeItem(SESSION_KEY);
     updateAuthControls();
+    notifyAuthChanged();
+}
+
+function notifyAuthChanged() {
+    document.dispatchEvent(new CustomEvent("auth-change"));
 }
 
 function updateAuthControls() {

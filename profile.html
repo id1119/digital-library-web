@@ -25,7 +25,13 @@
     <main class="container">
         <h1>Кориснички профил</h1>
 
-        <section class="card profile-card" data-profile-user-card>
+        <section class="card profile-card" data-profile-login-message>
+            <h2>Профил није доступан</h2>
+            <p>Пријавите се да би се приказали ваши подаци, рецензије и оцене.</p>
+            <button type="button" class="btn btn-primary" data-open-auth="login">Пријава</button>
+        </section>
+
+        <section class="card profile-card hidden" data-profile-user-card data-profile-protected>
             <div class="profile-header">
                 <div>
                     <h2>Моји подаци</h2>
@@ -69,10 +75,9 @@
                 </div>
             </div>
 
-            <a href="book-details-cuprija.html" class="btn btn-secondary">Погледај рецензије</a>
         </section>
 
-        <section class="profile-summary">
+        <section class="profile-summary hidden" data-profile-protected>
             <article class="summary-item">
                 <strong data-profile-review-count>1</strong>
                 <span>написана рецензија</span>
@@ -87,7 +92,7 @@
             </article>
         </section>
 
-        <div class="grid profile-activity-grid">
+        <div class="grid profile-activity-grid hidden" data-profile-protected>
             <section>
                 <h3>Моје рецензије</h3>
 

@@ -22,6 +22,26 @@
     </header>
     <main class="container">
         <h1>Каталог књига</h1>
+        <section class="card filter-card">
+            <h2>Претрага књига</h2>
+            <form class="filter-form" data-book-search novalidate>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="book-search-title">Назив књиге:</label>
+                        <input id="book-search-title" name="title" type="search" placeholder="Нпр. Фауст">
+                    </div>
+                    <div class="form-group">
+                        <label for="book-search-genre">Жанр:</label>
+                        <input id="book-search-genre" name="genre" type="search" placeholder="Нпр. класика">
+                    </div>
+                </div>
+                <div class="filter-actions">
+                    <button class="btn btn-primary" type="submit">Претражи</button>
+                    <button class="btn btn-secondary" type="button" data-book-search-reset>Очисти</button>
+                </div>
+            </form>
+        </section>
+        <p class="page-intro" data-books-result-summary></p>
         <div class="grid" data-books-grid></div>
     </main>
     <footer>

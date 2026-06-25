@@ -1,5 +1,3 @@
-const DEFAULT_USER_ID = "kor001";
-
 let databasePromise;
 let selectedAuthorId = null;
 let currentAuthorsList = [];
@@ -14,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setupAdminAuthorsPage();
     renderAuthorDetailsPage();
     renderProfileRatings();
+    document.addEventListener("auth-change", renderProfileRatings);
 });
 
 async function loadDatabase() {
@@ -578,15 +577,21 @@ function setupStarRating(author, databaseRatings) {
         button.addEventListener("focus", () => paintStars(Number(button.dataset.rating)));
         button.addEventListener("click", async () => {
             const value = Number(button.dataset.rating);
+            const userId = currentUserId();
+
+            if (!userId) {
+                showStatus("[data-rating-message]", "Морате бити пријављени да бисте оценили аутора.", "error");
+                return;
+            }
 
             try {
                 const savedRating = {
                     idAutora: author.id,
-                    idKorisnika: currentUserId(),
+                    idKorisnika: userId,
                     vrednost: value,
                     datum: new Date().toISOString().slice(0, 10)
                 };
-                const existingRating = databaseRatings.find((rating) => rating.idKorisnika === currentUserId());
+                const existingRating = databaseRatings.find((rating) => rating.idKorisnika === userId);
 
                 if (existingRating) {
                     await firebaseRequest(`ocene/${existingRating.id}`, {
@@ -633,9 +638,16 @@ async function renderProfileRatings() {
         return;
     }
 
+    const userId = currentUserId();
+
+    if (!userId) {
+        container.innerHTML = "";
+        return;
+    }
+
     try {
         const database = await loadDatabase();
-        const ratings = objectToArray(database.ocene).filter((rating) => rating.idKorisnika === currentUserId());
+        const ratings = objectToArray(database.ocene).filter((rating) => rating.idKorisnika === userId);
 
         const ratingCards = ratings.map((rating) => {
                 const author = database.autori[rating.idAutora];
@@ -666,7 +678,7 @@ async function renderProfileRatings() {
 }
 
 function currentUserId() {
-    return getCurrentUser()?.id || DEFAULT_USER_ID;
+    return getCurrentUser()?.id || null;
 }
 
 function calculateAverage(ratings) {
