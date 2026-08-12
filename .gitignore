@@ -1,5 +1,15 @@
 node_modules/
-.DS_Store
-.env
 dist/
+
+# Environment / local config
+.env
+.env.*
+!.env.example
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+
+# Local project notes/specifications
 specifications/
